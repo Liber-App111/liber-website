@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="xi Si init Ni Bi pr qi Ui $i capture calculateEventProperties Zi register register_once register_for_session unregister unregister_for_session Yi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Ki identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Qi Wi createPersonProfile setInternalOrTestUser Ji Fi tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zi debug mr it getPageViewId captureTraceFeedback captureTraceMetric Ri".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_2ThTXHl2KDJTQolhAJInrXvRKtKXohJTFI7QK8k49r2', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Liber. You're not missing it. The learning is already here.</title>
+<meta name="description" content="Liber helps relaxed, interest-led and unschooling homeschool parents see the learning that's already happening. It quietly builds a record you can trust." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Liber app palette — re-skinned from WeWeb design system */
+    --paper:#F8F6F2;        /* warm cream base (app background) */
+    --paper-2:#FCFBF8;      /* off-white card surface */
+    --paper-3:#EEF0EA;      /* soft sage-tinted panel */
+    --ink:#2B2B2B;          /* primary text */
+    --ink-soft:#5F6660;     /* secondary / body text */
+    --ink-faint:#8C918B;    /* muted captions */
+    --line:#E6E4DE;         /* light hairline borders */
+    --sage:#5E7F64;         /* primary green accent */
+    --sage-deep:#47624D;    /* dark green */
+    --sage-tint:#DCE5DC;    /* soft sage wash */
+    --clay:#6C8E73;         /* secondary accent → success green (was clay) */
+    --clay-tint:#DCE5DC;    /* soft sage wash (was clay tint) */
+    --gold:#5E7F64;         /* Liber+ accent → primary green (was gold) */
+    --radius:18px;
+    --radius-lg:26px;
+    --maxw:1120px;
+    --ease:cubic-bezier(.4,.14,.18,1);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink-soft);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    font-size:18px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces',Georgia,serif;
+    color:var(--ink);
+    font-weight:500;
+    line-height:1.1;
+    letter-spacing:-0.015em;
+    margin:0;
+  }
+  p{margin:0 0 1.1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .narrow{max-width:760px;margin-left:auto;margin-right:auto;}
+
+  /* ===== Section rhythm — generous breathing room ===== */
+  section{padding:clamp(72px,11vw,150px) 0;position:relative;}
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--sage);margin:0 0 22px;display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--sage);opacity:.6;}
+
+  .display{font-size:clamp(2.3rem,5.6vw,4rem);}
+  .h2{font-size:clamp(1.9rem,3.8vw,2.9rem);}
+  .lede{font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.5;color:var(--ink-soft);}
+
+  /* ===== Buttons ===== */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:'Inter',sans-serif;font-weight:500;font-size:1.02rem;
+    padding:16px 30px;border-radius:100px;border:1px solid transparent;
+    cursor:pointer;text-decoration:none;transition:transform .35s var(--ease),background .3s,box-shadow .3s;
+  }
+  .btn-primary{background:var(--sage);color:#fff;box-shadow:0 10px 28px -12px rgba(71,81,65,.6);}
+  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--sage);color:var(--sage-deep);transform:translateY(-2px);}
+  .btn-arrow{transition:transform .35s var(--ease);}
+  .btn:hover .btn-arrow{transform:translateX(4px);}
+
+  /* ===== Header ===== */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    backdrop-filter:saturate(120%) blur(10px);
+    background:rgba(247,243,236,.78);
+    border-bottom:1px solid transparent;transition:border-color .3s,background .3s;
+  }
+  header.site.scrolled{border-color:var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em;text-decoration:none;display:flex;align-items:center;gap:9px;}
+  .logo .leaf{width:20px;height:20px;display:inline-block;margin-bottom:1px;color:var(--sage);flex:none;}
+  .nav-links{display:flex;align-items:center;gap:34px;}
+  .nav-links a{text-decoration:none;font-size:.98rem;color:var(--ink-soft);transition:color .2s;}
+  .nav-links a:hover{color:var(--sage-deep);}
+  .nav-cta{padding:11px 22px;font-size:.95rem;}
+  .nav-toggle{display:none;}
+
+  /* ===== Photographic placeholders ===== */
+  .photo{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    background:linear-gradient(135deg,#cbb89c 0%,#a8957a 45%,#8a9c84 100%);
+    box-shadow:0 30px 60px -30px rgba(40,34,26,.45);
+    isolation:isolate;
+  }
+  .photo::after{ /* very light vignette only, so real photos stay clean */
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(130% 130% at 50% 0%,transparent 70%,rgba(40,30,20,.10) 100%);
+  }
+  .photo .ph-label{
+    position:absolute;left:16px;bottom:14px;z-index:3;
+    font-size:11.5px;letter-spacing:.05em;color:rgba(255,255,255,.92);
+    background:rgba(36,31,26,.34);backdrop-filter:blur(3px);
+    padding:5px 11px;border-radius:100px;display:inline-flex;align-items:center;gap:6px;font-weight:500;
+  }
+  .photo .ph-label svg{width:13px;height:13px;}
+  /* palette variants so the page feels like a gallery of real, different moments */
+  .photo.v-creek{background:linear-gradient(140deg,#8fa6a0 0%,#6f8c84 50%,#4f6b62 100%);}
+  .photo.v-table{background:linear-gradient(140deg,#d8c19c 0%,#c2a172 55%,#9c7c4f 100%);}
+  .photo.v-books{background:linear-gradient(140deg,#c8a98e 0%,#a9846a 50%,#7d5f49 100%);}
+  .photo.v-window{background:linear-gradient(140deg,#bcc3c9 0%,#9aa6ad 55%,#74838b 100%);}
+  .photo.v-hands{background:linear-gradient(140deg,#d3b9a6 0%,#b89178 55%,#8f6a52 100%);}
+  .photo-cap{font-size:.95rem;color:var(--ink-faint);font-style:italic;margin-top:14px;text-align:center;}
+
+  /* reveal-on-scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.08s;} .reveal.d2{transition-delay:.16s;} .reveal.d3{transition-delay:.24s;} .reveal.d4{transition-delay:.32s;}
+
+  /* ============================================================
+     HERO  — calm skin + "written back" interactive reveal
+     ============================================================ */
+  .hero{padding-top:clamp(48px,7vw,84px);padding-bottom:clamp(60px,9vw,120px);}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,80px);align-items:center;}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);max-width:13ch;}
+  .hero .lede{margin:26px 0 34px;max-width:46ch;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .hero-trust{margin-top:26px;font-size:.92rem;color:var(--ink-faint);display:flex;align-items:center;gap:9px;}
+  .hero-trust svg{width:16px;height:16px;color:var(--sage);}
+
+  /* The reveal card */
+  .moment{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:20px;box-shadow:0 40px 80px -45px rgba(40,34,26,.5);position:relative;
+  }
+  .moment .photo{aspect-ratio:5/4;border-radius:16px;}
+  .moment-note{
+    margin-top:16px;padding:15px 17px;background:var(--paper-3);border-radius:14px;
+    font-size:1.02rem;color:var(--ink);line-height:1.5;
+  }
+  .moment-note .who{display:block;font-size:.8rem;color:var(--ink-faint);margin-top:8px;font-style:italic;}
+  .moment-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;}
+  .reveal-btn{
+    appearance:none;border:1px solid var(--sage);background:var(--sage-tint);color:var(--sage-deep);
+    font-family:'Inter',sans-serif;font-weight:500;font-size:.95rem;border-radius:100px;
+    padding:12px 20px;cursor:pointer;transition:background .3s,transform .3s,color .3s;display:inline-flex;align-items:center;gap:9px;
+  }
+  .reveal-btn:hover{background:var(--sage);color:#fff;transform:translateY(-1px);}
+  .reveal-btn .spark{width:16px;height:16px;}
+  .moment-hint{font-size:.82rem;color:var(--ink-faint);}
+
+  /* the "written back" tags */
+  .written{margin-top:18px;border-top:1px dashed var(--line);padding-top:18px;display:none;}
+  .written.show{display:block;animation:fadeUp .6s var(--ease);}
+  .written-label{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:12px;}
+  .tags{display:flex;flex-wrap:wrap;gap:9px;}
+  .tag{
+    font-size:.9rem;color:var(--sage-deep);background:#fff;border:1px solid var(--line);
+    padding:8px 14px;border-radius:100px;opacity:0;transform:translateY(8px) scale(.96);
+    animation:tagIn .5s var(--ease) forwards;
+  }
+  .tag b{font-weight:600;color:var(--ink);}
+  .written-said{margin:15px 0 0;font-size:.96rem;color:var(--ink-soft);font-style:italic;}
+  .reflection-line{margin:0 0 11px;font-size:1.02rem;line-height:1.5;color:var(--ink);padding-left:18px;position:relative;opacity:0;animation:lineIn .5s var(--ease) forwards;}
+  .reflection-line:last-child{margin-bottom:0;}
+  .reflection-line::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--sage);}
+  @keyframes lineIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  @keyframes tagIn{to{opacity:1;transform:none;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+
+  /* ============================================================
+     HOW IT WORKS — the reveal mechanic as the structural spine
+     ============================================================ */
+  .band{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .section-head{max-width:680px;margin:0 0 clamp(48px,6vw,80px);}
+  .section-head .h2{margin-bottom:18px;}
+
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--paper);}
+  .step{padding:30px 24px;border-right:1px solid var(--line);position:relative;transition:background .4s;}
+  .step:last-child{border-right:none;}
+  .step{cursor:pointer;}
+  .step:hover{background:var(--sage-tint);}
+  .step.active{background:var(--sage-tint);}
+  .step.active .ring{border-color:var(--sage);color:var(--sage);}
+  .step.active h4{color:var(--sage-deep);}
+  .step .num{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--clay);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .step .num .ring{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--clay);display:grid;place-items:center;font-size:.85rem;}
+  .step h4{font-size:1.18rem;margin-bottom:9px;}
+  .step p{font-size:.95rem;margin:0;color:var(--ink-soft);}
+
+  /* The big interactive "transform" panel */
+  .transform{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(20px,4vw,56px);align-items:center;margin-top:clamp(48px,6vw,80px);}
+  .tcard{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px;box-shadow:0 30px 60px -40px rgba(40,34,26,.4);}
+  .tcard h4{font-size:1.05rem;margin-bottom:16px;color:var(--ink-faint);font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.78rem;}
+  .tcard .photo{aspect-ratio:3/2;}
+  .raw-note{margin-top:15px;font-size:1.05rem;color:var(--ink);line-height:1.5;}
+  .arrow-mid{display:grid;place-items:center;color:var(--sage);}
+  .arrow-mid .a-inner{width:54px;height:54px;border-radius:50%;background:var(--sage-tint);display:grid;place-items:center;border:1px solid var(--line);}
+  .arrow-mid svg{width:24px;height:24px;}
+  .out-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .out-list li{display:flex;gap:12px;align-items:flex-start;font-size:1.02rem;color:var(--ink);opacity:0;transform:translateX(10px);}
+  .transform.in .out-list li{animation:slideIn .55s var(--ease) forwards;}
+  .transform.in .out-list li:nth-child(1){animation-delay:.15s;}
+  .transform.in .out-list li:nth-child(2){animation-delay:.35s;}
+  .transform.in .out-list li:nth-child(3){animation-delay:.55s;}
+  .transform.in .out-list li:nth-child(4){animation-delay:.75s;}
+  @keyframes slideIn{to{opacity:1;transform:none;}}
+  .out-list .ic{width:24px;height:24px;border-radius:50%;background:var(--clay-tint);color:var(--clay);display:grid;place-items:center;flex:none;margin-top:1px;}
+  .out-list .ic svg{width:13px;height:13px;}
+  .transform-said{text-align:center;max-width:60ch;margin:clamp(36px,5vw,56px) auto 0;font-family:'Fraunces',serif;font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--ink);font-weight:500;line-height:1.35;font-style:italic;}
+
+  /* ============================================================
+     SOCIAL PROOF — real moments
+     ============================================================ */
+  .quotes{columns:3;column-gap:24px;}
+  .quote{
+    break-inside:avoid;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;margin-bottom:24px;
+  }
+  .quote p{font-family:'Fraunces',serif;font-size:1.22rem;line-height:1.4;color:var(--ink);font-style:italic;margin:0 0 16px;}
+  .quote .src{display:flex;align-items:center;gap:11px;font-size:.9rem;color:var(--ink-faint);font-style:normal;}
+  .quote .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--clay),var(--sage));display:grid;place-items:center;color:#fff;font-weight:600;font-size:.85rem;flex:none;}
+  .quote:hover{border-color:var(--sage-tint);background:var(--paper-2);}
+
+  /* ============================================================
+     FREE vs LIBER+   value hierarchy
+     ============================================================ */
+  .plans{display:grid;grid-template-columns:1fr 1.08fr;gap:24px;align-items:stretch;}
+  .plan{border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3.4vw,42px);background:var(--paper-2);display:flex;flex-direction:column;}
+  .plan.plus{background:linear-gradient(160deg,#EDF2ED 0%,#E4EDE4 100%);border-color:#C0D0C0;color:var(--ink);position:relative;overflow:hidden;}
+  /* Decorative circle removed for cleaner feel */
+  .plan .pname{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--ink);margin-bottom:6px;}
+  .plan.plus .pname{color:var(--sage-deep);display:flex;align-items:center;gap:10px;}
+  .plan.plus .pname .plus-badge{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.1em;background:var(--sage-deep);color:#fff;padding:4px 9px;border-radius:100px;font-weight:600;}
+  .plan .ptag{font-size:.98rem;color:var(--ink-faint);margin-bottom:24px;min-height:48px;}
+  .plan.plus .ptag{color:var(--ink-soft);}
+  .plan .price{font-family:'Fraunces',serif;font-size:2.2rem;color:var(--ink);margin-bottom:22px;}
+  .plan.plus .price{color:var(--sage-deep);}
+  .plan .price small{font-size:1rem;color:var(--ink-faint);font-family:'Inter',sans-serif;}
+  .plan.plus .price small{color:var(--ink-faint);}
+  .feat{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:22px;flex:1;}
+  .feat li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;line-height:1.4;}
+  .feat-content{display:flex;flex-direction:column;gap:4px;flex:1;}
+  .feat-title{font-weight:600;color:inherit;line-height:1.3;}
+  .feat-desc{font-size:.95rem;color:var(--ink-soft);line-height:1.4;margin-top:2px;}
+  .plan.plus .feat-title{color:var(--ink);font-weight:600;}
+  .plan.plus .feat-desc{color:var(--ink-soft);}
+  .feat .ck{width:21px;height:21px;flex:none;border-radius:50%;display:grid;place-items:center;margin-top:2px;background:var(--sage-tint);color:var(--sage-deep);}
+  .plan.plus .feat .ck{background:var(--sage-tint);color:var(--sage-deep);}
+  .feat .ck svg{width:12px;height:12px;}
+  .plan.plus .btn-primary{background:var(--sage);color:#fff;box-shadow:0 8px 24px -10px rgba(71,98,77,.35);}
+  .plan.plus .btn-primary:hover{background:var(--sage-deep);}
+  .plan-foot{font-size:.85rem;color:var(--ink-faint);margin-top:14px;text-align:center;}
+  .plan.plus .plan-foot{color:var(--ink-faint);}
+  .review-note{margin-top:28px;text-align:center;font-size:.95rem;color:var(--ink-faint);max-width:54ch;margin-left:auto;margin-right:auto;}
+
+  /* ============================================================
+     TIME-BASED PAYOFF — portrait builds toward review readiness
+     ============================================================ */
+  .timeline{position:relative;margin-top:clamp(40px,5vw,64px);}
+  .tl-track{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;}
+  .tl-track::before{content:"";position:absolute;top:30px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,var(--line),var(--clay),var(--sage));z-index:0;}
+  .tl-step{position:relative;z-index:1;text-align:center;}
+  .tl-dot{width:14px;height:14px;border-radius:50%;background:var(--paper);border:2.5px solid var(--clay);margin:23px auto 20px;}
+  /* tl dot active state handled by JS */
+  .tl-when{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:8px;}
+  .tl-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;text-align:left;min-height:150px;}
+  .tl-card h4{font-size:1.08rem;margin-bottom:8px;}
+  .tl-card p{font-size:.92rem;margin:0;color:var(--ink-soft);}
+  .tl-step{cursor:pointer;}
+  .tl-step.tl-active .tl-dot{background:var(--sage);border-color:var(--sage);box-shadow:0 0 0 6px var(--sage-tint);transition:all .35s;}
+  .tl-step.tl-active .tl-card{background:var(--sage-tint);border-color:#cfd8c6;}
+  .tl-step.tl-active .tl-when{color:var(--sage-deep);}
+  .tl-dot{transition:all .35s;}
+  .tl-card{transition:background .35s,border-color .35s;}
+
+  /* ============================================================
+     FOUNDER
+     ============================================================ */
+  .founder{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,72px);align-items:center;}
+  .founder .photo{aspect-ratio:4/5;}
+  .founder blockquote{margin:0;font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.6vw,1.95rem);line-height:1.4;color:var(--ink);font-weight:500;}
+  .founder .sign{margin-top:24px;display:flex;align-items:center;gap:14px;}
+  .founder .sign .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--clay),var(--sage-deep));display:grid;place-items:center;color:#fff;font-weight:600;}
+  .founder .sign .meta b{color:var(--ink);font-family:'Inter',sans-serif;display:block;font-size:.98rem;}
+  .founder .sign .meta span{font-size:.88rem;color:var(--ink-faint);}
+
+  /* ============================================================
+     FINAL CTA
+     ============================================================ */
+  .final{text-align:center;}
+  .final .h2{font-size:clamp(2rem,4.4vw,3.2rem);max-width:18ch;margin:0 auto 20px;}
+  .final .lede{max-width:52ch;margin:0 auto 34px;}
+  .final-mini{margin-top:22px;font-size:.92rem;color:var(--ink-faint);font-style:italic;}
+
+  /* ===== Footer ===== */
+  footer.site{background:var(--paper-2);border-top:1px solid var(--line);padding:56px 0 40px;}
+  .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;}
+  .foot-grid .logo{margin-bottom:12px;}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:.95rem;}
+  .foot-links a{text-decoration:none;color:var(--ink-soft);}
+  .foot-links a:hover{color:var(--sage-deep);}
+  .foot-note{margin-top:36px;font-size:.85rem;color:var(--ink-faint);max-width:60ch;}
+  .meaning{font-size:.95rem;color:var(--ink-faint);margin-top:8px;}
+
+  /* prototype annotation banner */
+
+  /* ===== Responsive ===== */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero h1{max-width:none;}
+    .moment{max-width:480px;}
+    .steps{grid-template-columns:repeat(2,1fr);}
+    .step:nth-child(2n){border-right:none;}
+    .step{border-bottom:1px solid var(--line);}
+    .transform{grid-template-columns:1fr;}
+    .arrow-mid{transform:rotate(90deg);margin:4px 0;}
+    .quotes{columns:2;}
+    .plans{grid-template-columns:1fr;}
+    .founder{grid-template-columns:1fr;}
+    .founder .photo{max-width:380px;}
+    .tl-track{grid-template-columns:repeat(2,1fr);gap:30px 18px;}
+    .tl-track::before{display:none;}
+  }
+  @media (max-width:680px){
+    body{font-size:17px;}
+    .nav-links{display:none;}
+    .nav-toggle{display:inline-flex;}
+    .quotes{columns:1;}
+    .steps{grid-template-columns:1fr;}
+    .step{border-right:none;border-bottom:1px solid var(--line);}
+    .step:last-child{border-bottom:none;}
+    .tl-track{grid-template-columns:1fr;}
+    .hero-actions .btn{width:100%;}
+    section{padding:64px 0;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;transition-duration:.001ms !important;scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;}
+    .out-list li{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+
+
+<header class="site" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#moments">Real moments</a>
+      <a href="#plans">Free &amp; Liber+</a>
+      <a href="#founder">Our story</a>
+    </nav>
+    <a href="https://app.liber.net.au/login/" class="btn btn-primary nav-cta">Try it free</a>
+    <button class="btn btn-ghost nav-cta nav-toggle" aria-label="Menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">For relaxed &amp; interest-led homeschoolers</span>
+        <h1>You're not missing it. The learning is already&nbsp;here.</h1>
+        <p class="lede">Most homeschool parents already know the learning is happening. They just can't always see it clearly enough to trust it. Liber helps you notice what's already there, in your own words, and quietly keeps it for when you need it.</p>
+        <div class="hero-actions">
+          <a href="https://app.liber.net.au/login/" class="btn btn-primary">Try it free. One moment is enough <span class="btn-arrow">→</span></a>
+          <a href="#how" class="btn btn-ghost">See how it works</a>
+        </div>
+        <div class="hero-trust">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z"/></svg>
+          Private by design · No grades, no worksheets · Built by a homeschool parent
+        </div>
+      </div>
+
+      <!-- Interactive "written back" reveal -->
+      <div class="hero-card reveal d2">
+        <div class="moment" id="moment">
+          <div class="photo v-table" role="img" style="background-image:url('images/creek-exploring.jpg');background-size:cover;background-position:center;" aria-label="Two children exploring the shallows at the river mouth, one balancing on a fallen branch, one reaching into the water">
+          </div>
+          <div class="moment-note">
+            "Spent ages down at the water. One of them balancing along the old branch, the other digging in the shallows to see what was under there."
+            <span class="who">A note you typed in 20 seconds</span>
+          </div>
+          <div class="moment-foot">
+            <button class="reveal-btn" id="revealBtn" aria-expanded="false" aria-controls="written">
+              <svg class="spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg>
+              See what Liber sees
+            </button>
+            <span class="moment-hint">See the learning already hiding in plain sight</span>
+          </div>
+          <div class="written" id="written" aria-live="polite">
+            <div class="written-label">More than it looked like</div>
+            <div class="tags" id="tags"></div>
+            <p class="written-said">That afternoon they kept testing what the water and the wood would do. That's the kind of thing that's easy to miss, and easy to forget you saw.</p>
+          </div>
+        </div>
+        <p class="photo-cap">That moment counted. You just didn't have the language for it yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="band" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">How it actually works</span>
+        <h2 class="h2">This isn't a journaling app. It's a way of learning to see.</h2>
+        <p class="lede">You capture something ordinary from today. Liber helps you see what it was really about. Over time, a clear picture of how your child learns quietly takes shape.</p>
+      </div>
+
+      <!-- 5 steps -->
+      <div class="steps reveal d1">
+        <div class="step">
+          <div class="num"><span class="ring">1</span></div>
+          <h4>Capture</h4>
+          <p>A photo. A few lines. Something from today. It doesn't need to be big. Most of the best moments aren't.</p>
+        </div>
+        <div class="step">
+          <div class="num"><span class="ring">2</span></div>
+          <h4>Keep</h4>
+          <p>The moment doesn't slip away this time. It's held somewhere safe, ready for whenever you want to look back.</p>
+        </div>
+        <div class="step">
+          <div class="num"><span class="ring">3</span></div>
+          <h4>Start noticing</h4>
+          <p>You begin to recognise the threads. The things your child keeps coming back to. The way they work through a problem in their own way.</p>
+        </div>
+        <div class="step">
+          <div class="num"><span class="ring">4</span></div>
+          <h4>See the bigger picture</h4>
+          <p>The separate moments start to add up to something. A clearer sense of who your child is becoming as a learner.</p>
+        </div>
+        <div class="step">
+          <div class="num"><span class="ring">5</span></div>
+          <h4>Feel ready</h4>
+          <p>When someone asks how it's going, you're not scrambling. It's all already here, in your own words, ready when you need it.</p>
+        </div>
+      </div>
+
+      <!-- The transform panel -->
+      <div class="transform" id="transform">
+        <div class="tcard">
+          <h4>What you capture</h4>
+          <div class="photo v-creek" role="img" style="background-image:url('images/hero-journalling.jpg');background-size:cover;background-position:center;" aria-label="Two children drawing in nature journals on camp chairs, wrapped up against the morning cool">
+          </div>
+          <p class="raw-note">"Both of them out on the chairs after breakfast, drawing in their journals. Nobody asked them to. They just wanted to get down what they'd seen."</p>
+        </div>
+
+        <div class="arrow-mid" aria-hidden="true">
+          <span class="a-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+
+        <div class="tcard">
+          <h4>What Liber helps you see</h4>
+          <ul class="out-list">
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> <span>They weren't just drawing. They were working out how to hold onto something they'd noticed.</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> <span>Looking closely enough at the world to want to record it, in their own way.</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> <span>Sitting with something quietly, all on their own steam, because it mattered to them.</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> <span>Choosing, without being asked, to turn a morning into something they made.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="transform-said reveal">It doesn't tell you you're doing enough. It helps you see what you've actually been doing, usually far more than it feels like in the day-to-day.</p>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL PROOF ============ -->
+  <section id="moments">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Real moments · real parents</span>
+        <h2 class="h2">What parents say when they start seeing it</h2>
+      </div>
+      <div class="quotes reveal d1">
+        <div class="quote">
+          <p>"I take a photo and save it in Liber and then chuck the paperwork. If I had to do this all by hand, it would not happen."</p>
+          <div class="src"><span class="av">·</span> Early User · homeschool parent</div>
+        </div>
+        <div class="quote">
+          <p>"It felt like someone finally put words to what I already knew."</p>
+          <div class="src"><span class="av">·</span> Early Liber parent</div>
+        </div>
+        <div class="quote">
+          <p>"I didn't need to sit down and write a report. I just captured the moments as they happened."</p>
+          <div class="src"><span class="av">·</span> Early Liber parent</div>
+        </div>
+        <div class="quote">
+          <p>"So much of our learning doesn't look like school. But Liber helped me see it was still real."</p>
+          <div class="src"><span class="av">·</span> Early Liber parent</div>
+        </div>
+        <div class="quote">
+          <p>"I stopped feeling like I had to prove we were doing enough. I could just see that we were."</p>
+          <div class="src"><span class="av">·</span> Early Liber parent</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FREE vs LIBER+ ============ -->
+  <section class="band" id="plans">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Start free · grow when you need to</span>
+        <h2 class="h2">Free is genuinely useful. Liber+ is for when it counts.</h2>
+        <p class="lede">Begin with the daily rhythm. Capture moments and start your record. Liber+ adds the depth and the review-ready tools for when someone official asks.</p>
+      </div>
+
+      <div class="plans reveal d1">
+        <div class="plan">
+          <div class="pname">Free</div>
+          <div class="ptag">Find the rhythm. Notice moments, save them, and watch a record begin to build.</div>
+          <div class="price">$0 <small>/ to start</small></div>
+          <ul class="feat">
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> Capture unlimited everyday moments, photo and note</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> Your moments quietly gathered in one place</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> The first threads starting to show as you go</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span> Private by design. Your family's data is never shared</li>
+          </ul>
+          <a href="https://app.liber.net.au/login/" class="btn btn-ghost" style="width:100%">Start for free</a>
+          <div class="plan-foot">No card. One moment is enough to begin.</div>
+        </div>
+
+        <div class="plan plus">
+          <div class="pname">Liber<span class="plus-badge">+ PLUS</span></div>
+          <div class="ptag">Everything in Free, plus the depth to see how it's all coming together over time.</div>
+          <div class="price">For when it matters <small></small></div>
+          <ul class="feat">
+            <li>
+              <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span>
+              <div class="feat-content">
+                <div class="feat-title">See the threads over time</div>
+                <div class="feat-desc">How the moments connect across months and years.</div>
+              </div>
+            </li>
+            <li>
+              <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span>
+              <div class="feat-content">
+                <div class="feat-title">Richer learning stories</div>
+                <div class="feat-desc">A fuller picture of who your child is becoming.</div>
+              </div>
+            </li>
+            <li>
+              <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span>
+              <div class="feat-content">
+                <div class="feat-title">Your whole history, open to you</div>
+                <div class="feat-desc">Nothing tucked away. The full record whenever you want it.</div>
+              </div>
+            </li>
+            <li>
+              <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-11"/></svg></span>
+              <div class="feat-content">
+                <div class="feat-title">Ready if someone asks</div>
+                <div class="feat-desc">Export a clear story, with optional curriculum tagging if you ever need it. Never required.</div>
+              </div>
+            </li>
+          </ul>
+          <a href="https://app.liber.net.au/login/" class="btn btn-primary" style="width:100%">Explore Liber+</a>
+          <div class="plan-foot">Upgrade only when it feels right. Cancel anytime.</div>
+        </div>
+      </div>
+      <p class="review-note">Preparing for a review or AP visit? Liber+ turns the moments you've already captured into evidence someone else can understand, without it ever feeling like a compliance exercise.</p>
+    </div>
+  </section>
+
+  <!-- ============ TIME-BASED PAYOFF ============ -->
+  <section id="payoff">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What builds over time</span>
+        <h2 class="h2">One moment today becomes something you can trust by review season.</h2>
+        <p class="lede">You don't build a record. It builds itself, from the ordinary things you were already noticing.</p>
+      </div>
+
+      <div class="timeline reveal d1">
+        <div class="tl-track">
+          <div class="tl-step">
+            <div class="tl-when">Week one</div>
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <h4>A single moment</h4>
+              <p>A photo of a half-built thing and three lines about it. That's the whole commitment.</p>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-when">A few months in</div>
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <h4>Patterns surface</h4>
+              <p>The same curiosity keeps reappearing in new forms. You start to see the shape of how they learn.</p>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-when">Across the year</div>
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <h4>A portrait forms</h4>
+              <p>Learning areas fill in on their own. A real story of your child as a learner, grounded in evidence.</p>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-when">Review time</div>
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <h4>Ready, not scrambling</h4>
+              <p>You hand over something genuine and organised. Not a folder of checkboxes, but a record you can stand behind.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOUNDER ============ -->
+  <section class="band" id="founder">
+    <div class="wrap founder">
+      <div class="reveal">
+        <div class="photo v-window" role="img" style="background-image:url('images/founder-family.jpg');background-size:cover;background-position:center;" aria-label="Adam and his family together outdoors, laughing">
+        </div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Built by a homeschool parent</span>
+        <blockquote>"I watched my kids spend hours exploring, building, asking questions and figuring things out. I knew they were learning. Real learning. But whenever someone asked how homeschooling was going, I struggled to put it into words. Not because nothing was happening. Quite the opposite. There was so much learning, curiosity and growth happening every day. I just couldn't see the whole picture clearly enough to explain it. I built Liber because I wanted a way to notice those moments, hold onto them, and trust what I was already seeing."</blockquote>
+        <div class="sign">
+          <span class="av">A</span>
+          <div class="meta">
+            <b>Adam</b>
+            <span>Founder · homeschooling parent, NSW</span>
+          </div>
+        </div>
+        <p style="margin-top:24px;color:var(--ink-soft);">It changes how you see the learning happening every day. Not as random moments you might forget. As a connected story that you can trust, hold onto, and explain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final">
+    <div class="wrap narrow reveal">
+      <span class="eyebrow" style="justify-content:center;">Start with one moment from today</span>
+      <h2 class="h2">You've already been doing the work. It's already there to see.</h2>
+      <p class="lede">No grades. No worksheets. No turning your home into a school. Just a calm, honest way to see what's already real, ready for when it matters.</p>
+      <a href="https://app.liber.net.au/login/" class="btn btn-primary">Try Liber free <span class="btn-arrow">→</span></a>
+      <p class="final-mini">It doesn't need to be significant. Most of the real ones aren't.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
+        <p class="meaning"><i>Liber</i> — Latin for <i>free</i> and <i>book</i>. The open book, and the freedom to learn your own way.</p>
+      </div>
+      <nav class="foot-links">
+        <a href="#how">How it works</a>
+        <a href="#plans">Free &amp; Liber+</a>
+        <a href="#founder">Our story</a>
+        <a href="https://www.instagram.com/liberlearning/">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a>
+      </nav>
+    </div>
+    <p class="foot-note">Liber is a calm, private, responsive web app for relaxed, interest-led, unschooling and neurodivergent homeschool families across Australia, New Zealand and beyond. Your family's information is private and never shared.</p>
+  </div>
+</footer>
+
+<script>
+  // Header shadow on scroll
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Reveal-on-scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Transform panel animates its list when in view
+  const transform = document.getElementById('transform');
+  const tio = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); tio.unobserve(e.target);} });
+  },{threshold:.35});
+  if(transform) tio.observe(transform);
+
+  // Hero "written back" reveal
+  const btn = document.getElementById('revealBtn');
+  const written = document.getElementById('written');
+  const tagsEl = document.getElementById('tags');
+  const RECOGNITIONS = [
+    "They kept at it long after most kids would have moved on",
+    "One worked out how to balance, the other kept digging to see what was under there",
+    "Nobody set this up for them. They just wanted to know what would happen"
+  ];
+  let revealed = false;
+  btn.addEventListener('click', ()=>{
+    revealed = !revealed;
+    btn.setAttribute('aria-expanded', String(revealed));
+    if(revealed){
+      tagsEl.innerHTML='';
+      RECOGNITIONS.forEach((line,i)=>{
+        const p=document.createElement('p');
+        p.className='reflection-line';
+        p.style.animationDelay=(i*0.12)+'s';
+        p.textContent=line;
+        tagsEl.appendChild(p);
+      });
+      written.classList.add('show');
+      btn.innerHTML='<svg class="spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg> I can see it';
+    } else {
+      written.classList.remove('show');
+      btn.innerHTML='<svg class="spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg> See what Liber sees';
+    }
+  });
+
+  // Steps — interactive progression
+  const steps = document.querySelectorAll('.step');
+  if(steps.length){
+    steps[0].classList.add('active');
+    steps.forEach(step=>{
+      step.addEventListener('click',()=>{
+        steps.forEach(s=>s.classList.remove('active'));
+        step.classList.add('active');
+      });
+    });
+  }
+
+  // Timeline — interactive
+  const tlSteps = document.querySelectorAll('.tl-step');
+  if(tlSteps.length){
+    tlSteps[0].classList.add('tl-active');
+    tlSteps.forEach(tls=>{
+      tls.addEventListener('click',()=>{
+        tlSteps.forEach(s=>s.classList.remove('tl-active'));
+        tls.classList.add('tl-active');
+      });
+    });
+  }
+
+  // Mobile menu (simple anchor scroll — links live in header on desktop)
+  const toggle = document.querySelector('.nav-toggle');
+  if(toggle){ toggle.addEventListener('click', ()=>{ document.getElementById('how').scrollIntoView({behavior:'smooth'}); }); }
+</script>
+</body>
+</html>
