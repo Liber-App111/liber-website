@@ -405,14 +405,23 @@
   }
   @media (max-width:680px){
     body{font-size:17px;}
-    .nav-links{display:none;}
+    /* mobile menu: nav-links become a drop panel under the sticky bar */
     .nav-toggle{display:inline-flex;}
+    .nav-links{position:absolute;top:72px;left:0;right:0;display:none;flex-direction:column;gap:0;
+      background:var(--paper-2);border-bottom:1px solid var(--line);
+      box-shadow:0 22px 44px -26px rgba(40,34,26,.45);padding:6px 0;}
+    header.site.nav-open .nav-links{display:flex;}
+    .nav-links a{padding:14px 28px;width:100%;font-size:1.02rem;}
     .quotes{columns:1;}
     .steps{grid-template-columns:1fr;}
     .step{border-right:none;border-bottom:1px solid var(--line);}
     .step:last-child{border-bottom:none;}
     .tl-track{grid-template-columns:1fr;}
     .hero-actions .btn{width:100%;}
+    /* mobile footer: stack cleanly */
+    .foot-grid{flex-direction:column;gap:22px;}
+    .foot-links{flex-direction:column;gap:2px;}
+    .foot-links a{padding:9px 0;}
     section{padding:64px 0;}
   }
 
@@ -438,7 +447,7 @@
 <header class="site" id="header">
   <div class="wrap nav">
     <a href="#top" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="nav-links">
       <a href="#how">How it works</a>
       <a href="/learning-record/">Learning record</a>
       <a href="/for-separated-families/">For co-parents</a>
@@ -446,7 +455,7 @@
       <a href="#founder">Our story</a>
     </nav>
     <a href="https://app.liber.net.au/login/?utm_source=liber_site&utm_medium=web&utm_content=nav" class="btn btn-primary nav-cta">Try it free</a>
-    <button class="btn btn-ghost nav-cta nav-toggle" aria-label="Menu">Menu</button>
+    <button class="btn btn-ghost nav-cta nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">Menu</button>
   </div>
 </header>
 
@@ -572,8 +581,12 @@
       </div>
       <div class="quotes reveal d1">
         <div class="quote">
-          <p>"I take a photo and save it in Liber and then chuck the paperwork. If I had to do this all by hand, it would not happen."</p>
-          <div class="src"><span class="av">·</span> Early User · homeschool parent</div>
+          <p>"I take a photo and save it in Liber and then chuck the paperwork. If I had to do this all by hand, I would have every intention, but in reality it would not happen."</p>
+          <div class="src"><span class="av">·</span> Zephyr · homeschool mum</div>
+        </div>
+        <div class="quote">
+          <p>"Liber gives me confidence that I'm giving my children a well-rounded and meaningful education that surpasses the curriculum requirements."</p>
+          <div class="src"><span class="av">·</span> Steph · homeschool mum</div>
         </div>
         <div class="quote">
           <p>"I'd give this to a reviewer." <span style="color:var(--ink-faint);">— on seeing the record come together.</span></p>
@@ -795,16 +808,11 @@
         <a href="/terms/">Terms</a>
       </nav>
     </div>
-    <p class="foot-note">Liber is a calm, private, responsive web app for relaxed, interest-led, unschooling and neurodivergent homeschool families across Australia, New Zealand and beyond. Your family's information is private and never shared.</p>
+    <p class="foot-note">Liber Group Pty Ltd · ABN 69 694 983 429. A calm, private, responsive web app for relaxed, interest-led, unschooling and neurodivergent homeschool families across Australia, New Zealand and beyond. Your family's information is private and never sold.</p>
   </div>
 </footer>
 
 <script>
-  // Header shadow on scroll
-  const header = document.getElementById('header');
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-
   // Reveal-on-scroll
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
@@ -872,9 +880,7 @@
     });
   }
 
-  // Mobile menu (simple anchor scroll — links live in header on desktop)
-  const toggle = document.querySelector('.nav-toggle');
-  if(toggle){ toggle.addEventListener('click', ()=>{ document.getElementById('how').scrollIntoView({behavior:'smooth'}); }); }
 </script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
