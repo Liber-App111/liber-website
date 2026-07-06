@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="xi Si init Ni Bi pr qi Ui $i capture calculateEventProperties Zi register register_once register_for_session unregister unregister_for_session Yi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Ki identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Qi Wi createPersonProfile setInternalOrTestUser Ji Fi tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zi debug mr it getPageViewId captureTraceFeedback captureTraceMetric Ri".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_2ThTXHl2KDJTQolhAJInrXvRKtKXohJTFI7QK8k49r2', {
@@ -9,11 +10,10 @@
         person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
     })
 </script>
-<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <meta name="theme-color" content="#5E7F64" />
 <title>Liber. You're not missing it. The learning is already here.</title>
 <meta name="description" content="Liber helps relaxed, interest-led and unschooling homeschool parents see the learning that's already happening. It quietly builds a record you can trust." />
@@ -379,19 +379,39 @@
   .final-mini{margin-top:22px;font-size:.92rem;color:var(--ink-faint);font-style:italic;}
 
   /* ===== Footer ===== */
-  footer.site{background:var(--paper-2);border-top:1px solid var(--line);padding:56px 0 40px;}
-  .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;}
-  .foot-grid .logo{margin-bottom:12px;}
-  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:.95rem;}
-  .foot-links a{text-decoration:none;color:var(--ink-soft);}
-  .foot-links a:hover{color:var(--sage-deep);}
-  .foot-note{margin-top:36px;font-size:.85rem;color:var(--ink-faint);max-width:60ch;}
-  .meaning{font-size:.95rem;color:var(--ink-faint);margin-top:8px;}
+  footer.site{background:var(--paper);border-top:1px solid var(--line);}
+  footer.site .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  /* CTA band */
+  .foot-cta{border-bottom:1px solid var(--line);padding:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .foot-cta h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;color:var(--ink);}
+  .foot-cta p{color:var(--ink-soft);font-size:.95rem;margin-top:6px;}
+  .foot-cta .btn{font-size:.9rem;padding:11px 22px;box-shadow:0 4px 12px -8px rgba(71,81,65,.45);}
+  /* Main columns */
+  .foot-main{display:flex;justify-content:space-between;align-items:flex-start;gap:48px;padding:52px 0 44px;}
+  .brand-col{flex:0 1 340px;}
+  .foot-nav{display:flex;gap:64px;flex-wrap:wrap;}
+  .foot-nav > div{min-width:130px;}
+  .brand-col .logo{margin-bottom:0;line-height:1.1;}
+  .brand-col .meaning{font-style:italic;color:var(--ink-soft);font-size:.9rem;line-height:1.55;margin-top:12px;max-width:300px;}
+  .foot-trust{display:flex;align-items:flex-start;gap:8px;margin-top:20px;max-width:300px;color:var(--sage-deep);font-size:.84rem;line-height:1.5;font-weight:500;}
+  .foot-trust svg{width:15px;height:15px;fill:var(--sage);flex-shrink:0;margin-top:1px;}
+  .foot-main h3{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:12px;line-height:1.2;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 14px;}
+  .foot-main ul{list-style:none;margin:0;padding:0;}
+  .foot-main li{margin-bottom:10px;}
+  .foot-main li a{color:var(--ink);text-decoration:none;font-size:15px;line-height:1.4;padding:1px 0;display:inline-block;}
+  .foot-main li a:hover{color:var(--sage-deep);text-decoration:underline;text-underline-offset:3px;}
+  /* Bottom bar */
+  .foot-bottom{border-top:1px solid var(--line);padding:20px 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--ink-soft);font-size:.8rem;}
+  .foot-bottom a{color:var(--ink-soft);text-decoration:none;}
+  .foot-bottom a:hover{color:var(--ink);text-decoration:underline;}
+  .foot-legal{display:flex;gap:20px;}
 
   /* prototype annotation banner */
 
   /* ===== Responsive ===== */
   @media (max-width:980px){
+    .foot-main{flex-direction:column;gap:40px;}
+    .brand-col{flex:none;max-width:420px;}
     .hero-grid{grid-template-columns:1fr;}
     .hero h1{max-width:none;}
     .moment{max-width:480px;}
@@ -423,9 +443,11 @@
     .tl-track{grid-template-columns:1fr;}
     .hero-actions .btn{width:100%;}
     /* mobile footer: stack cleanly */
-    .foot-grid{flex-direction:column;gap:22px;}
-    .foot-links{flex-direction:column;gap:2px;}
-    .foot-links a{padding:9px 0;}
+    footer.site .wrap{padding:0 24px;}
+    .foot-nav{gap:28px 48px;}
+    .foot-nav > div{min-width:120px;flex:1 1 40%;}
+    .foot-cta{flex-direction:column;align-items:flex-start;}
+    .foot-bottom{flex-direction:column;align-items:flex-start;}
     section{padding:64px 0;}
   }
 
@@ -793,26 +815,63 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="foot-grid">
+
+    <div class="foot-cta">
       <div>
+        <h2>Keep a record that feels like your family.</h2>
+        <p>Start your learning record today — free, calm, no pressure.</p>
+      </div>
+      <a class="btn btn-primary" href="https://app.liber.net.au/login/?utm_source=liber_site&utm_medium=web&utm_content=footer">Start free</a>
+    </div>
+
+    <div class="foot-main">
+      <div class="brand-col">
         <a href="#top" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
         <p class="meaning"><i>Liber</i> — Latin for <i>free</i> and <i>book</i>. The open book, and the freedom to learn your own way.</p>
+        <div class="foot-trust">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 15l-4-4 1.41-1.41L10 13.17l6.59-6.59L18 8l-8 8z"/></svg>
+          Your family's information is private and never sold.
+        </div>
       </div>
-      <nav class="foot-links">
-        <a href="#how">How it works</a>
-        <a href="/learning-record/">Learning record</a>
-        <a href="/for-separated-families/">For co-parents</a>
-        <a href="/am-i-doing-enough/">Am I doing enough?</a>
-        <a href="#plans">Free &amp; Liber+</a>
-        <a href="#founder">Our story</a>
-        <a href="https://www.instagram.com/liberlearning/">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a>
-        <a href="/guides/">Guides</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
+
+      <nav class="foot-nav">
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="/learning-record/">Learning record</a></li>
+            <li><a href="/for-separated-families/">For co-parents</a></li>
+            <li><a href="#plans">Free &amp; Liber+</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/am-i-doing-enough/">Am I doing enough?</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#founder">Our story</a></li>
+            <li><a href="https://www.instagram.com/liberlearning/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
-    <p class="foot-note">Liber Group Pty Ltd · ABN 69 694 983 429. A calm, private, responsive web app for relaxed, interest-led, unschooling and neurodivergent homeschool families across Australia, New Zealand and beyond. Your family's information is private and never sold.</p>
+
+    <div class="foot-bottom">
+      <span>© 2026 Liber Group Pty Ltd · ABN 69 694 983 429 · Made for families across Australia, New Zealand and beyond.</span>
+      <span class="foot-legal">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </span>
+    </div>
+
   </div>
 </footer>
 
@@ -885,6 +944,6 @@
   }
 
 </script>
-<script src="/assets/site.js" defer></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
