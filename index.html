@@ -382,20 +382,16 @@
   footer.site{background:var(--paper);border-top:1px solid var(--line);}
   footer.site .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
   /* CTA band */
-  .foot-cta{border-bottom:1px solid var(--line);padding:44px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-  .foot-cta h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.6rem;letter-spacing:-.01em;color:var(--ink);}
+  .foot-cta{border-bottom:1px solid var(--line);padding:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .foot-cta h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;color:var(--ink);}
   .foot-cta p{color:var(--ink-soft);font-size:.95rem;margin-top:6px;}
+  .foot-cta .btn{font-size:.92rem;padding:12px 26px;box-shadow:0 6px 18px -10px rgba(71,81,65,.5);}
   /* Main columns */
-  .foot-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:52px 0 44px;}
+  .foot-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;column-gap:32px;row-gap:40px;padding:52px 0 44px;align-items:start;}
   .brand-col .logo{margin-bottom:0;}
   .brand-col .meaning{font-style:italic;color:var(--ink-soft);font-size:.9rem;line-height:1.55;margin-top:12px;max-width:300px;}
   .foot-trust{display:flex;align-items:flex-start;gap:8px;margin-top:20px;max-width:300px;color:var(--sage-deep);font-size:.84rem;line-height:1.5;font-weight:500;}
   .foot-trust svg{width:15px;height:15px;fill:var(--sage);flex-shrink:0;margin-top:1px;}
-  .foot-social{display:flex;gap:14px;margin-top:22px;}
-  .foot-social a{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--paper-2);display:inline-flex;align-items:center;justify-content:center;transition:border-color .15s ease;}
-  .foot-social a:hover{border-color:var(--sage);}
-  .foot-social svg{width:15px;height:15px;fill:var(--ink-faint);}
-  .foot-social a:hover svg{fill:var(--sage);}
   .foot-main h3{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;}
   .foot-main ul{list-style:none;}
   .foot-main li{margin-bottom:11px;}
@@ -833,10 +829,6 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 15l-4-4 1.41-1.41L10 13.17l6.59-6.59L18 8l-8 8z"/></svg>
           Your family's information is private and never sold.
         </div>
-        <div class="foot-social">
-          <a href="https://www.instagram.com/liberlearning/" aria-label="Liber on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.48 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a>
-          <a href="https://www.facebook.com/profile.php?id=61584045934594" aria-label="Liber on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a>
-        </div>
       </div>
 
       <div>
@@ -861,6 +853,8 @@
         <h3>Company</h3>
         <ul>
           <li><a href="#founder">Our story</a></li>
+          <li><a href="https://www.instagram.com/liberlearning/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a></li>
         </ul>
       </div>
     </div>
