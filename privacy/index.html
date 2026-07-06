@@ -1,77 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once identify reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_2ThTXHl2KDJTQolhAJInrXvRKtKXohJTFI7QK8k49r2', { api_host: 'https://us.i.posthog.com', defaults: '2026-05-30', person_profiles: 'identified_only' })
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy — Liber</title>
-<meta name="description" content="How Liber collects, uses, stores and protects your family's information — including children's learning records and photos." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#5E7F64" />
+<title>Privacy Policy · Liber</title>
+<meta name="description" content="How Liber Group Pty Ltd collects, uses, stores and protects your personal information — including children's learning records and photos." />
 <link rel="canonical" href="https://liber.net.au/privacy/" />
 <meta name="robots" content="index, follow" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/site.css" />
 <style>
-  :root{--paper:#F7F3EC;--paper-2:#FBF8F2;--ink:#241F1A;--ink-soft:#4A433B;--ink-faint:#8A8074;--line:#E2D9C9;--sage:#5E6E58;--sage-deep:#475141;--radius:18px;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--paper);color:var(--ink-soft);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.65;}
-  header{border-bottom:1px solid var(--line);}
-  .nav{max-width:780px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;}
-  .logo{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--ink);text-decoration:none;font-weight:600;}
-  main{max-width:780px;margin:0 auto;padding:48px 24px 80px;}
-  h1{font-family:'Fraunces',serif;color:var(--ink);font-size:1.9rem;font-weight:600;}
-  h2{font-family:'Fraunces',serif;color:var(--ink);font-size:1.25rem;margin-top:2em;font-weight:600;}
-  .note{background:#F0E2D5;border-radius:var(--radius);padding:14px 20px;font-size:.92rem;}
-  a{color:var(--sage-deep);}
-  ul{padding-left:1.3em;} li{margin:.4em 0;}
+  .legal{max-width:800px;}
+  .legal h2{font-size:1.35rem;margin:1.9em 0 .5em;}
+  .legal p,.legal li{color:var(--ink-soft);}
+  .legal ul{padding-left:1.25em;margin:0 0 1.1em;} .legal li{margin:.35em 0;}
+  .legal .updated{color:var(--ink-faint);font-size:.92rem;}
+  .legal .contact{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin-top:12px;}
 </style>
 </head>
 <body>
-<header><div class="nav"><a class="logo" href="/">Liber</a></div></header>
+
+<header class="site" id="header">
+  <div class="wrap nav">
+    <a href="/" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/learning-record/">Learning record</a>
+      <a href="/for-separated-families/">For co-parents</a>
+      <a href="/#plans">Free &amp; Liber+</a>
+    </nav>
+    <a href="https://app.liber.net.au/login/?utm_source=liber_site&utm_medium=web&utm_content=nav" class="btn btn-primary nav-cta">Try it free</a>
+    <button class="nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
 <main>
-<!-- DRAFT — requires legal review before production. Placeholders marked [CONFIRM]. -->
-<h1>Privacy Policy</h1>
-<p class="note"><b>Draft for review</b> — this policy is being finalised. Questions in the meantime: [CONFIRM support email]. Last updated: 2 July 2026.</p>
+  <section>
+    <div class="wrap legal">
+      <div class="crumb"><a href="/">Liber</a> → Privacy Policy</div>
+      <h1 class="display" style="font-size:clamp(2rem,4vw,2.8rem);">Privacy Policy</h1>
+      <p class="updated">Last updated 19 February 2026.</p>
 
-<p>Liber exists to hold your family's learning story, which means we hold information that matters — including records and photos of your children. We treat that as the responsibility it is. This policy explains what we collect, why, where it lives, and your rights, in plain English. We handle personal information in accordance with the Australian Privacy Act 1988 and the Australian Privacy Principles (APPs).</p>
+      <h2>Introduction</h2>
+      <p>This document sets out the privacy policy of Liber Group Pty Ltd (ABN 69 694 983 429) (referred to in this privacy policy as 'we', 'us', or 'our'). We operate and provide access to the Liber application, an educational support, planning, journaling and record-keeping tool for home education families.</p>
+      <p>We take our privacy obligations seriously and we've created this privacy policy to explain how we store, maintain, use and disclose personal information.</p>
+      <p>We are committed to preventing serious invasions of privacy and ensuring the protection of your personal information, so you can contact us using the details below if you have any questions or concerns.</p>
+      <p>By providing personal information to us, you consent to our storage, maintenance, use and disclosing of personal information in accordance with this privacy policy.</p>
+      <p>We may change this privacy policy from time to time by posting an updated copy on our website and we encourage you to check our website regularly to ensure that you are aware of our most current privacy policy.</p>
 
-<h2>Who we are</h2>
-<p>Liber is operated by [CONFIRM legal entity name, ABN], based in New South Wales, Australia ("we", "us"). Contact: [CONFIRM support email].</p>
+      <h2>Types of personal information we collect</h2>
+      <p>The personal information we collect may include the following:</p>
+      <ul>
+        <li>name;</li>
+        <li>mailing or street address;</li>
+        <li>email address;</li>
+        <li>telephone number and other contact details;</li>
+        <li>age and date of birth;</li>
+        <li>account registration details (including username and password);</li>
+        <li>payment and billing information, including subscription status and transaction references (with payment details processed securely by third-party payment providers and not stored by us);</li>
+        <li>information in connection with surveys, questionnaires and promotions;</li>
+        <li>information you upload to the application, including notes, reflections, photos, files, learning records and progress reports;</li>
+        <li>information about children provided by parents or guardians (without limitation name, age, learning records and progress information);</li>
+        <li>usage data relating to how you interact with the application;</li>
+        <li>device and technical data, including device identity and type, IP address, geo-location information, page view statistics, advertising data and standard web log information;</li>
+        <li>information about third parties, where you provide such information to us; and</li>
+        <li>any other information you provide to us via the Website, the application or our online presence.</li>
+      </ul>
 
-<h2>What we collect</h2>
-<ul>
-<li><b>Account information:</b> your name, email address and password (stored hashed).</li>
-<li><b>Learning records you create:</b> journal entries, photos, notes, and details you choose to record about your children (such as first name and age). You control what goes in.</li>
-<li><b>Payment information:</b> if you subscribe to Liber+, payments are processed by our payment provider ([CONFIRM: Stripe]); we do not store your card number.</li>
-<li><b>Usage information:</b> basic analytics about how the app is used (e.g. feature usage), to improve the product.</li>
-</ul>
+      <h2>Personal information of minors</h2>
+      <p>We do not knowingly collect personal information directly from children. Accounts are created and managed by parents or legal guardians, who provide personal information about their children when using the application to create records, upload materials or track learning progress. Parents or legal guardians warrant that they have authority to provide any child-related personal information and consent to its collection and use in accordance with this Privacy Policy.</p>
+      <p>If we collect personal information from individuals under the age of 18, we will assess their capacity to consent on a case-by-case basis in accordance with the Australian Privacy Principles (APP) Guidelines. As a general principle, an individual under the age of 18 may have the capacity to consent if they demonstrate sufficient maturity to understand the nature and consequences of what is being proposed. Where it is determined that the individual does not have such capacity, we will seek verifiable consent from a parent or guardian.</p>
+      <p>If it is not practicable to assess capacity on a case-by-case basis, we will generally assume that individuals aged 15 and above have the capacity to provide consent, unless there are reasonable grounds to believe otherwise.</p>
+      <p>We do not permit individuals under 18 to create their own account. Parents or guardians may contact us at <a href="mailto:adam@liber.net.au">adam@liber.net.au</a> to review, manage, or request deletion of their child's personal information.</p>
 
-<h2>How we use it</h2>
-<ul>
-<li>To provide Liber: storing your moments, generating reflections and patterns, producing your exports.</li>
-<li>To generate reflections, the text of an entry is processed by our AI provider ([CONFIRM: Anthropic Claude API]) under commercial terms that do not permit training on your data. [CONFIRM current provider terms.]</li>
-<li>To communicate with you about your account and, with your consent, product updates.</li>
-<li>We do <b>not</b> sell your data, share it with advertisers, or use your family's photos or records for marketing without your explicit written permission.</li>
-</ul>
+      <h2>How we collect personal information</h2>
+      <p>We may collect personal information either directly from you, or from third parties, including where you:</p>
+      <ul>
+        <li>contact us through our website;</li>
+        <li>receive goods or services from us;</li>
+        <li>submit any of our online sign up forms;</li>
+        <li>communicate with us via email, telephone, SMS, social applications (such as LinkedIn or Facebook) or otherwise;</li>
+        <li>interact with our website, social applications, services, content and advertising;</li>
+        <li>invest in our business or enquire as to a potential purchase in our business;</li>
+        <li>create an account in the application;</li>
+        <li>upload content, including learning records, notes, photos, documents and reflections;</li>
+        <li>generate content or insights using application features (including AI-assisted features);</li>
+        <li>subscribe to a paid plan;</li>
+        <li>contact our support team; and</li>
+        <li>interact with the application, Website or in-app features.</li>
+      </ul>
+      <p>We may also collect personal information from you when you use or access our website or our social media pages. This may be done through use of web analytics tools, 'cookies' or other similar tracking technologies that allow us to track and analyse your website usage. Cookies are small files that store information on your computer, mobile phone or other device and enable and allow the creator of the cookie to identify when you visit different websites. If you do not wish information to be stored as a cookie, you can disable cookies in your web browser.</p>
+      <p>We may use third-party analytics and product analytics platforms to help us understand how users interact with the application and to improve performance and features. These providers may collect technical and usage data on our behalf.</p>
 
-<h2>Children's information</h2>
-<p>Liber accounts are held by parents and guardians — children do not hold accounts. The records you create about your children belong to your family. We never publish, share or use children's photos or learning records except to provide the service to you, and we apply our strictest handling to this data.</p>
+      <h2>Use of your personal information</h2>
+      <p>We collect and use personal information for the following purposes:</p>
+      <ul>
+        <li>to provide goods, services or information to you;</li>
+        <li>for record keeping and administrative purposes;</li>
+        <li>to provide information about you to our contractors, employees, consultants, agents or other third parties for the purpose of providing goods or services to you;</li>
+        <li>to improve and optimise our service offering and customer experience;</li>
+        <li>to comply with our legal obligations, resolve disputes or enforce our agreements with third parties;</li>
+        <li>to send you marketing and promotional messages and other information that may be of interest to you and for the purpose of direct marketing (in accordance with the Spam Act). In this regard, we may use email, SMS, social media or mail to send you direct marketing communications. You can opt out of receiving marketing materials from us by using the opt-out facility provided (e.g. an unsubscribe link);</li>
+        <li>to send you administrative messages, reminders, notices, updates, security alerts, and other information requested by you;</li>
+        <li>to operate, maintain and improve the application;</li>
+        <li>to generate planning tools, reports and learning insights within the application;</li>
+        <li>to provide technical support and respond to enquiries;</li>
+        <li>to monitor usage and performance, operate analytics and product analytics tools, troubleshoot issues and improve functionality and user experience;</li>
+        <li>to detect, prevent and respond to fraud, security incidents, misuse of the application and breaches of our Terms of Use;</li>
+        <li>to comply with legal and regulatory obligations (including privacy and child data protections);</li>
+        <li>to process payments and manage subscriptions; and</li>
+        <li>to communicate important service updates, security notices and product changes.</li>
+      </ul>
+      <p>We do not sell your personal information. We may disclose your personal information to cloud-providers, contractors and other third parties located inside or outside of Australia where this is necessary to operate and improve the Liber App or provide our services to you. If we do so, we will take reasonable steps to ensure that any overseas recipient has similar legal safeguards and deals with such personal information in a manner consistent with how we deal with it.</p>
 
-<h2>Where your data lives</h2>
-<p>Your data is stored with our hosting providers ([CONFIRM: Xano — confirm region, target AU residency]). We use reputable providers with industry-standard security, encryption in transit, and access controls. [CONFIRM backup and retention details.]</p>
+      <h2>Automated decision-making</h2>
+      <p>We may use automated systems, including artificial intelligence tools, to assist with generating learning insights, planning tools and reports within the application. These tools do not replace human decision-making and may produce inaccurate or incomplete outputs. You are responsible for reviewing and verifying any information generated by the application before relying on it. You may request further information about how automated features work by contacting us.</p>
 
-<h2>Your rights</h2>
-<ul>
-<li><b>Access and export:</b> you can access your records in the app and request a full export at any time.</li>
-<li><b>Correction:</b> you can edit or delete any entry.</li>
-<li><b>Deletion:</b> you can request deletion of your account and all associated data; we will complete it within 30 days and confirm. [CONFIRM process.]</li>
-<li><b>Complaints:</b> contact us first and we'll respond within 30 days; you may also contact the Office of the Australian Information Commissioner (oaic.gov.au).</li>
-</ul>
+      <h2>Data retention</h2>
+      <p>We retain personal information for as long as your account is active and for a reasonable period thereafter to provide the App and comply with our legal, accounting, security and dispute resolution obligations. You may request deletion of your account and associated personal information by contacting us using the details at the bottom of this Privacy Policy. Upon deletion, your account data will be removed from active systems, subject to any legal, regulatory, security or backup retention requirements.</p>
+      <p>You may clear locally stored data (for example, browser local storage or session storage) at any time through your browser settings. Please note that clearing local storage may affect your ability to resume scenarios or sessions.</p>
 
-<h2>Data breaches</h2>
-<p>If a data breach is likely to result in serious harm, we will notify affected users and the OAIC in accordance with the Notifiable Data Breaches scheme.</p>
+      <h2>Security</h2>
+      <p>We take reasonable steps to ensure your personal information is secure and protected from misuse or unauthorised access. Our information technology systems are password protected, and we use a range of administrative and technical measures to protect these systems. However, we cannot guarantee the security of your personal information.</p>
+      <p>We use third-party hosting providers and industry-standard security measures such as encryption in transit and at rest where practicable. However, no method of electronic transmission or storage is completely secure and we cannot guarantee absolute security of personal information.</p>
+      <p>If a data breach occurs that is likely to result in serious harm to individuals, we will comply with our obligations under the Notifiable Data Breaches (NDB) scheme in Part IIIC of the Privacy Act 1988 (Cth), including notifying affected individuals and the Office of the Australian Information Commissioner where required.</p>
 
-<h2>Changes</h2>
-<p>We'll post changes here with an updated date, and email you about material changes.</p>
+      <h2>Links</h2>
+      <p>Our website may contain links to other websites. Those links are provided for convenience and may not remain current or be maintained. We are not responsible for the privacy practices of those linked websites and we suggest you review the privacy policies of those websites before using them.</p>
+
+      <h2>Requesting access or correcting your personal information</h2>
+      <p>If you wish to request access to the personal information we hold about you, please contact us using the contact details set out below including your name and contact details. We may need to verify your identity before providing you with your personal information. In some cases, we may be unable to provide you with access to all your personal information and where this occurs, we will explain why. We will deal with all requests for access to personal information within a reasonable timeframe.</p>
+      <p>If you think that any personal information we hold about you is inaccurate, please contact us using the contact details set out below and we will take reasonable steps to ensure that it is corrected.</p>
+
+      <h2>Complaints</h2>
+      <p>If you wish to complain about how we handle your personal information or believe your privacy has been seriously invaded, please contact us using the details provided below with your name and contact details. We will investigate your complaint promptly and respond within a reasonable timeframe.</p>
+
+      <h2>Contact us</h2>
+      <p>For further information about our privacy policy or practices, or to access or correct your personal information, or make a complaint, please contact us using the details set out below:</p>
+      <div class="contact">
+        <p style="margin:0;"><strong>Name:</strong> Adam Monaghan</p>
+        <p style="margin:6px 0 0;"><strong>Email:</strong> <a href="mailto:adam@liber.net.au">adam@liber.net.au</a></p>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
+        <p class="meaning"><i>Liber</i> — Latin for <i>free</i> and <i>book</i>.</p>
+      </div>
+      <nav class="foot-links">
+        <a href="/#how">How it works</a>
+        <a href="/learning-record/">Learning record</a>
+        <a href="/for-separated-families/">For co-parents</a>
+        <a href="/am-i-doing-enough/">Am I doing enough?</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+    <p class="foot-note">Liber Group Pty Ltd · ABN 69 694 983 429 · Your family's information is private and never sold.</p>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node / tooling (if ever added)
+node_modules/
+npm-debug.log*
+.cache/
+
+# Netlify local
+.netlify/
+
+# Source images kept out of the repo (per build standards)
+assets/_src/

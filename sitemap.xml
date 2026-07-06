@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://liber.net.au/</loc><lastmod>2026-07-02</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://liber.net.au/</loc><lastmod>2026-07-05</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://liber.net.au/learning-record/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://liber.net.au/for-separated-families/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://liber.net.au/am-i-doing-enough/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://liber.net.au/guides/</loc><lastmod>2026-07-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://liber.net.au/guides/nesa-home-visit-evidence/</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://liber.net.au/privacy/</loc><lastmod>2026-07-02</lastmod><changefreq>yearly</changefreq></url>
