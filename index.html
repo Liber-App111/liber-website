@@ -379,19 +379,40 @@
   .final-mini{margin-top:22px;font-size:.92rem;color:var(--ink-faint);font-style:italic;}
 
   /* ===== Footer ===== */
-  footer.site{background:var(--paper-2);border-top:1px solid var(--line);padding:56px 0 40px;}
-  .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;}
-  .foot-grid .logo{margin-bottom:12px;}
-  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:.95rem;}
-  .foot-links a{text-decoration:none;color:var(--ink-soft);}
-  .foot-links a:hover{color:var(--sage-deep);}
-  .foot-note{margin-top:36px;font-size:.85rem;color:var(--ink-faint);max-width:60ch;}
-  .meaning{font-size:.95rem;color:var(--ink-faint);margin-top:8px;}
+  footer.site{background:var(--paper);border-top:1px solid var(--line);}
+  footer.site .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  /* CTA band */
+  .foot-cta{border-bottom:1px solid var(--line);padding:44px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .foot-cta h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.6rem;letter-spacing:-.01em;color:var(--ink);}
+  .foot-cta p{color:var(--ink-soft);font-size:.95rem;margin-top:6px;}
+  /* Main columns */
+  .foot-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:52px 0 44px;}
+  .brand-col .logo{margin-bottom:0;}
+  .brand-col .meaning{font-style:italic;color:var(--ink-soft);font-size:.9rem;line-height:1.55;margin-top:12px;max-width:300px;}
+  .foot-trust{display:flex;align-items:flex-start;gap:8px;margin-top:20px;max-width:300px;color:var(--sage-deep);font-size:.84rem;line-height:1.5;font-weight:500;}
+  .foot-trust svg{width:15px;height:15px;fill:var(--sage);flex-shrink:0;margin-top:1px;}
+  .foot-social{display:flex;gap:14px;margin-top:22px;}
+  .foot-social a{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--paper-2);display:inline-flex;align-items:center;justify-content:center;transition:border-color .15s ease;}
+  .foot-social a:hover{border-color:var(--sage);}
+  .foot-social svg{width:15px;height:15px;fill:var(--ink-faint);}
+  .foot-social a:hover svg{fill:var(--sage);}
+  .foot-main h3{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;}
+  .foot-main ul{list-style:none;}
+  .foot-main li{margin-bottom:11px;}
+  .foot-main li a{color:var(--ink);text-decoration:none;font-size:.95rem;line-height:1.4;padding:2px 0;display:inline-block;}
+  .foot-main li a:hover{color:var(--sage-deep);text-decoration:underline;text-underline-offset:3px;}
+  /* Bottom bar */
+  .foot-bottom{border-top:1px solid var(--line);padding:20px 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--ink-soft);font-size:.8rem;}
+  .foot-bottom a{color:var(--ink-soft);text-decoration:none;}
+  .foot-bottom a:hover{color:var(--ink);text-decoration:underline;}
+  .foot-legal{display:flex;gap:20px;}
 
   /* prototype annotation banner */
 
   /* ===== Responsive ===== */
   @media (max-width:980px){
+    .foot-main{grid-template-columns:1.4fr 1fr 1fr;gap:36px;}
+    .brand-col{grid-column:1 / -1;}
     .hero-grid{grid-template-columns:1fr;}
     .hero h1{max-width:none;}
     .moment{max-width:480px;}
@@ -423,9 +444,11 @@
     .tl-track{grid-template-columns:1fr;}
     .hero-actions .btn{width:100%;}
     /* mobile footer: stack cleanly */
-    .foot-grid{flex-direction:column;gap:22px;}
-    .foot-links{flex-direction:column;gap:2px;}
-    .foot-links a{padding:9px 0;}
+    footer.site .wrap{padding:0 24px;}
+    .foot-main{grid-template-columns:1fr 1fr;gap:32px 36px;}
+    .brand-col{grid-column:1 / -1;}
+    .foot-cta{flex-direction:column;align-items:flex-start;}
+    .foot-bottom{flex-direction:column;align-items:flex-start;}
     section{padding:64px 0;}
   }
 
@@ -793,26 +816,63 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="foot-grid">
+
+    <div class="foot-cta">
       <div>
+        <h2>Keep a record that feels like your family.</h2>
+        <p>Start your learning record today — free, calm, no pressure.</p>
+      </div>
+      <a class="btn btn-primary" href="https://app.liber.net.au/login/?utm_source=liber_site&utm_medium=web&utm_content=footer">Start free</a>
+    </div>
+
+    <div class="foot-main">
+      <div class="brand-col">
         <a href="#top" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
         <p class="meaning"><i>Liber</i> — Latin for <i>free</i> and <i>book</i>. The open book, and the freedom to learn your own way.</p>
+        <div class="foot-trust">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 15l-4-4 1.41-1.41L10 13.17l6.59-6.59L18 8l-8 8z"/></svg>
+          Your family's information is private and never sold.
+        </div>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/liberlearning/" aria-label="Liber on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.48 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61584045934594" aria-label="Liber on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a>
+        </div>
       </div>
-      <nav class="foot-links">
-        <a href="#how">How it works</a>
-        <a href="/learning-record/">Learning record</a>
-        <a href="/for-separated-families/">For co-parents</a>
-        <a href="/am-i-doing-enough/">Am I doing enough?</a>
-        <a href="#plans">Free &amp; Liber+</a>
-        <a href="#founder">Our story</a>
-        <a href="https://www.instagram.com/liberlearning/">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a>
-        <a href="/guides/">Guides</a>
+
+      <div>
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="/learning-record/">Learning record</a></li>
+          <li><a href="/for-separated-families/">For co-parents</a></li>
+          <li><a href="#plans">Free &amp; Liber+</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/am-i-doing-enough/">Am I doing enough?</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#founder">Our story</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Liber Group Pty Ltd · ABN 69 694 983 429 · Made for families across Australia, New Zealand and beyond.</span>
+      <span class="foot-legal">
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
-      </nav>
+      </span>
     </div>
-    <p class="foot-note">Liber Group Pty Ltd · ABN 69 694 983 429. A calm, private, responsive web app for relaxed, interest-led, unschooling and neurodivergent homeschool families across Australia, New Zealand and beyond. Your family's information is private and never sold.</p>
+
   </div>
 </footer>
 
