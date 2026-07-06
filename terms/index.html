@@ -22,21 +22,34 @@
 <style>
   .legal{max-width:820px;}
   .legal .updated{color:var(--ink-faint);font-size:.92rem;}
-  .legal p,.legal li{color:var(--ink-soft);}
-  .legal ol,.legal ul{list-style:none;margin:.2em 0;padding-left:1.15em;}
-  .legal > section ol, .legal .terms-body > ol{padding-left:0;}
-  .legal li{margin:.4em 0;}
-  .legal .sec{display:block;font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--ink);
-    font-size:1.18rem;letter-spacing:.02em;margin:1.7em 0 .35em;line-height:1.2;}
-  .legal strong{color:var(--ink);}
-  .legal a{color:var(--sage-deep);}
-  .legal table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem;}
-  .legal th,.legal td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
-  .legal th{background:var(--paper-3);font-family:'Inter';}
+  .terms-body{counter-reset:sec;color:var(--ink-soft);}
+  .terms-body p{margin:0 0 .8em;}
+  .terms-body .underline{text-decoration:underline;}
+  .terms-body strong{color:var(--ink);}
+  .terms-body a{color:var(--sage-deep);}
+  .terms-body h1.sec-l1{counter-increment:sec;position:relative;padding-left:2.4em;
+     font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.2rem;text-transform:uppercase;
+     letter-spacing:.02em;line-height:1.25;color:var(--ink);margin:2em 0 .55em;}
+  .terms-body h1.sec-l1::before{content:counter(sec);position:absolute;left:0;top:0;font-weight:500;color:var(--sage-deep);}
+  .terms-body h1.major{font-family:'Fraunces',serif;font-weight:500;font-size:1.2rem;text-transform:uppercase;
+     color:var(--ink);margin:2em 0 .55em;}
+  .terms-body h2.sub-l2{font-family:'Fraunces',serif;font-weight:500;font-size:1.03rem;text-transform:uppercase;
+     letter-spacing:.03em;color:var(--ink);margin:1.5em 0 .35em;}
+  .terms-body .introhead{font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase;text-decoration:underline;
+     letter-spacing:.03em;font-size:.92rem;color:var(--ink);margin:1.7em 0 .45em;}
+  .terms-body ol{list-style:none;counter-reset:item;margin:.35em 0;padding-left:2.5em;}
+  .terms-body ol>li{counter-increment:item;position:relative;margin:.5em 0;}
+  .terms-body ol>li::before{content:"(" counter(item,lower-alpha) ")";position:absolute;left:-2.5em;width:2.2em;color:var(--ink-faint);}
+  .terms-body ol ol>li::before{content:"(" counter(item,lower-roman) ")";}
+  .terms-body ol ol ol>li::before{content:"(" counter(item,upper-alpha) ")";}
+  .terms-body li>p{margin:0 0 .5em;}
+  .terms-body ul{margin:.35em 0;padding-left:1.4em;}
+  .terms-body table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem;}
+  .terms-body th,.terms-body td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  .terms-body th{background:var(--paper-3);}
 </style>
 </head>
 <body>
-
 <header class="site" id="header">
   <div class="wrap nav">
     <a href="/" class="logo">Liber<svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 4 4 8 4 13c0 4 2.5 7 6 8 0-4 1-7 3-9-1.5 2.5-2 5.5-2 9 4.5-1 8-4.5 8-10 0-5-3-8-7-9zm-1 8c1-1.5 2.5-2.5 4-3-1 2-2.5 3.5-4 4.5V10z"/></svg></a>
@@ -50,7 +63,6 @@
     <button class="nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">Menu</button>
   </div>
 </header>
-
 <main>
   <section>
     <div class="wrap legal">
@@ -58,12 +70,732 @@
       <h1 class="display" style="font-size:clamp(2rem,4vw,2.8rem);">Terms of Service</h1>
       <p class="updated">Liber Group Pty Ltd (ABN 69 694 983 429). Last updated 1 March 2026.</p>
       <div class="terms-body">
-<p>Welcome to Liber!</p><h2>ABOUT US</h2><p>We are <strong>Liber Group Pty Ltd (ABN 69 694 983 429). </strong>In these terms we refer to ourselves as <strong>“Liber”, “we”, “our” or “us”</strong>. We operate and provide access to our application currently known as Liber (<strong>Liber App</strong>), which is an educational support, planning, journaling and record-keeping tool designed to help home education as described on our website at <a href="https://liber.net.au/">https://liber.net.au</a> (<strong>Website</strong>).</p><p>Liber is an educational support tool only. It does not replace home education programs or formal instruction provided by a parent or guardian, a human tutor, or professional educational advice, and it is not endorsed by, affiliated with, or approved by any Department of Education, home education regulator, approving authority or government body in Australia responsible for home education registration, approval or compliance (<strong>Regulator</strong>), unless we expressly state otherwise in writing.</p><h2>WHAT ARE THESE TERMS ABOUT?</h2><p>These terms and conditions (<strong>Terms</strong>) govern your access to and use of the Liber App and any related services we provide under these Terms (together, the <strong>Liber App</strong> or <strong>Subscription</strong>).</p><p>Your Subscription is for the <strong>Subscription Tier</strong> you select when creating your account or purchasing a subscription through the Liber App or Website. We currently of</p><ul><li>a free tier, which provides limited functionality; and</li><li>one or more paid subscription tiers, which provide access to additional features, including extended progress history, continuity, and the ability to print reports for approval.</li></ul><p>These Terms also explain how subscriptions renew automatically, how fees are charged, and how you may cancel your Subscription. You can view the most current version of these Terms at our Website and within the Liber App. If you have questions about these terms, contact <a href="mailto:adam@liber.net.au">adam@liber.net.au</a>.</p><p><strong>Please note that your Subscription will continue to renew indefinitely, and you will continue to incur Subscription Fees, unless you notify us (or Apple or Google via your Apple Store Account or Google Play Account (as applicable) that you want to cancel your Subscription in accordance with clause 23. Please ensure you contact us if you want to cancel your Subscription.</strong></p><h2>WHAT ELSE SHOULD I KNOW?</h2><p>If you access or download our mobile application from the Apple App Store, you agree to Apple’s Licensed Application End User License Agreement and any Usage Rules set forth in the App Store Terms of Service or the Android, Google Inc. Terms and Conditions including the License Agreement and Terms of Service.</p><p><strong>We also strongly recommend that you read our disclaimers below before using or downloading the Liber App.</strong></p><ol><li><strong class="sec">READING AND ACCEPTING THESE TERMS</strong><ul><li><ul><li><ol><li>In these Terms, capitalised words and phrases have the meanings given to them where they are followed by bolded brackets, or as set out in the Definitions table at the end of these Terms. </li><li>By clicking the tick box or clicking the “I accept these Terms” button on our App, paying for your Subscription or otherwise accepting the benefit of any part of your Subscription, you agree to be bound by these Terms which form a binding contractual agreement between you the person acquiring a Subscription or the company you represent and are acquiring the Subscription on behalf of (<strong>‘you’ </strong>or<strong> ‘your’</strong>) and us.</li><li>We may change these Terms at any time by notifying you, and your continued use of the Liber App following such an update will represent an agreement by you to be bound by the Terms as amended.</li></ol></li></ul></li></ul></li><li>Changes to the liber app<ul><li><ul><li><ol><li>We may, at any time and in our absolute discretion: <ol><li>update, improve or change any features or functionality of the Liber App; </li><li>modify, suspend or discontinue any part of the Liber App (including during any early access or beta phase); and </li><li>update these Terms from time to time. </li></ol></li><li>We may make changes for any reason, including to improve functionality, address technical or security issues, or to comply with applicable laws or requirements imposed by any Regulator. </li><li>To the maximum extent permitted by law, we do not guarantee the ongoing availability of any particular feature, functionality or content within the Liber App.</li><li>If we update these Terms, we will notify you in accordance with these Terms. Your continued use of the Liber App after the updated Terms take effect constitutes your acceptance of the updated Terms.</li></ol></li></ul></li></ul></li><li><strong class="sec">ELIGIBILITY</strong><ul><li><ul><li><ol><li>By accepting these Terms, you represent and warrant that:<ol><li>you have the legal capacity and authority to enter into a binding contract with us; and</li><li>you are authorised to use the payment you provided when purchasing a Subscription (if applicable).</li></ol></li><li>If you are signing up not as an individual but on behalf of your company, your employer, an organisation, government or other legal entity (<strong>Represented Entity</strong>), then “you” or “your” means the Represented Entity and you are binding the Represented Entity to this agreement. If you are accepting this agreement and using our Liber App on behalf of a Represented Entity, you represent and warrant that you are authorised to do so. </li><li>The Liber App is intended for use by parents or legal guardians only. Individuals under 18 years of age must not create an Account or use the Liber App.</li><li>By creating an Account for a user under 18, the parent or legal guardian:<ol><li>represents and warrants that they are the child’s parent or legal guardian, or otherwise have proper authority to consent on their behalf;</li><li>agrees to be bound by these Terms in respect of the child’s use of the Liber App;</li><li>is responsible for supervising the child’s use of the Liber App;</li><li>may input information relating to a child for record-keeping purposes only;</li><li>are solely responsible for the accuracy, legality and appropriateness of any child-related data you upload.</li></ol></li><li>You must not use the Liber App if you are under 18 years old. If we become aware that a user under 18 has created an Account, we may suspend or delete the Account.</li><li>If you are a school, teacher or other organisation creating Accounts or inviting students to use the Liber App, you represent and warrant that you have obtained all necessary consents and approvals from the relevant students and/or their parents or guardians.</li></ol></li></ul></li></ul></li><li>Early access/beta<ul><li><ul><li><ol><li>You acknowledge and agree that the Liber App is in active development and may be made available to you on an early access or beta basis. </li><li>During any early access or beta phase: <ol><li>data stored in the Liber App may be modified, migrated, reset or lost as part of development and testing;</li><li>features and functionality of the Liber App may change, be modified, suspended or removed at any time; </li><li>underlying data models, assumptions and calculations used by the Liber App may evolve over time; and </li><li>the Liber App may experience outages, errors, defects or produce incorrect, incomplete or unreliable outputs. </li></ol></li><li>Availability of the Liber App is not guaranteed during early access or beta phases.</li><li>To the maximum extent permitted by law, we do not warrant that the Liber App will be uninterrupted, error-free or available at all times during any early access or beta phase, and you acknowledge and agree that you access and use the Liber App during this phase at your own risk.</li></ol></li></ul></li></ul></li><li>DISCLAIMERs<ol><li><strong class="sec">EDUCATIONAL AND AI DISCLAIMER</strong><ul><li><ol><li>The Liber App uses artificial intelligence (AI), machine learning and other automated technologies to analyse materials you upload (including notes, photos, work samples, reflections and files) and to generate or assist features that support planning, reflection and learning insights (<strong>Generated Materials</strong>).</li><li>You acknowledge and agree that AI technologies are probabilistic and may generate content that is inaccurate, incomplete, outdated, misleading or not aligned with your curriculum or any guidance issued by any Regulator.</li><li>Liber does not provide any guarantee that the Liber App or any Generated Materials are correct, complete, suitable for your specific needs, or aligned to any particular syllabus or requirements imposed by any Regulator.</li><li>The Liber App is an educational support tool only. It does not replace home education programs, formal instruction provided by a parent or guardian, professional tutoring, exam preparation courses, or independent study, and does not constitute professional, academic, career, legal, financial or other advice. </li><li>We do not guarantee that use of the Liber App will result in approval of any home education application, registration, assessment or reporting obligation.</li><li>You are solely responsible for reviewing and verifying any Generated Materials before relying on them, and we accept no responsibility for any decision, outcome or reliance placed on Generated Materials.</li></ol></li></ul></li><li><strong class="sec">NO GUARANTEE OF ACADEMIC OUTCOMES</strong><ul><li><ol><li>We do not represent, warrant or guarantee that your use of the Liber App or Generated Materials will result in improved understanding, grades, exam results, academic performance or any specific educational outcome.</li><li>We do not guarantee that use of the Liber App will result in approval of any home education application, registration, assessment or reporting obligation.</li><li>To the fullest extent permitted by law, you are not entitled to a refund, credit or compensation solely because:<ol><li>you are dissatisfied with the Generated Materials;</li><li>the Generated Materials do not match your curriculum or expectations; or</li><li>you did not achieve an educational outcome you hoped to achieve.</li></ol></li></ol></li></ul></li><li><strong class="sec">SYLLABUS AND THIRD PARTY MATERIALS</strong><ul><li><ol><li>You may upload syllabuses, notes, photographs, work samples, reflections, files and other materials to the Liber App (<strong>Uploaded Materials</strong>). These materials may be owned by you or by third parties (for example, curriculum providers, publishers or government education bodies).</li><li>Liber does not claim ownership of any Uploaded Materials. Our use of Uploaded Materials is limited to what is reasonably necessary to operate the Liber App, generate Generated Materials for you, and improve our products and services as set out in these Terms.</li><li>You are solely responsible for ensuring that you have all necessary rights, licences and permissions to upload any Uploaded Materials to the Liber App, including where those materials are created or owned by any third party, including any Regulator or any curriculum provider or publisher.</li><li>Without limiting clause 3.3(c), you must not upload any materials where doing so would breach any applicable terms of use, licence conditions, policies of a third-party content provider, or any applicable copyright or other intellectual property rights.</li><li>We do not monitor or vet Uploaded Materials for copyright compliance. To the maximum extent permitted by law, we are not responsible for, and you release us from, any claim, loss or liability arising out of or in connection with your upload or use of any Uploaded Materials.</li></ol></li></ul></li><li><strong class="sec">ACADEMIC INTEGRITY</strong><ul><li><ol><li>You must comply with any applicable requirements, policies or conditions imposed by any Regulator when using the Liber App.</li><li>You must not submit any Generated Materials (in whole or in part) as your own work where doing so would breach academic integrity rules or where you are required to complete the work independently.</li><li>We are not responsible for and will have no liability to you in respect of any disciplinary action, penalty or other consequence you may face from any Regulator or other authority or institution resulting from your misuse of the Liber App or Generated Materials.</li></ol></li></ul></li></ol></li><li><strong class="sec">DURATION OF YOUR SUBSCRIPTION</strong><ul><li><ul><li><ol><li>Your Subscription and these Terms commence on the date you agree to be bound by these Terms (as set out at the beginning of these Terms) and continues for the Subscription Period and any Renewal Periods applicable, unless terminated earlier in accordance with clause 23.</li><li>Subject to clause 6(c), upon expiration of the Subscription Period, this agreement will automatically and indefinitely renew on an ongoing basis for a period equal to the Subscription Period (<strong>Renewal Period</strong>). </li><li>This agreement will not automatically renew on expiry of the Subscription or Renewal Period (<strong>Renewal Date</strong>), if either party provides a written cancellation notice at least 7 Business Days prior to the Renewal Date.</li><li>Your subscription will automatically renew at the end of each billing cycle unless you cancel prior to renewal. You can cancel at any time via your account settings..</li></ol></li></ul></li></ul></li><li><strong class="sec">THE APP</strong><ol><li><strong class="sec">SCOPE OF YOUR SUBSCRIPTION AND THE APP</strong><ul><li><ol><li>We will provide you, to the extent described in your Subscription Tier, Liber App and the Documentation.</li><li>Your Subscription includes the benefits and limitations of your Subscription Tier as set out on our Website, or as otherwise communicated to you when you subscribe for your Subscription (and as amended from time to time by notice to you).</li><li>While your Subscription is maintained, we grant to you a non-exclusive, non-transferable licence to use Liber App and Documentation.</li><li>We may from time to time, in our absolute discretion, release enhancements to Liber App, meaning an upgraded, improved, modified or new versions of the Liber App (<strong>Enhancements</strong>). Any Enhancements to Liber App will not limit or otherwise affect these Terms. Enhancements may cause downtime or delays from time to time, and credits will not be provided for such downtime. </li><li>We may change any features of the Liber App at any time on notice to you.</li></ol></li></ul></li><li><strong class="sec">ACCOUNTS</strong><ul><li><ol><li>(<strong>Accounts</strong>) To use the Liber App, you may be required to sign-up, register and receive an account through the Website (an <strong>Account</strong>).</li><li>(<strong>Provide Information</strong>) As part of the Account registration process and as part of your continued use of the Website, you may be required to provide personal information and details, such as your email address, first and last name, preferred username, a secure password, billing, postal and physical addresses, mobile phone number, photos and video, audio files, profile information, payment details, ratings and reviews, verified identifications, verified certifications and authentication, and other information as determined by us from time to time.</li><li>(<strong>Warranty</strong>) You warrant that any information you give to us in the course of completing the Account registration process is accurate, honest, correct and up-to-date.</li><li>(<strong>Acceptance</strong>) Once you complete the Account registration process, we may, in our absolute discretion, choose to accept you as a registered user within the Website and provide you with an Account.</li></ol></li></ul></li><li>SUPPORT SERVICES</li></ol></li></ol><p>We will provide general support where reasonably necessary to resolve technical issues with Liber App (<strong>Support Services</strong>). Unless otherwise agreed in writing:</p><ul><li><ul><li><ul><li><ol><li>we will take reasonable steps to provide Support Services where necessary (you must first endeavour to resolve any issues with Liber App internally and we will not assist with issues that are beyond our reasonable control);</li><li>we will use our best endeavours to respond to requests for Support Services and you acknowledge that we will not be available 24/7 or respond within a particular time frame; </li><li>you are responsible for all internal administration and managing access, including storing back-up passwords and assisting your Users to access your Generated Material and use Liber App; </li><li>we do not provide IT managed services (including system monitoring, infrastructure management, user-level support or administration of your internal systems), and we do not guarantee any service levels, response times, resolution times, uptime or availability in connection with the Application or the Support Services; and</li><li>you will not have any claim for delay to your access to Liber App due to any failure or delay in Support Services.</li></ol></li></ul></li></ul><ol><li><strong class="sec">DATA HOSTING</strong><ol><li>Subject to the inclusions of your Subscription Tier, we will store User Data you upload to Liber App using a third-party hosting service selected by us (<strong>Hosting Services</strong>), subject to the following terms:<ol><li>(<strong>hosting location</strong>) We currently use third-party cloud hosting providers with data centres located in Australia or overseas to host the Liber App and store User Data. We may change hosting providers or add additional hosting locations from time to time but will use reasonable efforts to ensure that User Data relating to Australian users is stored in Australia or overseas in locations offering comparable data protection standards.</li><li>(<strong>encryption</strong>) We use reasonable technical and organisational measures, including encryption in transit and at rest where practicable, to protect User Data against unauthorised access, use or disclosure. However, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.</li><li>(<strong>service quality</strong>) While we will use our best efforts to select an appropriate hosting provider, we do not guarantee that the Hosting Services will be free from errors or defects or that User Data will be accessible or available at all times.</li><li>(<strong>security</strong>) We will use our best efforts to ensure that User Data is stored securely. However, we do not accept responsibility or liability for any unauthorised use, destruction, loss, damage or alteration to User Data, including due to hacking, malware, ransomware, viruses, malicious computer code or other forms of interference.</li><li>(<strong>backups &amp; disaster recovery</strong>) In the event that User Data is lost due to a system failure (e.g. a database or webserver crash), we cannot guarantee that any backup will be available, or if available that such a backup will be free from errors or defects.</li><li>(<strong>your responsibility for data</strong>) You are solely responsible for ensuring that:<ol><li>all User Data uploaded to Liber App is accurate, complete, lawful, and does not infringe any third-party rights;</li><li>you maintain independent backups of your User Data outside of the Application if required for your business continuity or legal obligations; and</li><li>you do not use Liber App as your sole repository or system of record for any critical or regulated data.</li></ol></li><li>(<strong>no transfer of ownership</strong>) Uploading User Data to Liber App does not transfer any ownership of that data to us. We do not claim any rights in your User Data except to the extent necessary to provide the services under these Terms.</li></ol></li></ol></li></ol></li></ul><ol><li>acceptable use and user obligations<ol><li>User content &amp; responsibility <ul><li><ol><li>You are solely responsible for all information, syllabuses, notes, assignments, questions, answers, images, documents and other content you upload, submit or share through the Liber App (<strong>User Content</strong>).</li><li>You must not, and must ensure that no one using your Account:<ol><li>Upload, generate, or share any User content that: </li></ol></li></ol></li></ul></li></ol></li></ol><p>you do not have the right to upload (for example, copyrighted materials owned by any third party, including any Regulator, curriculum provider or publisher, where you do not have permission);</p><p>is sensitive, confidential, or proprietary information without necessary rights and permissions;</p><p>is inappropriate, offensive, illicit, illegal, pornographic, sexist, homophobic, or racist material;</p><p>is material owned or copyrighted by a third party without authorisation.</p><ul><li><ul><li><ul><li><ul><li><ol><li>Use the Liber App:</li></ol></li></ul></li></ul></li></ul></li></ul><p>circumvent or breach any applicable requirements, policies or conditions imposed by any Regulator;</p><p>for any purpose other than its intended lawful use;</p><p>in a manner that is illegal, fraudulent, or facilitates illegal or fraudulent activity;</p><p>in a way that infringes the intellectual property or other rights of any person;</p><p>to intimidate, harass, impersonate, stalk, threaten, bully, or endanger another user;</p><p>to distribute unsolicited commercial messages, junk mail, spam, bulk content, or harassment.</p><ul><li><ul><li><ul><li><ul><li><ol><li>Tamper with or misuse the Liber App or Documentation by:</li></ol></li></ul></li></ul></li></ul></li></ul><p>copying, adapting, modifying, or creating derivative works;</p><p>removing or altering any copyright, trade mark, or proprietary notice;</p><p>integrating third-party software or APIs without Liber’s prior written consent;</p><p>decompiling, reverse-engineering, or attempting to derive source code;</p><p>circumventing any security feature or technological protection mechanism;</p><p>selling, transferring, sub-licensing, hiring, or otherwise disposing of the Liber App or Documentation to any third party (except granting permitted user access under these Terms);</p><p>sharing your account details, passwords, or other security credentials.</p><ul><li><ul><li><ul><li><ul><li><ol><li>Act in any way that harms, or is likely to harm, Liber’s reputation or the reputation of any associated party.</li></ol></li></ul><ol><li>If you become aware of misuse of your Subscription by any person, any errors in the material on your Subscription or any difficulty in accessing or using your Subscription, please contact us immediately using the contact details or form provided on our Website.</li><li>You agree, and you must ensure that all Users agree:<ol><li>to comply with each of your obligations in these Terms;</li><li>to sign up for an Account in order to use the Liber App;</li><li>that information given to you through Liber App, by us or another User, is general in nature and we take no responsibility for anything caused by any actions you take in reliance on that information; and</li><li>that we may cancel your, or any User’s, Account at any time if we consider, in our absolute discretion, that you or they are in breach of, or are likely to breach, this clause.</li></ol></li></ol></li></ul></li></ul><ol><li>compliance with laws<ol><li>You warrant that you will not, by using, receiving or requesting the Liber App:<ol><li>breach any applicable laws, rules or regulations (including any applicable privacy laws); or</li><li>infringe the Intellectual Property Rights or other rights of any third party or breach any duty of confidentiality.</li></ol></li></ol></li><li>reporting abuse or security concerns<ul><li><ol><li>You must report any abuse or security concerns related to Liber App as soon as you become aware of them. Reports should be submitted through the designated in-app reporting tool or emailed to <a href="mailto:support@liber.net.au">support@liber.net.au</a>. </li><li>Upon receiving a report, we will investigate the matter promptly and take appropriate action as required. You may be required to provide further information or assist in the investigation. Information provided in reports will be handled confidentially, subject to our Privacy Policy and applicable laws. You must comply with all applicable laws when reporting abuse or security concerns.</li><li>False or misleading reports may result in suspension or termination of your access to Liber App. </li></ol></li></ul></li></ol></li></ul><ol><li><strong class="sec">USER DATA ROLES AND RESPONSIBILITIES</strong><ol><li>Liber’s OBLIGATIONS<ul><li><ol><li>Liber will establish, maintain, enforce and continuously improve safety and security procedures and safeguards against the unauthorised use, destruction, loss or alteration of the User Data. You must not, and ensure that its personnel do not, undertake any action that may have the potential to compromise Liber’s ability to comply with this clause. </li><li>Liber will notify and keep you notified of Liber’s current safety and security procedures and safeguards that are made from time to time. </li></ol></li></ul></li><li>your privacy obligations<ul><li><ol><li>You must comply with all applicable laws when using the Liber App, including any obligations you may have in relation to the personal information of others that you upload (for example, where you upload another person’s details or information).</li><li>If you are a parent, legal guardian or other authorised carer using the Liber App to record or manage information about a child in connection with home education, you are responsible for ensuring that you have obtained all necessary consents and authorisations to upload and manage that child’s personal information, and that your use of the Liber App complies with your own privacy obligations and all applicable privacy laws.</li></ol></li></ul></li><li><strong class="sec">DATA BREACH</strong><ul><li><ol><li>While every precaution within Liber’s control will be taken to ensure security of the User Data, Liber cannot guarantee that User Data security issues will not arise.</li><li>You or Liber (as the case may be) will immediately notify the other party after learning of any potential, actual or suspected loss, misappropriation or unauthorised access to, or disclosure or use of Confidential Information or Personal Information or other compromise of the security, confidentiality, or integrity of Confidential Information or Personal Information (collectively, <strong>Security Breaches</strong>).</li><li>Liber will promptly investigate each potential, actual or suspected Security Breach and assist you and its personnel in connection with any investigation that you may desire to conduct with respect to the Security Breach.</li><li>Liber will take all steps requested by you to limit, stop or otherwise remedy any potential, actual or suspected Security Breach. </li><li>You will be solely responsible for any obligations in relation to any Notifiable Data Breaches and the Office of the Australian Information Commission. </li><li>Liber will take all steps it considers reasonably necessary to limit, stop or otherwise remedy any potential, actual or suspected Security Breach affecting User Data held or controlled by Liber.</li><li>To the extent Liber is an “APP entity” under the Privacy Act 1988 (Cth) in respect of any personal information involved in a Security Breach, Liber will comply with its obligations (if any) under the Notifiable Data Breaches scheme where the Security Breach arises from a breach of Liber’s systems or security controls under Liber’s control. If you are an APP entity in your own right, you are responsible for complying with any Notifiable Data Breaches obligations that apply to you in relation to your own systems and handling of personal information. </li><li>Liber is not responsible for any Security Breach arising from misuse or compromise of your Account credentials, or from a breach of your own systems or security controls.</li></ol></li></ul></li></ol></li><li>providing your own content on the app<ol><li>WARRANTIES around uploaded material<ol><li>By creating, uploading or posting any Uploaded Material in connection with the Liber App, you represent and warrant that:<ol><li>you have all necessary rights, licences and permissions to upload the Uploaded Material and to grant the licences in these Terms, including where the Uploaded Material is owned by any Regulator, curriculum provider, publisher or other third party;</li><li>the Uploaded Material does not infringe any third party’s intellectual property rights, privacy rights or other legal rights;</li><li>the Uploaded Material does not breach any applicable requirements, policies or conditions imposed by any Regulator;</li><li>the Uploaded Material is not unlawful, defamatory, discriminatory, harassing, hateful, threatening or otherwise inappropriate;</li><li>the Uploaded Material does not contain viruses, malware or other harmful code; and</li><li>the Uploaded Material complies with all applicable laws.</li></ol></li></ol></li><li><strong class="sec">LICENCE</strong><ul><li><ol><li>You retain ownership of any intellectual property rights you have in Uploaded Material. We do not claim ownership of your Uploaded Material.</li><li>By uploading or providing Uploaded Material, you grant us a non-exclusive, worldwide, royalty-free licence (with the right to sublicense to our service providers) to host, store, use, reproduce, modify and display the Uploaded Material solely to:<ol><li>operate, maintain and provide the Liber App and the Liber App to you and other users;</li><li>generate Generated Materials for you and other users; and</li><li>improve and develop the Liber App and our other products and services, including by using de-identified or aggregated data for analytics and machine learning.</li></ol></li><li>To the extent you have moral rights in any Uploaded Material, you consent to us (and our Personnel) doing any act or omission in relation to that Uploaded Material that would otherwise infringe those moral rights, to the extent reasonably necessary for the purposes in clause 8.2(b).</li><li>You indemnify us against all losses, costs and expenses we incur in connection with any claim that your Uploaded Material infringes a third party’s rights or breaches applicable law.</li></ol></li></ul></li><li><strong class="sec">REMOVAL</strong><ul><li><ol><li>Liber App acts as a passive conduit for the online distribution of Uploaded Material and has no obligation to screen Uploaded Material. However, we may, in our absolute discretion, review and remove any Uploaded Material from the Liber App at any time without giving any explanation or justification for removing the Uploaded Material, including but not limited to, if we determine that the Uploaded Material involves any illicit material, infringes a third party’s Intellectual Property Rights, or is reasonably likely to.</li><li>You agree that you are responsible for keeping and maintaining records of Uploaded Material.</li></ol></li></ul></li><li><strong class="sec">SYLLABUS AND INSTITUTIONAL MATERIALS</strong><ul><li><ol><li>Uploaded Material may include syllabuses, curriculum documents, teaching materials, learning resources, work samples and other content created or owned by any Regulator, curriculum provider, publisher or other third party <strong>(Institutional Materials)</strong>.</li><li>We do not claim ownership of any Institutional Materials. Our use of Institutional Materials is limited to what is reasonably necessary to provide the Liber App and the Liber App.</li><li>You are responsible for ensuring that uploading any Institutional Materials to the Liber App is permitted under the applicable requirements, policies or conditions imposed by the relevant third party and under applicable laws.</li><li>To the maximum extent permitted by law, we are not liable for any claim arising from your upload or use of any Institutional Materials in breach of those policies or laws.</li></ol></li></ul></li><li><strong class="sec">INFRINGING CONTENT ON THE APPLICATION</strong><ul><li><ol><li>If you become aware of Uploaded Material, or other Material, on Liber App that does not comply with this clause 10.1, or is reasonably likely to, please contact us immediately on the ‘Contact Us’ section of our Website or through the Contact Us feature on Liber App. </li><li>If you submit a complaint under clause 10.5(a):<ol><li>you warrant that the substance of the complaint is accurate, true and involves relevant infringement;</li><li>you acknowledge and agree that groundless threats of legal proceedings, including in relation to copyright infringement, may be prohibited under applicable law (for example, Australia’s <em>Copyright Act 1968</em>, or equivalent laws wherever you are located); and</li><li>you agree to indemnify us in relation to any loss or damage that may arise in relation to your complaint, including in relation to any third-party claim that the complaint contains a groundless threat.</li></ol></li></ol></li></ul></li></ol></li><li>generating your own content on the app<ol><li>WARRANTIES AROUND GENERATED MATERIAl<ol><li>By generating, prompting, or otherwise obtaining any Material through Liber App’s functionality (<strong>Generated Material</strong>), you represent and warrant that, and must ensure that all Users make equivalent representations and warranties:<ol><li>you understand that Generated Material is produced by an AI system based on your prompts and Uploaded Material, and may be inaccurate, incomplete, outdated or inconsistent with your official syllabus or any guidance issued by a Regulator;</li><li>you are solely responsible for reviewing, verifying and deciding whether and how to use any Generated Material, including by checking it against your syllabus and any guidance issued by a Regulator;</li><li>you will not use any Generated Material in a way that infringes a third party’s intellectual property rights or breaches any applicable law; and</li><li>you will not attempt to generate content that is unlawful, discriminatory, hateful, harassing, abusive, sexually explicit, or otherwise inappropriate.</li></ol></li></ol></li><li><strong class="sec">LICENCE TO GENERATED MATERIAL</strong><ul><li><ol><li>As between you and us, you own any intellectual property rights you have in the Generated Material, subject to any rights of third parties in the underlying Uploaded Material.</li><li>By using the Liber App and generating Generated Material, you grant us (and our Personnel) a non-exclusive, worldwide, royalty-free licence (with the right to sublicense to our service providers) to host, store, use, reproduce, modify and display the Generated Material solely to:<ol><li>operate, maintain and provide the Liber App and the Liber App to you and other users; and</li><li>analyse, improve and develop the Liber App and our other products and services, including by using de-identified or aggregated data for analytics and machine learning.</li></ol></li><li>To the extent you have moral rights in any Generated Material, you consent to us (and our Personnel) doing any act or omission in relation to that Generated Material that would otherwise infringe those moral rights, to the extent reasonably necessary for the purposes in clause 9.2(b).</li><li>You indemnify us against all damages, losses, costs and expenses incurred by us arising in connection with any third-party claim that Generated Material infringes any third party’s Intellectual Property Rights or otherwise breaches any applicable Law.</li></ol></li></ul></li><li><strong class="sec">REVIEW AND REMOVAL</strong><ul><li><ol><li>We do not proactively monitor Generated Material but we reserve the right, in our sole discretion, to review and remove or restrict access to any Generated Material at any time, including if we determine (or reasonably suspect) that it:<ol><li>breaches these terms,</li><li>infringes third party Intellectual Property Rights, or</li><li>is unlawful, misleading, harmful, or otherwise inappropriate.</li></ol></li><li>You agree that you are solely responsible for any decisions made, actions taken, or reliance placed on the Generated Material, and for keeping appropriate backups or records of any such Material as required.</li></ol></li></ul></li></ol></li><li><strong class="sec">FEE AND PAYMENT</strong><ol><li>free subscription tier<ol><li>We offer a basic and free Subscription Tier (<strong>Free Subscription Tier</strong>). No payments will be due during the Subscription Period for a Free Subscription Tier.</li></ol></li><li>Paid SUBSCRIPTION tiers<ul><li><ol><li>If you select a paid subscription tier (<strong>Paid Subscription</strong>), you must pay the subscription fees specified on our Website for your chosen tier, or as otherwise agreed in writing (<strong>Subscription Fees</strong>).</li><li>Subscription Fees are payable in advance and are non-refundable for change of mind.</li><li>Unless otherwise agreed in writing, Subscription Fees are charged on a recurring basis for the duration of your subscription, according to your selected billing option:<ol><li><strong>Monthly Subscription:</strong> Fees are charged on the first day of your subscription period and then on the same date each month thereafter.</li><li><strong>Annual Subscription:</strong> Fees are charged on the first day of your subscription period and then on the same date each year thereafter. </li></ol></li><li>If you cancel an Annual Subscription before the end of the paid Annual Subscription period, you will continue to have access until the end of that period, but no refund will be provided for any unused portion of the Annual Subscription.</li><li>Your subscription will automatically renew at the end of each billing cycle (monthly or annual, as applicable) unless you cancel it in accordance with the cancellation specified on the app.</li><li>All payments must be made via the payment methods made available in the Application or on our Website. You are responsible for ensuring that your payment details are valid and up-to-date at all times.</li></ol></li></ul></li><li>AUTOMATIC RECURRING BILLING</li></ol></li></ol><p>Subject to clauses 12.4 and 12.5:</p><ul><li><ul><li><ul><li><ol><li>Your Subscription will continue to renew on an automatic indefinite basis unless you notify us that you wish to cancel in accordance with this clause 12. </li><li>While your Subscription is maintained, your Subscription Fees will continue to be debited at the beginning of each Renewal Period from the payment method you nominated when you registered for an Account.</li><li>By signing up for a recurring Subscription, you acknowledge and agree that your Subscription has an initial and recurring payment feature, and you accept responsibility for all recurring charges prior to your cancellation of your Subscription. </li></ol></li></ul></li></ul><ol><li>grace period</li></ol></li></ul><p>If you fail to cancel your Subscription prior to a Renewal Period and you are charged recurring charges, you have up to 5 Business Days from the date of that renewal to cancel your Subscription by contacting us through our Website or through the Contact Us feature on Liber App (<strong>Grace Period</strong>). If you cancel your Subscription within the Grace Period, please contact us via our Website to request a refund for any recurring fees charged to you during the Grace Period, less any used Credits.</p><ul><li><ol><li><strong class="sec">CHANGES TO SUBSCRIPTION FEES</strong><ol><li>We may, from time to time, change our Subscription Fees and provide you with 10 Business Days’ notice prior to the changes. During this time, you have the opportunity to cancel your Subscription with us. If you do not cancel your Subscription before the new Subscription Fees take effect, the Grace Period in clause 12.4 will apply.</li></ol></li><li><strong class="sec">LATE PAYMENTS</strong><ol><li>We reserve the right to suspend all or part of the Liber App indefinitely if you fail to pay any Fees in accordance with this clause 12.</li></ol></li><li><strong class="sec">GST</strong><ol><li>Unless otherwise indicated, the Fees do not include GST. In relation to any GST payable for a taxable supply by us, you must pay the GST subject to us providing a tax invoice.</li></ol></li><li><strong class="sec">CARD SURCHARGES</strong><ol><li>We reserve the right to charge credit card surcharges in the event payments are made using a credit, debit or charge card (including Visa, MasterCard or American Express).</li></ol></li><li>ONLINE PAYMENT PARTNER</li></ol></li></ul><p>We may use third-party online payment partner, currently Stripe (<strong>Online Payment Partner</strong>) to collect Subscription Fees. </p><p>Apple Pay and Google Pay may also be offered as payment methods via Stripe or relevant app stores from time to time.</p><p>Provided that Liber has notified you of such Third Party Terms and provided you with a copy of those terms, you acknowledge and agree that:</p><ul><li><ul><li><ul><li><ul><li><ol><li>the processing of payments by the Online Payment Partner will be subject to the terms, conditions and privacy policies of the relevant Online Payment Partner (including Stripe, as applicable), as notified to you from time to time Stripe, in addition to this agreement, subject to the terms, conditions and privacy policies of the Online Payment Partner, which can be found here, <a href="https://stripe.com/au/legal/ssa">https://stripe.com/au/legal/ssa</a>. </li><li>you release us and our Personnel in respect of all liability for loss, damage or injury which may be suffered by any person arising from any act or omission of the Online Payment Partner, including any issue with security or performance of the Online Payment Partner’s platform or any error or mistake in processing your payment; and</li><li>We reserve the right to correct, or to instruct our Online Payment Partner to correct, any errors or mistakes in collecting your payment. </li></ol></li></ul></li></ul></li></ul></li></ul><p>You have the right to reject any terms and conditions of the Online Payment Partner. If you reject those terms, we cannot provide you with the Subscription and clause 23 will apply.</p><p>We may change or replace our Online Payment Partner from time to time without amending these Terms, provided we notify you of any materially different third party terms that will apply to the processing of your payments.</p><ol><li><strong class="sec">INTELLECTUAL PROPERTY AND DATA</strong><ol><li><strong class="sec">NO TRANSFER OF OWNERSHIP</strong><ol><li>Neither party will, under this agreement, acquire Intellectual Property Rights in the User Data or Liber’s Materials, specifically Liber’s source code (as applicable) and each party will retain its ownership of any Intellectual Property Rights in such Materials.</li></ol></li><li>Liber MATERIALS AND DEVELOPED Materials<ol><li>Liber grants you a non-exclusive, royalty free, non-transferable, worldwide and revocable licence to use the Liber’s Materials and Developed Materials, not constituting Generated Materials, to the extent required for you to use, enjoy the benefit of or exploit the Liber App as contemplated by these terms.</li></ol></li><li>user data and generated materials<ul><li><ol><li>As between you and us, you own all intellectual property rights in your User Data and Generated Materials (subject to any rights of third parties in Uploaded Materials such as Institutional Materials).</li><li>You grant us (and our Personnel) a non-exclusive, worldwide, royalty-free licence (with the right to sublicense to our service providers) to use, host, store, reproduce, modify and display the User Data and Generated Materials to the extent reasonably required to:<ol><li>provide the Liber App and operate the Liber App; and</li><li>analyse, improve and develop the Liber App and our other products and services, including by using de-identified or aggregated data for analytics and machine learning.</li></ol></li><li>We reserve the right to remove any User Data or Generated Material at any time, for any reason, including where we deem User Data or Generated Material to be inappropriate, offensive, illicit, illegal, pornographic, sexist, homophobic or racist.</li><li>You are responsible for ensuring that:<ol><li>you share User Data only with intended recipients; and</li><li>all User Data is appropriate and not in contravention of these Terms. </li></ol></li><li>You:<ol><li>warrant that our use of User Data will not infringe any third-party Intellectual Property Rights; and </li><li>indemnify us from and against all losses, claims, expenses, damages and liabilities (including any taxes, fees or costs) which arise out of such infringement.</li></ol></li></ol></li></ul></li></ol></li><li>THIRD PARTY SOFTWARE &amp; terms<ol><li><strong class="sec">THIRD PARTY TERMS</strong><ul><li><ol><li>If we are required to acquire goods or services supplied by a third party, you may be subject to the terms and conditions of that third party (‘<strong>Third Party Terms’</strong>). </li><li>Provided that we have notified you of such Third Party Terms and provided you with a copy of those terms, you agree to any Third Party Terms applicable to any goods or services supplied by a third party that we acquire as part of providing the Liber App to you and we will not be liable for any loss or damage suffered by you in connection with such Third Party Terms.</li><li>You have the right to reject any Third Party Terms. If you reject the Third Party Terms, we cannot provide the Liber App to you and clause 23 will apply.</li><li>We may change, replace or add third party service providers from time to time without amending these Terms, provided we notify you of any materially different Third Party Terms that will apply.</li></ol></li></ul></li><li><strong class="sec">THIRD PARTY APPLICATION INTEGRATIONS</strong><ul><li><ol><li>You acknowledge and agree that issues can arise when data is uploaded to software, transferred between different software programs, and when different software programs are integrated together. We cannot guarantee that integration processes between Liber App and other software programs will be free from errors, defects or delay. </li><li>You agree that we will not be liable for the functionality of any third party goods or services, including any third party software, or for the functionality of the Generated Material if you integrate it with third party software, or change or augment the Generated Material, including by making additions or changes to the Generated Material code, or by incorporating APIs into the Generated Material.</li><li>If you add third party software or software code to Liber App or your Generated Material, or integrate Liber App or your Generated Material with third party software (<strong>User Application Changes</strong>), then:<ol><li>you acknowledge and agree that User Application Changes can have adverse effects on the Liber App, including Liber App;</li><li>you will indemnify us in relation to any loss or damage that arises in connection with the User Application Changes;</li><li>we will not be liable for any failure in the Liber App, to the extent such failure is caused or contributed to by a User Application Change;</li><li>we may require you to change or remove User Application Changes, at our discretion, and if we do so, you must act promptly;</li><li>we may suspend your access to the Liber App until you have changed or removed User Application Change; and/or</li><li>we may change or remove any User Application Change, in our absolute discretion. We will not be liable for loss of data or any other loss or damage you may suffer in relation to our amendment to, or removal of, any User Application Change.</li></ol></li></ol></li></ul></li><li>IMPORTING AND EXPORTING LIMITATIONS on the application<ul><li><ol><li>You acknowledge and agree that Liber App may offer functionality that allows you to import materials (including Uploaded Material or third-party content) into Liber App or export Generated Material or other content from Liber App to external platforms, software, or services (<strong>Third Party Systems</strong>). However, we do not guarantee that Liber App will be compatible with any particular file format, system, platform, or third-party software.</li><li>We do not warrant that any imported Material or Uploaded Material will be readable, functional, compatible, or secure once uploaded to Liber App, nor that any Generated Material or other content exported from Liber App will be usable, functional, or compatible with any Third Party System.</li><li>You are solely responsible for verifying the suitability, legality, and compatibility of any imported Material or exported Generated Material, and for ensuring that your use of Third Party Systems complies with applicable laws and the relevant third-party terms.</li><li>To the extent permitted by law, we will not be liable for any loss or damage arising out of or in connection with:<ol><li>the import of any material into Liber App;</li><li>the export of any material (including Generated Material) from Liber App;</li><li>the incompatibility, corruption, or inaccessibility of any such material; or</li><li>the failure of any Third Party System to properly receive, process, or display any such material.</li></ol></li></ol></li></ul></li></ol></li><li><strong class="sec">NOTICE REGARDING APPLE</strong><ul><li><ol><li>If you are accessing Liber App from the Apple, Inc. (<strong>Apple</strong>) iOS Store, you acknowledge and agree:<ol><li>these Terms are between you and Liber App and not with Apple. Apple is not responsible for Liber App or any content available on Liber App;</li><li>Apple has no obligation whatsoever to furnish any maintenance and support services for Liber App;</li><li>To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to Liber App, and any other claims, losses, liabilities, damages, costs of expenses attributable to any failure to conform to any warranty will be Liber App’s responsibility;</li><li>Apple is not responsible for addressing any claims by you or any third party relating to Liber App, including, but not limited to:<ol><li>product liability claims;</li><li>any claim that Liber App fails to conform to any applicable legal or regulatory requirement; and</li><li>claims arising under consumer protection, privacy, or similar legislation;</li></ol></li><li>in the event of any third party claim that Liber App or your use of the Liber App infringes any third party’s intellectual property rights, Apple will not be responsible for the investigation, defence, settlement and discharge of any such claim;</li><li>that you represent and warrant that:<ol><li>you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting’” country; and</li><li>you are not listed on any U.S. Government list of prohibited or restricted parties;</li></ol></li><li>you must comply with applicable third party terms of agreement when using Liber App; and</li><li>Apple, and Apple’s subsidiaries, are third party beneficiaries of these Terms, and that, upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third party beneficiary.</li></ol></li></ol></li></ul></li><li><strong class="sec">NOTICE REGARDING GOOGLE PLAY</strong><ul><li><ol><li>If you download the App via Google Play, you acknowledge that Google has no responsibility for the App or its content, and that your use of the App must comply with the Google Play Terms of Service. Google and its affiliates are third-party beneficiaries of these Terms.</li></ol></li></ul></li><li><strong class="sec">OPERATION OF THE APP DEPENDENT ON THIRD PARTIES</strong><ul><li><ol><li>You acknowledge that the Liber App is dependent on software and hardware developed by third party providers such as Apple and Google. If following an update by such third party provider, the App can no longer function as they did prior to the update, we will not (to the maximum extent permitted by law) be liable to you for any loss or damage you might suffer as a result.</li></ol></li></ul></li><li><strong class="sec">SERVICE LIMITATIONS</strong><ul><li><ol><li>The Liber App is made available to you strictly on an ‘as is’ basis. We can’t guarantee, and make no warranties, to the extent permitted by law, that:<ol><li>the Liber App will be free from errors or defects;</li><li>the Liber App will be accessible or available at all times;</li><li>messages sent through the Liber App will be delivered promptly, or delivered at all;</li><li>information you receive or supply through the Liber App will be secure or confidential; or</li><li>any information provided through the Liber App is accurate or true.</li></ol></li></ol></li></ul></li><li><strong class="sec">CONFIDENTIALITY</strong><ul><li><ul><li><ol><li>Except as contemplated by these Terms, a party must not, and must not permit any of its Personnel, use or disclose to any person any Confidential Information disclosed to it by the other party without the disclosing party’s prior written consent. </li><li>Each party must promptly notify the other party if it learns of any potential, actual or suspected loss, misappropriation or unauthorised access to, or disclosure or use of Confidential Information or other compromise of the security, confidentiality, or integrity of Confidential Information.</li><li>The notifying party will investigate each potential, actual or suspected breach of confidentiality and assist the other party in connection with any related investigation. </li></ol></li></ul></li></ul></li><li><strong class="sec">PRIVACY</strong><ul><li><ul><li><ol><li>We collect personal information about you in the course of providing you with the Liber App, to contact and communicate with you, to respond to your enquiries and for other purposes set out in our Privacy Policy which can be found at: <a href="/privacy/">https://app.liber.net.au/privacy</a></li><li>Our Privacy Policy contains more information about how we use, disclose and store your personal information and details how you can access and correct your personal information. This includes how we handle any child-related information entered by parents or guardians. </li><li>You must not upload personal information of any child unless you are their parent or legal guardian or otherwise lawfully authorised to do so.</li><li>By agreeing to these Terms, you agree to our handling of personal information in accordance with our Privacy Policy.</li></ol></li></ul></li></ul></li><li><strong class="sec">LIABILITY</strong><ol><li><strong class="sec">WARRANTIES AND LIMITATIONS</strong><ul><li><ol><li>(<strong>Warranties</strong>) We warrant that:<ol><li>during the Subscription Period, the Liber App will be provided as described to you in, and subject to, these Terms; and</li><li>to our knowledge, the use of the Liber App in accordance with these Terms will not infringe the Intellectual Property Rights of any third party.</li></ol></li><li>(<strong>Errors</strong>) We will use reasonable commercial efforts to correct any errors, bugs or defects in Liber App which arise during your Subscription and which are notified to us by you, unless the errors, bugs or defects:<ol><li>result from the interaction of the Liber App with any other solution or computer hardware, software or services not approved in writing by us;</li><li>result from any misuse of the Liber App; or</li><li>result from the use of the Liber App by you other than in accordance with these Terms or the Documentation.</li></ol></li><li>(<strong>Service Limitations</strong>) While we will use our best endeavours to ensure the Liber App is working for its intended purpose, you acknowledge and agree that from time to time, you may encounter the following issues:<ol><li>the Liber App may have errors or defects;</li><li>the Liber App may not be accessible at times;</li><li>messages sent through the Liber App may not be delivered promptly, or delivered at all;</li><li>information you receive or supply through the Liber App may not be secure or confidential; or</li><li>any information provided through the Liber App may not be accurate or true.</li></ol></li><li>(<strong>No Warranties for Service Levels or Managed Services</strong>) You acknowledge and agree that:<ol><li>Liber App is provided as a standardised subscription offering as a mobile application;</li><li>we do not provide any IT managed services, custom support, or guaranteed service levels, unless expressly agreed in writing; and</li><li>we make no warranties or representations regarding the availability, uptime, performance, responsiveness or error resolution timeframes of the Liber App.</li></ol></li><li>(<strong>Exclusion</strong>) To the maximum extent permitted by applicable law, all express or implied representations and warranties not expressly stated in these Terms are excluded.</li><li>(<strong>Consumer law</strong>) Nothing in these Terms is intended to limit the operation of the Australian Consumer Law contained in the <em>Competition and Consumer Act 2010</em> (Cth) (<strong>ACL</strong>). Under the ACL, you may be entitled to certain remedies (like a refund, replacement or repair) if there is a failure with the goods or services provided.</li></ol></li></ul></li><li>liability<ul><li><ol><li>To the maximum extent permitted by law and subject to clause 21.2(b), the total liability of each party in respect of loss or damage sustained by the other party in connection with these Terms or the Liber App is limited to the total Fees paid to us by you in the 3 months preceding the date of the event giving rise to the relevant liability.</li><li>Clause 21.2(a) does not apply to your liability in respect of loss or damage sustained by us arising from your breach of clauses 8, 9, 11, 13, 14, 16 and 20.</li></ol></li></ul></li><li>CONSEQUENTIAL LOSS</li></ol></li></ol><p>To the maximum extent permitted by law, neither party will be liable for any incidental, special or consequential loss or damages, or damages for loss of data, business or business opportunity, goodwill, anticipated savings, profits or revenue in connection with these Terms or any goods or services provided by us, except:</p><ul><li><ul><li><ul><li><ol><li>in relation to a party’s liability for fraud, personal injury, death or loss or damage to tangible property; or</li><li>to the extent this liability cannot be excluded under the <em>Competition and Consumer Act 2010</em> (Cth).</li></ol></li></ul></li></ul></li></ul><ol><li><strong class="sec">UPGRADE AND DOWNGRADES</strong><ul><li><ul><li><ol><li>You may notify us that you would like to upgrade or downgrade your Subscription Tier at any time. If you do, we will:<ol><li>take reasonable steps to promptly provide you with access to the new Subscription Tier; and</li><li>upon providing such access, apply the new, relevant Subscription Fees, to the Renewal Period immediately following the period in which your access to the new Subscription Tier was provided, and you will be charged at the new Subscription Fee in every subsequent Renewal Period.</li></ol></li><li>If you choose to downgrade your Subscription, you will then be automatically downgraded to a Free Subscription Tier at the end of your current Billing Cycle and the terms of 22(a) will apply, unless we notify you otherwise. </li><li>If you upgrade or downgrade your Subscription, you will not be entitled to any refund, credit or pro-rata adjustment for any unused portion of your previous Subscription Tier</li><li>If you choose to downgrade your Subscription, you acknowledge and agree we are not liable, and you release us from all claims in relation to, any loss of content, features, or capacity, including any User Data.</li></ol></li></ul></li></ul></li><li><strong class="sec">CANCELLATION</strong><ol><li>cancellation at any time</li></ol></li></ol><p>Either party may cancel or terminate your Subscription for convenience by providing 10 Business Days’ notice to the other party.</p><ul><li><ol><li>cancellation for breach<ul><li><ol><li>We may suspend or cancel your Subscription immediately by written notice if we reasonably believe that you have breached these Terms, are likely to breach these Terms, or where suspension or termination is required for safety, security or legal reasons.</li><li>Either party may cancel your Subscription immediately by written notice if there has been a Breach of these Terms.</li><li>A “<strong>Breach</strong>” of these Terms means:<ol><li>a party (<strong>Notifying Party</strong>) considers the other party (or any of its Personnel or Users) is in breach of these Terms and notifies the other party;</li><li>the other party is given 10 Business Days to rectify the breach; and</li><li>the breach has not been rectified within 10 Business Days or another period agreed between the parties in writing.</li></ol></li></ol></li></ul></li><li>EFFECT OF caNCELLATION</li></ol></li></ul><p>Upon cancellation of this agreement: </p><ul><li><ul><li><ul><li><ol><li>you will no longer have access to Liber App, your Account or your User Data and we will have no responsibility to store or otherwise retain any User Data (and you release us in respect of any loss or damage which may arise out of us not retaining any User Data beyond that point);</li><li>unless agreed in writing, any Subscription Fees that would otherwise have been payable after termination for the remainder of the relevant Renewal Period will remain payable and, to the maximum extent permitted by law, no Subscription Fees already paid will be refundable; and</li><li>each party must comply with all obligations that are by their nature intended to survive the end of this agreement.</li></ol></li></ul></li></ul></li></ul><ol><li><strong class="sec">DISPUTE RESOLUTION</strong><ul><li><ul><li><ol><li>A party claiming that a dispute has arisen under or in connection with this agreement must not commence court proceedings arising from or relating to the dispute, other than a claim for urgent interlocutory relief, unless that party has complied with the requirements of this clause.</li><li>A party that requires resolution of a dispute which arises under or in connection with this agreement must give the other party or parties to the dispute written notice containing reasonable details of the dispute and requiring its resolution under this clause.</li><li>Once the dispute notice has been given, each party to the dispute must then use its best efforts to resolve the dispute in good faith. If the dispute is not resolved within a period of 14 days (or such other period as agreed by the parties in writing) after the date of the notice, any party to the dispute may take legal proceedings to resolve the dispute.</li></ol></li></ul></li></ul></li><li><strong class="sec">FORCE MAJEURE</strong><ul><li><ul><li><ol><li>We will not be liable for any delay or failure to perform its obligations under this agreement if such delay or failure arises out of a Force Majeure Event. </li><li>If a Force Majeure Event occurs, we must use reasonable endeavours to notify you of:<ol><li>reasonable details of the Force Majeure Event; and</li><li>so far as is known, the probable extent to which We will be unable to perform or be delayed in performing its obligations under this agreement.</li></ol></li><li>Subject to compliance with clause 25(b), our relevant obligation will be suspended during the Force Majeure Event to the extent that it is affected by the Force Majeure Event.</li><li>For the purposes of this agreement, a ‘Force Majeure Event’ means any:<ol><li>act of God, lightning strike, meteor strike, earthquake, storm, flood, landslide, explosion or fire;</li><li>strikes or other industrial action outside of the control of us; </li><li>war, terrorism, sabotage, blockade, revolution, riot, insurrection, civil commotion, epidemic, pandemic; or</li><li>any decision of a government authority in relation to COVID-19, or any threat of COVID-19 beyond the reasonable control of us, to the extent it affects our ability to perform our obligations.</li></ol></li></ol></li></ul></li></ul></li><li><strong class="sec">NOTICES</strong><ul><li><ul><li><ol><li>A notice or other communication to a party under these Terms must be:<ol><li>in writing and in English; and</li><li>delivered via email to the other party, to the email address specified in the Website or in your Account, or if no email address is specified, then the email address most regularly used by the parties to correspond regarding the subject matter of this agreement as at the date of this agreement (<strong>Email Address</strong>). The parties may update their Email Address by notice to the other party.</li></ol></li><li>Unless the party sending the notice knows or reasonably ought to suspect that an email was not delivered to the other party’s Email Address, notice will be taken to be given:<ol><li>24 hours after the email was sent, unless that falls on a Saturday, Sunday or a public holiday in the state or territory whose laws govern this agreement, in which case the notice will be taken to be given on the next occurring business day in that state or territory; or</li><li>when replied to by the other party,</li></ol></li></ol></li></ul></li></ul></li></ol><p>whichever is earlier.</p><ol><li><strong class="sec">GENERAL</strong><ol><li><strong class="sec">GOVERNING LAW AND JURISDICTION</strong><ol><li>This agreement is governed by the law applying in New South Wales, Australia. Each party irrevocably submits to the exclusive jurisdiction of the courts of New South Wales, Australia and courts of appeal from them in respect of any proceedings arising out of or in connection with this agreement. Each party irrevocably waives any objection to the venue of any legal process on the basis that the process has been brought in an inconvenient forum.</li></ol></li><li><strong class="sec">WAIVER</strong><ol><li>No party to this agreement may rely on the words or conduct of any other party as a waiver of any right unless the waiver is in writing and signed by the party granting the waiver.</li></ol></li><li><strong class="sec">SEVERANCE</strong><ol><li>Any term of this agreement which is wholly or partially void or unenforceable is severed to the extent that it is void or unenforceable. The validity and enforceability of the remainder of this agreement is not limited or otherwise affected.</li></ol></li><li><strong class="sec">JOINT AND SEVERAL LIABILITY</strong><ol><li>An obligation or a liability assumed by, or a right conferred on, two or more persons binds or benefits them jointly and severally.</li></ol></li><li><strong class="sec">ASSIGNMENT</strong><ol><li>A party cannot assign, novate or otherwise transfer any of its rights or obligations under this agreement without the prior written consent of the other party.</li></ol></li><li><strong class="sec">ENTIRE AGREEMENT</strong><ol><li>This agreement embodies the entire agreement between the parties and supersedes any prior negotiation, conduct, arrangement, understanding or agreement, express or implied, in relation to the subject matter of this agreement.</li></ol></li><li><strong class="sec">INTERPRETATION</strong><ul><li><ol><li>(<strong>singular and plural</strong>) words in the singular includes the plural (and vice versa);</li><li>(<strong>currency</strong>) a reference to $; or “dollar” is to Australian currency;</li><li>(<strong>gender</strong>) words indicating a gender includes the corresponding words of any other gender;</li><li>(<strong>defined terms</strong>) if a word or phrase is given a defined meaning, any other part of speech or grammatical form of that word or phrase has a corresponding meaning;</li><li>(<strong>person</strong>) a reference to “person” or “you” includes an individual, the estate of an individual, a corporation, an authority, an association, consortium or joint venture (whether incorporated or unincorporated), a partnership, a trust and any other entity;</li><li>(<strong>party</strong>) a reference to a party includes that party’s executors, administrators, successors and permitted assigns, including persons taking by way of novation and, in the case of a trustee, includes any substituted or additional trustee;</li><li>(<strong>this agreement</strong>) a reference to a party, clause, paragraph, schedule, exhibit, attachment or annexure is a reference to a party, clause, paragraph, schedule, exhibit, attachment or annexure to or of this agreement, and a reference to this agreement includes all schedules, exhibits, attachments and annexures to it;</li><li>(<strong>document</strong>) a reference to a document (including this agreement) is to that document as varied, novated, ratified or replaced from time to time;</li><li>(<strong>headings</strong>) headings and words in bold type are for convenience only and do not affect interpretation;</li><li>(<strong>includes</strong>) the word “includes” and similar words in any form is not a word of limitation; and</li><li>(<strong>adverse interpretation</strong>) no provision of this agreement will be interpreted adversely to a party because that party was responsible for the preparation of this agreement or that provision.</li></ol></li></ul></li></ol></li></ol><p></p><p>DEFINITIONS</p><table><thead><tr><th><p>Term</p></th><th><p>Definition</p></th></tr></thead><tbody><tr><td><p>Confidential Information</p></td><td><p>means information of or provided by a party that is by its nature is confidential information, is designated by that party as confidential, or that the other party knows or ought to know is confidential, but does not include information, which is or becomes, without a breach of confidentiality, public knowledge.</p></td></tr><tr><td><p>Developed Materials</p></td><td><p>means any Materials produced by Liber in the course of providing the Liber App including whether in draft or final form, in writing, provided orally, either alone or in conjunction with you or others, and any Intellectual Property Rights attaching to those materials.</p></td></tr><tr><td><p>Documentation</p></td><td><p>means all manuals, help files and other documents supplied by us to you relating to Liber App, whether in electronic or hardcopy form.</p></td></tr><tr><td><p>Generated Material</p></td><td><p>means Materials, including any mobile applications, developed content, media and other technical or creative works obtained from Liber App which are generated by, and specifically for, you or your Users.</p></td></tr><tr><td><p>Hosting Services</p></td><td><p>has the meaning given in clause 7.4.</p></td></tr><tr><td><p>Intellectual Property Rights</p></td><td><p>means any and all present and future intellectual and industrial property rights throughout the world (whether registered or unregistered), including copyright, trade marks, designs, patents, moral rights, semiconductor and circuit layout rights, trade, business, company and domain names, and other proprietary rights, trade secrets, know-how, technical data, confidential information and the right to have information kept confidential, or any rights to registration of such rights (including renewal), whether created before or after the date of this agreement.</p></td></tr><tr><td><p>Material</p></td><td><p>means tangible and intangible information, documents, reports, software (including source and object code), inventions, data and other materials in any media whatsoever.</p></td></tr><tr><td><p>Personnel</p></td><td><p>means, in respect of a party, its officers, employees, contractors (including subcontractors) and agents.</p></td></tr><tr><td><p>Liber App</p></td><td><p>has the meaning given in the first paragraph of these Terms.</p></td></tr><tr><td><p>Regulator</p></td><td><p>has the meaning given in the second paragraph of these Terms.</p></td></tr><tr><td><p>Subscription</p></td><td><p>has meaning given in the first paragraph of these Terms.</p></td></tr><tr><td><p>Subscription Fees</p></td><td><p>has the meaning set out in clause 12 of these Terms.</p></td></tr><tr><td><p>Subscription Period</p></td><td><p>means the period of your Subscription to the Liber App as agreed on the Website.</p></td></tr><tr><td><p>Subscription Tier</p></td><td><p>has the meaning given in the first paragraph of these Terms.</p></td></tr><tr><td><p>Support Services </p></td><td><p>has the meaning given in clause 7.3.</p></td></tr><tr><td><p>User</p></td><td><p>means you and any third party end user of the Liber App and Generated Material who you make Liber App and Generated Material available to.</p></td></tr><tr><td><p>User Data</p></td><td><p>means any files, data, document, information or any other Materials, which is uploaded to Liber App by you or any other User or which you, your Personnel or Users otherwise provide to us under or in connection with these Terms, including any Intellectual Property Rights attaching to those materials.</p></td></tr><tr><td><p>Website</p></td><td><p>means the website at the URL set out in the first paragraph of these Terms, and any other website operated by us in connection with the Liber App. </p></td></tr></tbody></table><p></p>
+
+
+<p>Welcome to Liber!</p>
+<p class="introhead">ABOUT US</p>
+<p>We are <strong>Liber Group Pty Ltd (ABN 69 694 983 429).</strong> In these terms we refer to ourselves as <strong>“Liber”, “we”, “our” or “us”</strong>. We operate and provide access to our application currently known as Liber (<strong>Liber App</strong>), which is an educational support, planning, journaling and record-keeping tool designed to help home education as described on our website at <a href="https://liber.net.au/">https://liber.net.au</a> (<strong>Website</strong>).</p>
+<p>Liber is an educational support tool only. It does not replace home education programs or formal instruction provided by a parent or guardian, a human tutor, or professional educational advice, and it is not endorsed by, affiliated with, or approved by any Department of Education, home education regulator, approving authority or government body in Australia responsible for home education registration, approval or compliance (<strong>Regulator</strong>), unless we expressly state otherwise in writing.</p>
+<p class="introhead">WHAT ARE THESE TERMS ABOUT?</p>
+<p>These terms and conditions (<strong>Terms</strong>) govern your access to and use of the Liber App and any related services we provide under these Terms (together, the <strong>Liber App</strong> or <strong>Subscription</strong>).</p>
+<p>Your Subscription is for the <strong>Subscription Tier</strong> you select when creating your account or purchasing a subscription through the Liber App or Website. We currently of</p>
+<ul>
+<li><p>a free tier, which provides limited functionality; and</p></li>
+<li><p>one or more paid subscription tiers, which provide access to additional features, including extended progress history, continuity, and the ability to print reports for approval.</p></li>
+</ul>
+<p>These Terms also explain how subscriptions renew automatically, how fees are charged, and how you may cancel your Subscription. You can view the most current version of these Terms at our Website and within the Liber App. If you have questions about these terms, contact <a href="mailto:adam@liber.net.au">adam@liber.net.au</a>.</p>
+<p><strong>Please note that your Subscription will continue to renew indefinitely, and you will continue to incur Subscription Fees, unless you notify us (or Apple or Google via your Apple Store Account or Google Play Account (as applicable) that you want to cancel your Subscription in accordance with clause</strong> <strong>23. Please ensure you contact us if you want to cancel your Subscription.</strong></p>
+<p class="introhead">WHAT ELSE SHOULD I KNOW?</p>
+<p>If you access or download our mobile application from the Apple App Store, you agree to Apple’s Licensed Application End User License Agreement and any Usage Rules set forth in the App Store Terms of Service or the Android, Google Inc. Terms and Conditions including the License Agreement and Terms of Service.</p>
+<p><strong>We also strongly recommend that you read our disclaimers below before using or downloading the Liber App.</strong></p>
+<h1 class="sec-l1" id="reading-and-accepting-these-terms">READING AND ACCEPTING THESE TERMS</h1>
+<ol>
+<li><p>In these Terms, capitalised words and phrases have the meanings given to them where they are followed by bolded brackets, or as set out in the Definitions table at the end of these Terms.</p></li>
+<li><p>By clicking the tick box or clicking the “I accept these Terms” button on our App, paying for your Subscription or otherwise accepting the benefit of any part of your Subscription, you agree to be bound by these Terms which form a binding contractual agreement between you the person acquiring a Subscription or the company you represent and are acquiring the Subscription on behalf of (<strong>‘you’ or ‘your’</strong>) and us.</p></li>
+<li><p>We may change these Terms at any time by notifying you, and your continued use of the Liber App following such an update will represent an agreement by you to be bound by the Terms as amended.</p></li>
+</ol>
+<h1 class="sec-l1" id="changes-to-the-liber-app">Changes to the liber app</h1>
+<ol>
+<li><p>We may, at any time and in our absolute discretion:</p>
+<ol>
+<li><p>update, improve or change any features or functionality of the Liber App;</p></li>
+<li><p>modify, suspend or discontinue any part of the Liber App (including during any early access or beta phase); and</p></li>
+<li><p>update these Terms from time to time.</p></li>
+</ol></li>
+<li><p>We may make changes for any reason, including to improve functionality, address technical or security issues, or to comply with applicable laws or requirements imposed by any Regulator.</p></li>
+<li><p>To the maximum extent permitted by law, we do not guarantee the ongoing availability of any particular feature, functionality or content within the Liber App.</p></li>
+<li><p>If we update these Terms, we will notify you in accordance with these Terms. Your continued use of the Liber App after the updated Terms take effect constitutes your acceptance of the updated Terms.</p></li>
+</ol>
+<h1 class="sec-l1" id="eligibility">ELIGIBILITY</h1>
+<ol>
+<li><p>By accepting these Terms, you represent and warrant that:</p>
+<ol>
+<li><p>you have the legal capacity and authority to enter into a binding contract with us; and</p></li>
+<li><p>you are authorised to use the payment you provided when purchasing a Subscription (if applicable).</p></li>
+</ol></li>
+<li><p>If you are signing up not as an individual but on behalf of your company, your employer, an organisation, government or other legal entity (<strong>Represented Entity</strong>), then “you” or “your” means the Represented Entity and you are binding the Represented Entity to this agreement. If you are accepting this agreement and using our Liber App on behalf of a Represented Entity, you represent and warrant that you are authorised to do so.</p></li>
+<li><p>The Liber App is intended for use by parents or legal guardians only. Individuals under 18 years of age must not create an Account or use the Liber App.</p></li>
+<li><p>By creating an Account for a user under 18, the parent or legal guardian:</p>
+<ol>
+<li><p>represents and warrants that they are the child’s parent or legal guardian, or otherwise have proper authority to consent on their behalf;</p></li>
+<li><p>agrees to be bound by these Terms in respect of the child’s use of the Liber App;</p></li>
+<li><p>is responsible for supervising the child’s use of the Liber App;</p></li>
+<li><p>may input information relating to a child for record-keeping purposes only;</p></li>
+<li><p>are solely responsible for the accuracy, legality and appropriateness of any child-related data you upload.</p></li>
+</ol></li>
+<li><p>You must not use the Liber App if you are under 18 years old. If we become aware that a user under 18 has created an Account, we may suspend or delete the Account.</p></li>
+<li><p>If you are a school, teacher or other organisation creating Accounts or inviting students to use the Liber App, you represent and warrant that you have obtained all necessary consents and approvals from the relevant students and/or their parents or guardians.</p></li>
+</ol>
+<h1 class="sec-l1" id="early-accessbeta">Early access/beta</h1>
+<ol>
+<li><p>You acknowledge and agree that the Liber App is in active development and may be made available to you on an early access or beta basis.</p></li>
+<li><p>During any early access or beta phase:</p>
+<ol>
+<li><p>data stored in the Liber App may be modified, migrated, reset or lost as part of development and testing;</p></li>
+<li><p>features and functionality of the Liber App may change, be modified, suspended or removed at any time;</p></li>
+<li><p>underlying data models, assumptions and calculations used by the Liber App may evolve over time; and</p></li>
+<li><p>the Liber App may experience outages, errors, defects or produce incorrect, incomplete or unreliable outputs.</p></li>
+</ol></li>
+<li><p>Availability of the Liber App is not guaranteed during early access or beta phases.</p></li>
+<li><p>To the maximum extent permitted by law, we do not warrant that the Liber App will be uninterrupted, error-free or available at all times during any early access or beta phase, and you acknowledge and agree that you access and use the Liber App during this phase at your own risk.</p></li>
+</ol>
+<h1 class="sec-l1" id="disclaimers">DISCLAIMERs</h1>
+<h2 class="sub-l2" id="educational-and-ai-disclaimer">EDUCATIONAL AND AI DISCLAIMER</h2>
+<ol>
+<li><p>The Liber App uses artificial intelligence (AI), machine learning and other automated technologies to analyse materials you upload (including notes, photos, work samples, reflections and files) and to generate or assist features that support planning, reflection and learning insights (<strong>Generated Materials</strong>).</p></li>
+<li><p>You acknowledge and agree that AI technologies are probabilistic and may generate content that is inaccurate, incomplete, outdated, misleading or not aligned with your curriculum or any guidance issued by any Regulator.</p></li>
+<li><p>Liber does not provide any guarantee that the Liber App or any Generated Materials are correct, complete, suitable for your specific needs, or aligned to any particular syllabus or requirements imposed by any Regulator.</p></li>
+<li><p>The Liber App is an educational support tool only. It does not replace home education programs, formal instruction provided by a parent or guardian, professional tutoring, exam preparation courses, or independent study, and does not constitute professional, academic, career, legal, financial or other advice.</p></li>
+<li><p>We do not guarantee that use of the Liber App will result in approval of any home education application, registration, assessment or reporting obligation.</p></li>
+<li><p>You are solely responsible for reviewing and verifying any Generated Materials before relying on them, and we accept no responsibility for any decision, outcome or reliance placed on Generated Materials.</p></li>
+</ol>
+<h2 class="sub-l2" id="no-guarantee-of-academic-outcomes">NO GUARANTEE OF ACADEMIC OUTCOMES</h2>
+<ol>
+<li><p>We do not represent, warrant or guarantee that your use of the Liber App or Generated Materials will result in improved understanding, grades, exam results, academic performance or any specific educational outcome.</p></li>
+<li><p>We do not guarantee that use of the Liber App will result in approval of any home education application, registration, assessment or reporting obligation.</p></li>
+<li><p>To the fullest extent permitted by law, you are not entitled to a refund, credit or compensation solely because:</p>
+<ol>
+<li><p>you are dissatisfied with the Generated Materials;</p></li>
+<li><p>the Generated Materials do not match your curriculum or expectations; or</p></li>
+<li><p>you did not achieve an educational outcome you hoped to achieve.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="syllabus-and-third-party-materials">SYLLABUS AND THIRD PARTY MATERIALS</h2>
+<ol>
+<li><p>You may upload syllabuses, notes, photographs, work samples, reflections, files and other materials to the Liber App (<strong>Uploaded Materials</strong>). These materials may be owned by you or by third parties (for example, curriculum providers, publishers or government education bodies).</p></li>
+<li><p>Liber does not claim ownership of any Uploaded Materials. Our use of Uploaded Materials is limited to what is reasonably necessary to operate the Liber App, generate Generated Materials for you, and improve our products and services as set out in these Terms.</p></li>
+<li><p>You are solely responsible for ensuring that you have all necessary rights, licences and permissions to upload any Uploaded Materials to the Liber App, including where those materials are created or owned by any third party, including any Regulator or any curriculum provider or publisher.</p></li>
+<li><p>Without limiting clause 3.3(c), you must not upload any materials where doing so would breach any applicable terms of use, licence conditions, policies of a third-party content provider, or any applicable copyright or other intellectual property rights.</p></li>
+<li><p>We do not monitor or vet Uploaded Materials for copyright compliance. To the maximum extent permitted by law, we are not responsible for, and you release us from, any claim, loss or liability arising out of or in connection with your upload or use of any Uploaded Materials.</p></li>
+</ol>
+<h2 class="sub-l2" id="academic-integrity">ACADEMIC INTEGRITY</h2>
+<ol>
+<li><p>You must comply with any applicable requirements, policies or conditions imposed by any Regulator when using the Liber App.</p></li>
+<li><p>You must not submit any Generated Materials (in whole or in part) as your own work where doing so would breach academic integrity rules or where you are required to complete the work independently.</p></li>
+<li><p>We are not responsible for and will have no liability to you in respect of any disciplinary action, penalty or other consequence you may face from any Regulator or other authority or institution resulting from your misuse of the Liber App or Generated Materials.</p></li>
+</ol>
+<h1 class="sec-l1" id="duration-of-your-subscription">DURATION OF YOUR SUBSCRIPTION</h1>
+<ol>
+<li><p>Your Subscription and these Terms commence on the date you agree to be bound by these Terms (as set out at the beginning of these Terms) and continues for the Subscription Period and any Renewal Periods applicable, unless terminated earlier in accordance with clause 23.</p></li>
+<li><p>Subject to clause 6(c), upon expiration of the Subscription Period, this agreement will automatically and indefinitely renew on an ongoing basis for a period equal to the Subscription Period (<strong>Renewal Period</strong>).</p></li>
+<li><p>This agreement will not automatically renew on expiry of the Subscription or Renewal Period (<strong>Renewal Date</strong>), if either party provides a written cancellation notice at least 7 Business Days prior to the Renewal Date.</p></li>
+<li><p>Your subscription will automatically renew at the end of each billing cycle unless you cancel prior to renewal. You can cancel at any time via your account settings..</p></li>
+</ol>
+<h1 class="sec-l1" id="the-app">THE APP</h1>
+<h2 class="sub-l2" id="scope-of-your-subscription-and-the-app">SCOPE OF YOUR SUBSCRIPTION AND THE APP</h2>
+<ol>
+<li><p>We will provide you, to the extent described in your Subscription Tier, Liber App and the Documentation.</p></li>
+<li><p>Your Subscription includes the benefits and limitations of your Subscription Tier as set out on our Website, or as otherwise communicated to you when you subscribe for your Subscription (and as amended from time to time by notice to you).</p></li>
+<li><p>While your Subscription is maintained, we grant to you a non-exclusive, non-transferable licence to use Liber App and Documentation.</p></li>
+<li><p>We may from time to time, in our absolute discretion, release enhancements to Liber App, meaning an upgraded, improved, modified or new versions of the Liber App (<strong>Enhancements</strong>). Any Enhancements to Liber App will not limit or otherwise affect these Terms. Enhancements may cause downtime or delays from time to time, and credits will not be provided for such downtime.</p></li>
+<li><p>We may change any features of the Liber App at any time on notice to you.</p></li>
+</ol>
+<h2 class="sub-l2" id="accounts">ACCOUNTS</h2>
+<ol>
+<li><p>(<strong>Accounts</strong>) To use the Liber App, you may be required to sign-up, register and receive an account through the Website (an <strong>Account</strong>).</p></li>
+<li><p>(<strong>Provide Information</strong>) As part of the Account registration process and as part of your continued use of the Website, you may be required to provide personal information and details, such as your email address, first and last name, preferred username, a secure password, billing, postal and physical addresses, mobile phone number, photos and video, audio files, profile information, payment details, ratings and reviews, verified identifications, verified certifications and authentication, and other information as determined by us from time to time.</p></li>
+<li><p>(<strong>Warranty</strong>) You warrant that any information you give to us in the course of completing the Account registration process is accurate, honest, correct and up-to-date.</p></li>
+<li><p>(<strong>Acceptance</strong>) Once you complete the Account registration process, we may, in our absolute discretion, choose to accept you as a registered user within the Website and provide you with an Account.</p></li>
+</ol>
+<h2 class="sub-l2" id="support-services">SUPPORT SERVICES</h2>
+<p>We will provide general support where reasonably necessary to resolve technical issues with Liber App (<strong>Support Services</strong>). Unless otherwise agreed in writing:</p>
+<ol>
+<li><p>we will take reasonable steps to provide Support Services where necessary (you must first endeavour to resolve any issues with Liber App internally and we will not assist with issues that are beyond our reasonable control);</p></li>
+<li><p>we will use our best endeavours to respond to requests for Support Services and you acknowledge that we will not be available 24/7 or respond within a particular time frame;</p></li>
+<li><p>you are responsible for all internal administration and managing access, including storing back-up passwords and assisting your Users to access your Generated Material and use Liber App;</p></li>
+<li><p>we do not provide IT managed services (including system monitoring, infrastructure management, user-level support or administration of your internal systems), and we do not guarantee any service levels, response times, resolution times, uptime or availability in connection with the Application or the Support Services; and</p></li>
+<li><p>you will not have any claim for delay to your access to Liber App due to any failure or delay in Support Services.</p></li>
+</ol>
+<h2 class="sub-l2" id="data-hosting">DATA HOSTING</h2>
+<ol>
+<li><p>Subject to the inclusions of your Subscription Tier, we will store User Data you upload to Liber App using a third-party hosting service selected by us (<strong>Hosting Services</strong>), subject to the following terms:</p>
+<ol>
+<li><p>(<strong>hosting location</strong>) We currently use third-party cloud hosting providers with data centres located in Australia or overseas to host the Liber App and store User Data. We may change hosting providers or add additional hosting locations from time to time but will use reasonable efforts to ensure that User Data relating to Australian users is stored in Australia or overseas in locations offering comparable data protection standards.</p></li>
+<li><p>(<strong>encryption</strong>) We use reasonable technical and organisational measures, including encryption in transit and at rest where practicable, to protect User Data against unauthorised access, use or disclosure. However, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.</p></li>
+<li><p>(<strong>service quality</strong>) While we will use our best efforts to select an appropriate hosting provider, we do not guarantee that the Hosting Services will be free from errors or defects or that User Data will be accessible or available at all times.</p></li>
+<li><p>(<strong>security</strong>) We will use our best efforts to ensure that User Data is stored securely. However, we do not accept responsibility or liability for any unauthorised use, destruction, loss, damage or alteration to User Data, including due to hacking, malware, ransomware, viruses, malicious computer code or other forms of interference.</p></li>
+<li><p>(<strong>backups &amp; disaster recovery</strong>) In the event that User Data is lost due to a system failure (e.g. a database or webserver crash), we cannot guarantee that any backup will be available, or if available that such a backup will be free from errors or defects.</p></li>
+<li><p>(<strong>your responsibility for data</strong>) You are solely responsible for ensuring that:</p>
+<ol>
+<li><p>all User Data uploaded to Liber App is accurate, complete, lawful, and does not infringe any third-party rights;</p></li>
+<li><p>you maintain independent backups of your User Data outside of the Application if required for your business continuity or legal obligations; and</p></li>
+<li><p>you do not use Liber App as your sole repository or system of record for any critical or regulated data.</p></li>
+</ol></li>
+<li><p>(<strong>no transfer of ownership</strong>) Uploading User Data to Liber App does not transfer any ownership of that data to us. We do not claim any rights in your User Data except to the extent necessary to provide the services under these Terms.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="acceptable-use-and-user-obligations">acceptable use and user obligations</h1>
+<h2 class="sub-l2" id="user-content-responsibility">User content &amp; responsibility </h2>
+<ol>
+<li><p>You are solely responsible for all information, syllabuses, notes, assignments, questions, answers, images, documents and other content you upload, submit or share through the Liber App (<strong>User Content</strong>).</p></li>
+<li><p>You must not, and must ensure that no one using your Account:</p>
+<ol>
+<li><p>Upload, generate, or share any User content that:</p>
+<ol>
+<li><p>you do not have the right to upload (for example, copyrighted materials owned by any third party, including any Regulator, curriculum provider or publisher, where you do not have permission);</p></li>
+<li><p>is sensitive, confidential, or proprietary information without necessary rights and permissions;</p></li>
+<li><p>is inappropriate, offensive, illicit, illegal, pornographic, sexist, homophobic, or racist material;</p></li>
+<li><p>is material owned or copyrighted by a third party without authorisation.</p></li>
+</ol></li>
+<li><p>Use the Liber App:</p>
+<ol>
+<li><p>circumvent or breach any applicable requirements, policies or conditions imposed by any Regulator;</p></li>
+<li><p>for any purpose other than its intended lawful use;</p></li>
+<li><p>in a manner that is illegal, fraudulent, or facilitates illegal or fraudulent activity;</p></li>
+<li><p>in a way that infringes the intellectual property or other rights of any person;</p></li>
+<li><p>to intimidate, harass, impersonate, stalk, threaten, bully, or endanger another user;</p></li>
+<li><p>to distribute unsolicited commercial messages, junk mail, spam, bulk content, or harassment.</p></li>
+</ol></li>
+<li><p>Tamper with or misuse the Liber App or Documentation by:</p>
+<ol>
+<li><p>copying, adapting, modifying, or creating derivative works;</p></li>
+<li><p>removing or altering any copyright, trade mark, or proprietary notice;</p></li>
+<li><p>integrating third-party software or APIs without Liber’s prior written consent;</p></li>
+<li><p>decompiling, reverse-engineering, or attempting to derive source code;</p></li>
+<li><p>circumventing any security feature or technological protection mechanism;</p></li>
+<li><p>selling, transferring, sub-licensing, hiring, or otherwise disposing of the Liber App or Documentation to any third party (except granting permitted user access under these Terms);</p></li>
+<li><p>sharing your account details, passwords, or other security credentials.</p></li>
+</ol></li>
+<li><p>Act in any way that harms, or is likely to harm, Liber’s reputation or the reputation of any associated party.</p></li>
+</ol></li>
+<li><p>If you become aware of misuse of your Subscription by any person, any errors in the material on your Subscription or any difficulty in accessing or using your Subscription, please contact us immediately using the contact details or form provided on our Website.</p></li>
+<li><p>You agree, and you must ensure that all Users agree:</p>
+<ol>
+<li><p>to comply with each of your obligations in these Terms;</p></li>
+<li><p>to sign up for an Account in order to use the Liber App;</p></li>
+<li><p>that information given to you through Liber App, by us or another User, is general in nature and we take no responsibility for anything caused by any actions you take in reliance on that information; and</p></li>
+<li><p>that we may cancel your, or any User’s, Account at any time if we consider, in our absolute discretion, that you or they are in breach of, or are likely to breach, this clause.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="compliance-with-laws">compliance with laws</h2>
+<ol>
+<li><p>You warrant that you will not, by using, receiving or requesting the Liber App:</p>
+<ol>
+<li><p>breach any applicable laws, rules or regulations (including any applicable privacy laws); or</p></li>
+<li><p>infringe the Intellectual Property Rights or other rights of any third party or breach any duty of confidentiality.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="reporting-abuse-or-security-concerns">reporting abuse or security concerns</h2>
+<ol>
+<li><p>You must report any abuse or security concerns related to Liber App as soon as you become aware of them. Reports should be submitted through the designated in-app reporting tool or emailed to <a href="mailto:support@liber.net.au">support@liber.net.au</a>.</p></li>
+<li><p>Upon receiving a report, we will investigate the matter promptly and take appropriate action as required. You may be required to provide further information or assist in the investigation. Information provided in reports will be handled confidentially, subject to our Privacy Policy and applicable laws. You must comply with all applicable laws when reporting abuse or security concerns.</p></li>
+<li><p>False or misleading reports may result in suspension or termination of your access to Liber App.</p></li>
+</ol>
+<h1 class="sec-l1" id="user-data-roles-and-responsibilities">USER DATA ROLES AND RESPONSIBILITIES</h1>
+<h2 class="sub-l2" id="libers-obligations">Liber’s OBLIGATIONS</h2>
+<ol>
+<li><p>Liber will establish, maintain, enforce and continuously improve safety and security procedures and safeguards against the unauthorised use, destruction, loss or alteration of the User Data. You must not, and ensure that its personnel do not, undertake any action that may have the potential to compromise Liber’s ability to comply with this clause.</p></li>
+<li><p>Liber will notify and keep you notified of Liber’s current safety and security procedures and safeguards that are made from time to time.</p></li>
+</ol>
+<h2 class="sub-l2" id="your-privacy-obligations">your privacy obligations</h2>
+<ol>
+<li><p>You must comply with all applicable laws when using the Liber App, including any obligations you may have in relation to the personal information of others that you upload (for example, where you upload another person’s details or information).</p></li>
+<li><p>If you are a parent, legal guardian or other authorised carer using the Liber App to record or manage information about a child in connection with home education, you are responsible for ensuring that you have obtained all necessary consents and authorisations to upload and manage that child’s personal information, and that your use of the Liber App complies with your own privacy obligations and all applicable privacy laws.</p></li>
+</ol>
+<h2 class="sub-l2" id="data-breach">DATA BREACH</h2>
+<ol>
+<li><p>While every precaution within Liber’s control will be taken to ensure security of the User Data, Liber cannot guarantee that User Data security issues will not arise.</p></li>
+<li><p>You or Liber (as the case may be) will immediately notify the other party after learning of any potential, actual or suspected loss, misappropriation or unauthorised access to, or disclosure or use of Confidential Information or Personal Information or other compromise of the security, confidentiality, or integrity of Confidential Information or Personal Information (collectively, <strong>Security Breaches</strong>).</p></li>
+<li><p>Liber will promptly investigate each potential, actual or suspected Security Breach and assist you and its personnel in connection with any investigation that you may desire to conduct with respect to the Security Breach.</p></li>
+<li><p>Liber will take all steps requested by you to limit, stop or otherwise remedy any potential, actual or suspected Security Breach.</p></li>
+<li><p>You will be solely responsible for any obligations in relation to any Notifiable Data Breaches and the Office of the Australian Information Commission.</p></li>
+<li><p>Liber will take all steps it considers reasonably necessary to limit, stop or otherwise remedy any potential, actual or suspected Security Breach affecting User Data held or controlled by Liber.</p></li>
+<li><p>To the extent Liber is an “APP entity” under the Privacy Act 1988 (Cth) in respect of any personal information involved in a Security Breach, Liber will comply with its obligations (if any) under the Notifiable Data Breaches scheme where the Security Breach arises from a breach of Liber’s systems or security controls under Liber’s control. If you are an APP entity in your own right, you are responsible for complying with any Notifiable Data Breaches obligations that apply to you in relation to your own systems and handling of personal information.</p></li>
+<li><p>Liber is not responsible for any Security Breach arising from misuse or compromise of your Account credentials, or from a breach of your own systems or security controls.</p></li>
+</ol>
+<h1 class="sec-l1" id="providing-your-own-content-on-the-app">providing your own content on the app</h1>
+<h2 class="sub-l2" id="warranties-around-uploaded-material">WARRANTIES around uploaded material</h2>
+<ol>
+<li><p>By creating, uploading or posting any Uploaded Material in connection with the Liber App, you represent and warrant that:</p>
+<ol>
+<li><p>you have all necessary rights, licences and permissions to upload the Uploaded Material and to grant the licences in these Terms, including where the Uploaded Material is owned by any Regulator, curriculum provider, publisher or other third party;</p></li>
+<li><p>the Uploaded Material does not infringe any third party’s intellectual property rights, privacy rights or other legal rights;</p></li>
+<li><p>the Uploaded Material does not breach any applicable requirements, policies or conditions imposed by any Regulator;</p></li>
+<li><p>the Uploaded Material is not unlawful, defamatory, discriminatory, harassing, hateful, threatening or otherwise inappropriate;</p></li>
+<li><p>the Uploaded Material does not contain viruses, malware or other harmful code; and</p></li>
+<li><p>the Uploaded Material complies with all applicable laws.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="licence">LICENCE</h2>
+<ol>
+<li><p>You retain ownership of any intellectual property rights you have in Uploaded Material. We do not claim ownership of your Uploaded Material.</p></li>
+<li><p>By uploading or providing Uploaded Material, you grant us a non-exclusive, worldwide, royalty-free licence (with the right to sublicense to our service providers) to host, store, use, reproduce, modify and display the Uploaded Material solely to:</p>
+<ol>
+<li><p>operate, maintain and provide the Liber App and the Liber App to you and other users;</p></li>
+<li><p>generate Generated Materials for you and other users; and</p></li>
+<li><p>improve and develop the Liber App and our other products and services, including by using de-identified or aggregated data for analytics and machine learning.</p></li>
+</ol></li>
+<li><p>To the extent you have moral rights in any Uploaded Material, you consent to us (and our Personnel) doing any act or omission in relation to that Uploaded Material that would otherwise infringe those moral rights, to the extent reasonably necessary for the purposes in clause 8.2(b).</p></li>
+<li><p>You indemnify us against all losses, costs and expenses we incur in connection with any claim that your Uploaded Material infringes a third party’s rights or breaches applicable law.</p></li>
+</ol>
+<h2 class="sub-l2" id="removal">REMOVAL</h2>
+<ol>
+<li><p>Liber App acts as a passive conduit for the online distribution of Uploaded Material and has no obligation to screen Uploaded Material. However, we may, in our absolute discretion, review and remove any Uploaded Material from the Liber App at any time without giving any explanation or justification for removing the Uploaded Material, including but not limited to, if we determine that the Uploaded Material involves any illicit material, infringes a third party’s Intellectual Property Rights, or is reasonably likely to.</p></li>
+<li><p>You agree that you are responsible for keeping and maintaining records of Uploaded Material.</p></li>
+</ol>
+<h2 class="sub-l2" id="syllabus-and-institutional-materials">SYLLABUS AND INSTITUTIONAL MATERIALS</h2>
+<ol>
+<li><p>Uploaded Material may include syllabuses, curriculum documents, teaching materials, learning resources, work samples and other content created or owned by any Regulator, curriculum provider, publisher or other third party <strong>(Institutional Materials)</strong>.</p></li>
+<li><p>We do not claim ownership of any Institutional Materials. Our use of Institutional Materials is limited to what is reasonably necessary to provide the Liber App and the Liber App.</p></li>
+<li><p>You are responsible for ensuring that uploading any Institutional Materials to the Liber App is permitted under the applicable requirements, policies or conditions imposed by the relevant third party and under applicable laws.</p></li>
+<li><p>To the maximum extent permitted by law, we are not liable for any claim arising from your upload or use of any Institutional Materials in breach of those policies or laws.</p></li>
+</ol>
+<h2 class="sub-l2" id="infringing-content-on-the-application">INFRINGING CONTENT ON THE APPLICATION</h2>
+<ol>
+<li><p>If you become aware of Uploaded Material, or other Material, on Liber App that does not comply with this clause 10.1, or is reasonably likely to, please contact us immediately on the ‘Contact Us’ section of our Website or through the Contact Us feature on Liber App.</p></li>
+<li><p>If you submit a complaint under clause 10.5(a):</p>
+<ol>
+<li><p>you warrant that the substance of the complaint is accurate, true and involves relevant infringement;</p></li>
+<li><p>you acknowledge and agree that groundless threats of legal proceedings, including in relation to copyright infringement, may be prohibited under applicable law (for example, Australia’s <em>Copyright Act 1968</em>, or equivalent laws wherever you are located); and</p></li>
+<li><p>you agree to indemnify us in relation to any loss or damage that may arise in relation to your complaint, including in relation to any third-party claim that the complaint contains a groundless threat.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="generating-your-own-content-on-the-app">generating your own content on the app</h1>
+<h2 class="sub-l2" id="warranties-around-generated-material">WARRANTIES AROUND GENERATED MATERIAl</h2>
+<ol>
+<li><p>By generating, prompting, or otherwise obtaining any Material through Liber App’s functionality (<strong>Generated Material</strong>), you represent and warrant that, and must ensure that all Users make equivalent representations and warranties:</p>
+<ol>
+<li><p>you understand that Generated Material is produced by an AI system based on your prompts and Uploaded Material, and may be inaccurate, incomplete, outdated or inconsistent with your official syllabus or any guidance issued by a Regulator;</p></li>
+<li><p>you are solely responsible for reviewing, verifying and deciding whether and how to use any Generated Material, including by checking it against your syllabus and any guidance issued by a Regulator;</p></li>
+<li><p>you will not use any Generated Material in a way that infringes a third party’s intellectual property rights or breaches any applicable law; and</p></li>
+<li><p>you will not attempt to generate content that is unlawful, discriminatory, hateful, harassing, abusive, sexually explicit, or otherwise inappropriate.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="licence-to-generated-material">LICENCE TO GENERATED MATERIAL</h2>
+<ol>
+<li><p>As between you and us, you own any intellectual property rights you have in the Generated Material, subject to any rights of third parties in the underlying Uploaded Material.</p></li>
+<li><p>By using the Liber App and generating Generated Material, you grant us (and our Personnel) a non-exclusive, worldwide, royalty-free licence (with the right to sublicense to our service providers) to host, store, use, reproduce, modify and display the Generated Material solely to:</p>
+<ol>
+<li><p>operate, maintain and provide the Liber App and the Liber App to you and other users; and</p></li>
+<li><p>analyse, improve and develop the Liber App and our other products and services, including by using de-identified or aggregated data for analytics and machine learning.</p></li>
+</ol></li>
+<li><p>To the extent you have moral rights in any Generated Material, you consent to us (and our Personnel) doing any act or omission in relation to that Generated Material that would otherwise infringe those moral rights, to the extent reasonably necessary for the purposes in clause 9.2(b).</p></li>
+<li><p>You indemnify us against all damages, losses, costs and expenses incurred by us arising in connection with any third-party claim that Generated Material infringes any third party’s Intellectual Property Rights or otherwise breaches any applicable Law.</p></li>
+</ol>
+<h2 class="sub-l2" id="review-and-removal">REVIEW AND REMOVAL</h2>
+<ol>
+<li><p>We do not proactively monitor Generated Material but we reserve the right, in our sole discretion, to review and remove or restrict access to any Generated Material at any time, including if we determine (or reasonably suspect) that it:</p>
+<ol>
+<li><p>breaches these terms,</p></li>
+<li><p>infringes third party Intellectual Property Rights, or</p></li>
+<li><p>is unlawful, misleading, harmful, or otherwise inappropriate.</p></li>
+</ol></li>
+<li><p>You agree that you are solely responsible for any decisions made, actions taken, or reliance placed on the Generated Material, and for keeping appropriate backups or records of any such Material as required.</p></li>
+</ol>
+<h1 class="sec-l1" id="fee-and-payment">FEE AND PAYMENT</h1>
+<h2 class="sub-l2" id="free-subscription-tier">free subscription tier</h2>
+<ol>
+<li><p>We offer a basic and free Subscription Tier (<strong>Free Subscription Tier</strong>). No payments will be due during the Subscription Period for a Free Subscription Tier.</p></li>
+</ol>
+<h2 class="sub-l2" id="paid-subscription-tiers">Paid SUBSCRIPTION tiers</h2>
+<ol>
+<li><p>If you select a paid subscription tier (<strong>Paid Subscription</strong>), you must pay the subscription fees specified on our Website for your chosen tier, or as otherwise agreed in writing (<strong>Subscription Fees</strong>).</p></li>
+<li><p>Subscription Fees are payable in advance and are non-refundable for change of mind.</p></li>
+<li><p>Unless otherwise agreed in writing, Subscription Fees are charged on a recurring basis for the duration of your subscription, according to your selected billing option:</p>
+<ol>
+<li><p><strong>Monthly Subscription:</strong> Fees are charged on the first day of your subscription period and then on the same date each month thereafter.</p></li>
+<li><p><strong>Annual Subscription:</strong> Fees are charged on the first day of your subscription period and then on the same date each year thereafter.</p></li>
+</ol></li>
+<li><p>If you cancel an Annual Subscription before the end of the paid Annual Subscription period, you will continue to have access until the end of that period, but no refund will be provided for any unused portion of the Annual Subscription.</p></li>
+<li><p>Your subscription will automatically renew at the end of each billing cycle (monthly or annual, as applicable) unless you cancel it in accordance with the cancellation specified on the app.</p></li>
+<li><p>All payments must be made via the payment methods made available in the Application or on our Website. You are responsible for ensuring that your payment details are valid and up-to-date at all times.</p></li>
+</ol>
+<h2 class="sub-l2" id="automatic-recurring-billing">AUTOMATIC RECURRING BILLING</h2>
+<p>Subject to clauses 12.4 and 12.5:</p>
+<ol>
+<li><p>Your Subscription will continue to renew on an automatic indefinite basis unless you notify us that you wish to cancel in accordance with this clause 12.</p></li>
+<li><p>While your Subscription is maintained, your Subscription Fees will continue to be debited at the beginning of each Renewal Period from the payment method you nominated when you registered for an Account.</p></li>
+<li><p>By signing up for a recurring Subscription, you acknowledge and agree that your Subscription has an initial and recurring payment feature, and you accept responsibility for all recurring charges prior to your cancellation of your Subscription.</p></li>
+</ol>
+<h2 class="sub-l2" id="grace-period">grace period</h2>
+<p>If you fail to cancel your Subscription prior to a Renewal Period and you are charged recurring charges, you have up to 5 Business Days from the date of that renewal to cancel your Subscription by contacting us through our Website or through the Contact Us feature on Liber App (<strong>Grace Period</strong>). If you cancel your Subscription within the Grace Period, please contact us via our Website to request a refund for any recurring fees charged to you during the Grace Period, less any used Credits.</p>
+<h2 class="sub-l2" id="changes-to-subscription-fees">CHANGES TO SUBSCRIPTION FEES</h2>
+<ol>
+<li><p>We may, from time to time, change our Subscription Fees and provide you with 10 Business Days’ notice prior to the changes. During this time, you have the opportunity to cancel your Subscription with us. If you do not cancel your Subscription before the new Subscription Fees take effect, the Grace Period in clause 12.4 will apply.</p></li>
+</ol>
+<h2 class="sub-l2" id="late-payments">LATE PAYMENTS</h2>
+<ol>
+<li><p>We reserve the right to suspend all or part of the Liber App indefinitely if you fail to pay any Fees in accordance with this clause 12.</p></li>
+</ol>
+<h2 class="sub-l2" id="gst">GST</h2>
+<ol>
+<li><p>Unless otherwise indicated, the Fees do not include GST. In relation to any GST payable for a taxable supply by us, you must pay the GST subject to us providing a tax invoice.</p></li>
+</ol>
+<h2 class="sub-l2" id="card-surcharges">CARD SURCHARGES</h2>
+<ol>
+<li><p>We reserve the right to charge credit card surcharges in the event payments are made using a credit, debit or charge card (including Visa, MasterCard or American Express).</p></li>
+</ol>
+<h2 class="sub-l2" id="online-payment-partner">ONLINE PAYMENT PARTNER</h2>
+<ol>
+<li><p>We may use third-party online payment partner, currently Stripe (<strong>Online Payment Partner</strong>) to collect Subscription Fees.</p></li>
+<li><p>Apple Pay and Google Pay may also be offered as payment methods via Stripe or relevant app stores from time to time.</p></li>
+<li><p>Provided that Liber has notified you of such Third Party Terms and provided you with a copy of those terms, you acknowledge and agree that:</p></li>
+
+<li><p>the processing of payments by the Online Payment Partner will be subject to the terms, conditions and privacy policies of the relevant Online Payment Partner (including Stripe, as applicable), as notified to you from time to time Stripe, in addition to this agreement, subject to the terms, conditions and privacy policies of the Online Payment Partner, which can be found here, <a href="https://stripe.com/au/legal/ssa">https://stripe.com/au/legal/ssa</a>.</p></li>
+<li><p>you release us and our Personnel in respect of all liability for loss, damage or injury which may be suffered by any person arising from any act or omission of the Online Payment Partner, including any issue with security or performance of the Online Payment Partner’s platform or any error or mistake in processing your payment; and</p></li>
+<li><p>We reserve the right to correct, or to instruct our Online Payment Partner to correct, any errors or mistakes in collecting your payment.</p>
+<ol>
+<li><p>You have the right to reject any terms and conditions of the Online Payment Partner. If you reject those terms, we cannot provide you with the Subscription and clause 23 will apply.</p></li>
+<li><p>We may change or replace our Online Payment Partner from time to time without amending these Terms, provided we notify you of any materially different third party terms that will apply to the processing of your payments.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="intellectual-property-and-data">INTELLECTUAL PROPERTY AND DATA</h1>
+<h2 class="sub-l2" id="no-transfer-of-ownership">NO TRANSFER OF OWNERSHIP</h2>
+<ol>
+<li><p>Neither party will, under this agreement, acquire Intellectual Property Rights in the User Data or Liber’s Materials, specifically Liber’s source code (as applicable) and each party will retain its ownership of any Intellectual Property Rights in such Materials.</p></li>
+</ol>
+<h2 class="sub-l2" id="liber-materials-and-developed-materials">Liber MATERIALS AND DEVELOPED Materials</h2>
+<ol>
+<li><p>Liber grants you a non-exclusive, royalty free, non-transferable, worldwide and revocable licence to use the Liber’s Materials and Developed Materials, not constituting Generated Materials, to the extent required for you to use, enjoy the benefit of or exploit the Liber App as contemplated by these terms.</p></li>
+</ol>
+<h2 class="sub-l2" id="user-data-and-generated-materials">user data and generated materials</h2>
+<ol>
+<li><p>As between you and us, you own all intellectual property rights in your User Data and Generated Materials (subject to any rights of third parties in Uploaded Materials such as Institutional Materials).</p></li>
+<li><p>You grant us (and our Personnel) a non-exclusive, worldwide, royalty-free licence (with the right to sublicense to our service providers) to use, host, store, reproduce, modify and display the User Data and Generated Materials to the extent reasonably required to:</p>
+<ol>
+<li><p>provide the Liber App and operate the Liber App; and</p></li>
+<li><p>analyse, improve and develop the Liber App and our other products and services, including by using de-identified or aggregated data for analytics and machine learning.</p></li>
+</ol></li>
+<li><p>We reserve the right to remove any User Data or Generated Material at any time, for any reason, including where we deem User Data or Generated Material to be inappropriate, offensive, illicit, illegal, pornographic, sexist, homophobic or racist.</p></li>
+<li><p>You are responsible for ensuring that:</p>
+<ol>
+<li><p>you share User Data only with intended recipients; and</p></li>
+<li><p>all User Data is appropriate and not in contravention of these Terms.</p></li>
+</ol></li>
+<li><p>You:</p>
+<ol>
+<li><p>warrant that our use of User Data will not infringe any third-party Intellectual Property Rights; and</p></li>
+<li><p>indemnify us from and against all losses, claims, expenses, damages and liabilities (including any taxes, fees or costs) which arise out of such infringement.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="third-party-software-terms">THIRD PARTY SOFTWARE &amp; terms</h1>
+<h2 class="sub-l2" id="third-party-terms">THIRD PARTY TERMS</h2>
+<ol>
+<li><p>If we are required to acquire goods or services supplied by a third party, you may be subject to the terms and conditions of that third party (‘<strong>Third Party Terms’</strong>).</p></li>
+<li><p>Provided that we have notified you of such Third Party Terms and provided you with a copy of those terms, you agree to any Third Party Terms applicable to any goods or services supplied by a third party that we acquire as part of providing the Liber App to you and we will not be liable for any loss or damage suffered by you in connection with such Third Party Terms.</p></li>
+<li><p>You have the right to reject any Third Party Terms. If you reject the Third Party Terms, we cannot provide the Liber App to you and clause 23 will apply.</p></li>
+<li><p>We may change, replace or add third party service providers from time to time without amending these Terms, provided we notify you of any materially different Third Party Terms that will apply.</p></li>
+</ol>
+<h2 class="sub-l2" id="third-party-application-integrations">THIRD PARTY APPLICATION INTEGRATIONS </h2>
+<ol>
+<li><p>You acknowledge and agree that issues can arise when data is uploaded to software, transferred between different software programs, and when different software programs are integrated together. We cannot guarantee that integration processes between Liber App and other software programs will be free from errors, defects or delay.</p></li>
+<li><p>You agree that we will not be liable for the functionality of any third party goods or services, including any third party software, or for the functionality of the Generated Material if you integrate it with third party software, or change or augment the Generated Material, including by making additions or changes to the Generated Material code, or by incorporating APIs into the Generated Material.</p></li>
+<li><p>If you add third party software or software code to Liber App or your Generated Material, or integrate Liber App or your Generated Material with third party software (<strong>User Application Changes</strong>), then:</p>
+<ol>
+<li><p>you acknowledge and agree that User Application Changes can have adverse effects on the Liber App, including Liber App;</p></li>
+<li><p>you will indemnify us in relation to any loss or damage that arises in connection with the User Application Changes;</p></li>
+<li><p>we will not be liable for any failure in the Liber App, to the extent such failure is caused or contributed to by a User Application Change;</p></li>
+<li><p>we may require you to change or remove User Application Changes, at our discretion, and if we do so, you must act promptly;</p></li>
+<li><p>we may suspend your access to the Liber App until you have changed or removed User Application Change; and/or</p></li>
+<li><p>we may change or remove any User Application Change, in our absolute discretion. We will not be liable for loss of data or any other loss or damage you may suffer in relation to our amendment to, or removal of, any User Application Change.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="importing-and-exporting-limitations-on-the-application">IMPORTING AND EXPORTING LIMITATIONS on the application</h2>
+<ol>
+<li><p>You acknowledge and agree that Liber App may offer functionality that allows you to import materials (including Uploaded Material or third-party content) into Liber App or export Generated Material or other content from Liber App to external platforms, software, or services (<strong>Third Party Systems</strong>). However, we do not guarantee that Liber App will be compatible with any particular file format, system, platform, or third-party software.</p></li>
+<li><p>We do not warrant that any imported Material or Uploaded Material will be readable, functional, compatible, or secure once uploaded to Liber App, nor that any Generated Material or other content exported from Liber App will be usable, functional, or compatible with any Third Party System.</p></li>
+<li><p>You are solely responsible for verifying the suitability, legality, and compatibility of any imported Material or exported Generated Material, and for ensuring that your use of Third Party Systems complies with applicable laws and the relevant third-party terms.</p></li>
+<li><p>To the extent permitted by law, we will not be liable for any loss or damage arising out of or in connection with:</p>
+<ol>
+<li><p>the import of any material into Liber App;</p></li>
+<li><p>the export of any material (including Generated Material) from Liber App;</p></li>
+<li><p>the incompatibility, corruption, or inaccessibility of any such material; or</p></li>
+<li><p>the failure of any Third Party System to properly receive, process, or display any such material.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="notice-regarding-apple">NOTICE REGARDING APPLE </h1>
+<ol>
+<li><p>If you are accessing Liber App from the Apple, Inc. (<strong>Apple</strong>) iOS Store, you acknowledge and agree:</p>
+<ol>
+<li><p>these Terms are between you and Liber App and not with Apple. Apple is not responsible for Liber App or any content available on Liber App;</p></li>
+<li><p>Apple has no obligation whatsoever to furnish any maintenance and support services for Liber App;</p></li>
+<li><p>To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to Liber App, and any other claims, losses, liabilities, damages, costs of expenses attributable to any failure to conform to any warranty will be Liber App’s responsibility;</p></li>
+<li><p>Apple is not responsible for addressing any claims by you or any third party relating to Liber App, including, but not limited to:</p>
+<ol>
+<li><p>product liability claims;</p></li>
+<li><p>any claim that Liber App fails to conform to any applicable legal or regulatory requirement; and</p></li>
+<li><p>claims arising under consumer protection, privacy, or similar legislation;</p></li>
+</ol></li>
+<li><p>in the event of any third party claim that Liber App or your use of the Liber App infringes any third party’s intellectual property rights, Apple will not be responsible for the investigation, defence, settlement and discharge of any such claim;</p></li>
+<li><p>that you represent and warrant that:</p>
+<ol>
+<li><p>you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting’” country; and</p></li>
+<li><p>you are not listed on any U.S. Government list of prohibited or restricted parties;</p></li>
+</ol></li>
+<li><p>you must comply with applicable third party terms of agreement when using Liber App; and</p></li>
+<li><p>Apple, and Apple’s subsidiaries, are third party beneficiaries of these Terms, and that, upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third party beneficiary.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="notice-regarding-google-play">NOTICE REGARDING GOOGLE PLAY</h1>
+<ol>
+<li><p>If you download the App via Google Play, you acknowledge that Google has no responsibility for the App or its content, and that your use of the App must comply with the Google Play Terms of Service. Google and its affiliates are third-party beneficiaries of these Terms.</p></li>
+</ol>
+<h1 class="sec-l1" id="operation-of-the-app-dependent-on-third-parties">OPERATION OF THE APP DEPENDENT ON THIRD PARTIES</h1>
+<ol>
+<li><p>You acknowledge that the Liber App is dependent on software and hardware developed by third party providers such as Apple and Google. If following an update by such third party provider, the App can no longer function as they did prior to the update, we will not (to the maximum extent permitted by law) be liable to you for any loss or damage you might suffer as a result.</p></li>
+</ol>
+<h1 class="sec-l1" id="service-limitations">SERVICE LIMITATIONS</h1>
+<ol>
+<li><p>The Liber App is made available to you strictly on an ‘as is’ basis. We can’t guarantee, and make no warranties, to the extent permitted by law, that:</p>
+<ol>
+<li><p>the Liber App will be free from errors or defects;</p></li>
+<li><p>the Liber App will be accessible or available at all times;</p></li>
+<li><p>messages sent through the Liber App will be delivered promptly, or delivered at all;</p></li>
+<li><p>information you receive or supply through the Liber App will be secure or confidential; or</p></li>
+<li><p>any information provided through the Liber App is accurate or true.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="confidentiality">CONFIDENTIALITY</h1>
+<ol>
+<li><p>Except as contemplated by these Terms, a party must not, and must not permit any of its Personnel, use or disclose to any person any Confidential Information disclosed to it by the other party without the disclosing party’s prior written consent.</p></li>
+<li><p>Each party must promptly notify the other party if it learns of any potential, actual or suspected loss, misappropriation or unauthorised access to, or disclosure or use of Confidential Information or other compromise of the security, confidentiality, or integrity of Confidential Information.</p></li>
+<li><p>The notifying party will investigate each potential, actual or suspected breach of confidentiality and assist the other party in connection with any related investigation.</p></li>
+</ol>
+<h1 class="sec-l1" id="privacy">PRIVACY </h1>
+<ol>
+<li><p>We collect personal information about you in the course of providing you with the Liber App, to contact and communicate with you, to respond to your enquiries and for other purposes set out in our Privacy Policy which can be found at: <a href="/privacy/">https://app.liber.net.au/privacy</a></p></li>
+<li><p>Our Privacy Policy contains more information about how we use, disclose and store your personal information and details how you can access and correct your personal information. This includes how we handle any child-related information entered by parents or guardians.</p></li>
+<li><p>You must not upload personal information of any child unless you are their parent or legal guardian or otherwise lawfully authorised to do so.</p></li>
+<li><p>By agreeing to these Terms, you agree to our handling of personal information in accordance with our Privacy Policy.</p></li>
+</ol>
+<h1 class="sec-l1" id="liability">LIABILITY</h1>
+<h2 class="sub-l2" id="warranties-and-limitations">WARRANTIES AND LIMITATIONS</h2>
+<ol>
+<li><p>(<strong>Warranties</strong>) We warrant that:</p>
+<ol>
+<li><p>during the Subscription Period, the Liber App will be provided as described to you in, and subject to, these Terms; and</p></li>
+<li><p>to our knowledge, the use of the Liber App in accordance with these Terms will not infringe the Intellectual Property Rights of any third party.</p></li>
+</ol></li>
+<li><p>(<strong>Errors</strong>) We will use reasonable commercial efforts to correct any errors, bugs or defects in Liber App which arise during your Subscription and which are notified to us by you, unless the errors, bugs or defects:</p>
+<ol>
+<li><p>result from the interaction of the Liber App with any other solution or computer hardware, software or services not approved in writing by us;</p></li>
+<li><p>result from any misuse of the Liber App; or</p></li>
+<li><p>result from the use of the Liber App by you other than in accordance with these Terms or the Documentation.</p></li>
+</ol></li>
+<li><p>(<strong>Service Limitations</strong>) While we will use our best endeavours to ensure the Liber App is working for its intended purpose, you acknowledge and agree that from time to time, you may encounter the following issues:</p>
+<ol>
+<li><p>the Liber App may have errors or defects;</p></li>
+<li><p>the Liber App may not be accessible at times;</p></li>
+<li><p>messages sent through the Liber App may not be delivered promptly, or delivered at all;</p></li>
+<li><p>information you receive or supply through the Liber App may not be secure or confidential; or</p></li>
+<li><p>any information provided through the Liber App may not be accurate or true.</p></li>
+</ol></li>
+<li><p>(<strong>No Warranties for Service Levels or Managed Services</strong>) You acknowledge and agree that:</p>
+<ol>
+<li><p>Liber App is provided as a standardised subscription offering as a mobile application;</p></li>
+<li><p>we do not provide any IT managed services, custom support, or guaranteed service levels, unless expressly agreed in writing; and</p></li>
+<li><p>we make no warranties or representations regarding the availability, uptime, performance, responsiveness or error resolution timeframes of the Liber App.</p></li>
+</ol></li>
+<li><p>(<strong>Exclusion</strong>) To the maximum extent permitted by applicable law, all express or implied representations and warranties not expressly stated in these Terms are excluded.</p></li>
+<li><p>(<strong>Consumer law</strong>) Nothing in these Terms is intended to limit the operation of the Australian Consumer Law contained in the <em>Competition and Consumer Act 2010</em> (Cth) (<strong>ACL</strong>). Under the ACL, you may be entitled to certain remedies (like a refund, replacement or repair) if there is a failure with the goods or services provided.</p></li>
+</ol>
+<h2 class="sub-l2" id="liability-1">liability</h2>
+<ol>
+<li><p>To the maximum extent permitted by law and subject to clause 21.2(b), the total liability of each party in respect of loss or damage sustained by the other party in connection with these Terms or the Liber App is limited to the total Fees paid to us by you in the 3 months preceding the date of the event giving rise to the relevant liability.</p></li>
+<li><p>Clause 21.2(a) does not apply to your liability in respect of loss or damage sustained by us arising from your breach of clauses 8, 9, 11, 13, 14, 16 and 20.</p></li>
+</ol>
+<h2 class="sub-l2" id="consequential-loss">CONSEQUENTIAL LOSS</h2>
+<p>To the maximum extent permitted by law, neither party will be liable for any incidental, special or consequential loss or damages, or damages for loss of data, business or business opportunity, goodwill, anticipated savings, profits or revenue in connection with these Terms or any goods or services provided by us, except:</p>
+<ol>
+<li><p>in relation to a party’s liability for fraud, personal injury, death or loss or damage to tangible property; or</p></li>
+<li><p>to the extent this liability cannot be excluded under the <em>Competition and Consumer Act 2010</em> (Cth).</p></li>
+</ol>
+<h1 class="sec-l1" id="upgrade-and-downgrades">UPGRADE AND DOWNGRADES</h1>
+<ol>
+<li><p>You may notify us that you would like to upgrade or downgrade your Subscription Tier at any time. If you do, we will:</p>
+<ol>
+<li><p>take reasonable steps to promptly provide you with access to the new Subscription Tier; and</p></li>
+<li><p>upon providing such access, apply the new, relevant Subscription Fees, to the Renewal Period immediately following the period in which your access to the new Subscription Tier was provided, and you will be charged at the new Subscription Fee in every subsequent Renewal Period.</p></li>
+</ol></li>
+<li><p>If you choose to downgrade your Subscription, you will then be automatically downgraded to a Free Subscription Tier at the end of your current Billing Cycle and the terms of 22(a) will apply, unless we notify you otherwise.</p></li>
+<li><p>If you upgrade or downgrade your Subscription, you will not be entitled to any refund, credit or pro-rata adjustment for any unused portion of your previous Subscription Tier</p></li>
+<li><p>If you choose to downgrade your Subscription, you acknowledge and agree we are not liable, and you release us from all claims in relation to, any loss of content, features, or capacity, including any User Data.</p></li>
+</ol>
+<h1 class="sec-l1" id="cancellation">CANCELLATION</h1>
+<h2 class="sub-l2" id="cancellation-at-any-time">cancellation at any time</h2>
+<p>Either party may cancel or terminate your Subscription for convenience by providing 10 Business Days’ notice to the other party.</p>
+<h2 class="sub-l2" id="cancellation-for-breach">cancellation for breach</h2>
+<ol>
+<li><p>We may suspend or cancel your Subscription immediately by written notice if we reasonably believe that you have breached these Terms, are likely to breach these Terms, or where suspension or termination is required for safety, security or legal reasons.</p></li>
+<li><p>Either party may cancel your Subscription immediately by written notice if there has been a Breach of these Terms.</p></li>
+<li><p>A “<strong>Breach</strong>” of these Terms means:</p>
+<ol>
+<li><p>a party (<strong>Notifying Party</strong>) considers the other party (or any of its Personnel or Users) is in breach of these Terms and notifies the other party;</p></li>
+<li><p>the other party is given 10 Business Days to rectify the breach; and</p></li>
+<li><p>the breach has not been rectified within 10 Business Days or another period agreed between the parties in writing.</p></li>
+</ol></li>
+</ol>
+<h2 class="sub-l2" id="effect-of-cancellation">EFFECT OF caNCELLATION</h2>
+<p>Upon cancellation of this agreement:</p>
+<ol>
+<li><p>you will no longer have access to Liber App, your Account or your User Data and we will have no responsibility to store or otherwise retain any User Data (and you release us in respect of any loss or damage which may arise out of us not retaining any User Data beyond that point);</p></li>
+<li><p>unless agreed in writing, any Subscription Fees that would otherwise have been payable after termination for the remainder of the relevant Renewal Period will remain payable and, to the maximum extent permitted by law, no Subscription Fees already paid will be refundable; and</p></li>
+<li><p>each party must comply with all obligations that are by their nature intended to survive the end of this agreement.</p></li>
+</ol>
+<h1 class="sec-l1" id="dispute-resolution">DISPUTE RESOLUTION</h1>
+<ol>
+<li><p>A party claiming that a dispute has arisen under or in connection with this agreement must not commence court proceedings arising from or relating to the dispute, other than a claim for urgent interlocutory relief, unless that party has complied with the requirements of this clause.</p></li>
+<li><p>A party that requires resolution of a dispute which arises under or in connection with this agreement must give the other party or parties to the dispute written notice containing reasonable details of the dispute and requiring its resolution under this clause.</p></li>
+<li><p>Once the dispute notice has been given, each party to the dispute must then use its best efforts to resolve the dispute in good faith. If the dispute is not resolved within a period of 14 days (or such other period as agreed by the parties in writing) after the date of the notice, any party to the dispute may take legal proceedings to resolve the dispute.</p></li>
+</ol>
+<h1 class="sec-l1" id="force-majeure">FORCE MAJEURE</h1>
+<ol>
+<li><p>We will not be liable for any delay or failure to perform its obligations under this agreement if such delay or failure arises out of a Force Majeure Event. </p></li>
+<li><p>If a Force Majeure Event occurs, we must use reasonable endeavours to notify you of:</p>
+<ol>
+<li><p>reasonable details of the Force Majeure Event; and</p></li>
+<li><p>so far as is known, the probable extent to which We will be unable to perform or be delayed in performing its obligations under this agreement.</p></li>
+</ol></li>
+<li><p>Subject to compliance with clause 25(b), our relevant obligation will be suspended during the Force Majeure Event to the extent that it is affected by the Force Majeure Event.</p></li>
+<li><p>For the purposes of this agreement, a ‘Force Majeure Event’ means any:</p>
+<ol>
+<li><p>act of God, lightning strike, meteor strike, earthquake, storm, flood, landslide, explosion or fire;</p></li>
+<li><p>strikes or other industrial action outside of the control of us;</p></li>
+<li><p>war, terrorism, sabotage, blockade, revolution, riot, insurrection, civil commotion, epidemic, pandemic; or</p></li>
+<li><p>any decision of a government authority in relation to COVID-19, or any threat of COVID-19 beyond the reasonable control of us, to the extent it affects our ability to perform our obligations.</p></li>
+</ol></li>
+</ol>
+<h1 class="sec-l1" id="notices">NOTICES</h1>
+<ol>
+<li><p>A notice or other communication to a party under these Terms must be:</p>
+<ol>
+<li><p>in writing and in English; and</p></li>
+<li><p>delivered via email to the other party, to the email address specified in the Website or in your Account, or if no email address is specified, then the email address most regularly used by the parties to correspond regarding the subject matter of this agreement as at the date of this agreement (<strong>Email Address</strong>). The parties may update their Email Address by notice to the other party.</p></li>
+</ol></li>
+<li><p>Unless the party sending the notice knows or reasonably ought to suspect that an email was not delivered to the other party’s Email Address, notice will be taken to be given:</p>
+<ol>
+<li><p>24 hours after the email was sent, unless that falls on a Saturday, Sunday or a public holiday in the state or territory whose laws govern this agreement, in which case the notice will be taken to be given on the next occurring business day in that state or territory; or</p></li>
+<li><p>when replied to by the other party,</p></li>
+</ol></li>
+</ol>
+<p>whichever is earlier.</p>
+<h1 class="sec-l1" id="general">GENERAL</h1>
+<h2 class="sub-l2" id="governing-law-and-jurisdiction">GOVERNING LAW AND JURISDICTION</h2>
+<ol>
+<li><p>This agreement is governed by the law applying in New South Wales, Australia. Each party irrevocably submits to the exclusive jurisdiction of the courts of New South Wales, Australia and courts of appeal from them in respect of any proceedings arising out of or in connection with this agreement. Each party irrevocably waives any objection to the venue of any legal process on the basis that the process has been brought in an inconvenient forum.</p></li>
+</ol>
+<h2 class="sub-l2" id="waiver">WAIVER</h2>
+<ol>
+<li><p>No party to this agreement may rely on the words or conduct of any other party as a waiver of any right unless the waiver is in writing and signed by the party granting the waiver.</p></li>
+</ol>
+<h2 class="sub-l2" id="severance">SEVERANCE</h2>
+<ol>
+<li><p>Any term of this agreement which is wholly or partially void or unenforceable is severed to the extent that it is void or unenforceable. The validity and enforceability of the remainder of this agreement is not limited or otherwise affected.</p></li>
+</ol>
+<h2 class="sub-l2" id="joint-and-several-liability">JOINT AND SEVERAL LIABILITY</h2>
+<ol>
+<li><p>An obligation or a liability assumed by, or a right conferred on, two or more persons binds or benefits them jointly and severally.</p></li>
+</ol>
+<h2 class="sub-l2" id="assignment">ASSIGNMENT</h2>
+<ol>
+<li><p>A party cannot assign, novate or otherwise transfer any of its rights or obligations under this agreement without the prior written consent of the other party.</p></li>
+</ol>
+<h2 class="sub-l2" id="entire-agreement">ENTIRE AGREEMENT</h2>
+<ol>
+<li><p>This agreement embodies the entire agreement between the parties and supersedes any prior negotiation, conduct, arrangement, understanding or agreement, express or implied, in relation to the subject matter of this agreement.</p></li>
+</ol>
+<h2 class="sub-l2" id="interpretation">INTERPRETATION</h2>
+<ol>
+<li><p>(<strong>singular and plural</strong>) words in the singular includes the plural (and vice versa);</p></li>
+<li><p>(<strong>currency</strong>) a reference to $; or “dollar” is to Australian currency;</p></li>
+<li><p>(<strong>gender</strong>) words indicating a gender includes the corresponding words of any other gender;</p></li>
+<li><p>(<strong>defined terms</strong>) if a word or phrase is given a defined meaning, any other part of speech or grammatical form of that word or phrase has a corresponding meaning;</p></li>
+<li><p>(<strong>person</strong>) a reference to “person” or “you” includes an individual, the estate of an individual, a corporation, an authority, an association, consortium or joint venture (whether incorporated or unincorporated), a partnership, a trust and any other entity;</p></li>
+<li><p>(<strong>party</strong>) a reference to a party includes that party’s executors, administrators, successors and permitted assigns, including persons taking by way of novation and, in the case of a trustee, includes any substituted or additional trustee;</p></li>
+<li><p>(<strong>this agreement</strong>) a reference to a party, clause, paragraph, schedule, exhibit, attachment or annexure is a reference to a party, clause, paragraph, schedule, exhibit, attachment or annexure to or of this agreement, and a reference to this agreement includes all schedules, exhibits, attachments and annexures to it;</p></li>
+<li><p>(<strong>document</strong>) a reference to a document (including this agreement) is to that document as varied, novated, ratified or replaced from time to time;</p></li>
+<li><p>(<strong>headings</strong>) headings and words in bold type are for convenience only and do not affect interpretation;</p></li>
+<li><p>(<strong>includes</strong>) the word “includes” and similar words in any form is not a word of limitation; and</p></li>
+<li><p>(<strong>adverse interpretation</strong>) no provision of this agreement will be interpreted adversely to a party because that party was responsible for the preparation of this agreement or that provision.</p></li>
+</ol>
+<h1 class="major" id="definitions">DEFINITIONS</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Confidential Information</td>
+<td>means information of or provided by a party that is by its nature is confidential information, is designated by that party as confidential, or that the other party knows or ought to know is confidential, but does not include information, which is or becomes, without a breach of confidentiality, public knowledge.</td>
+</tr>
+<tr class="even">
+<td>Developed Materials</td>
+<td>means any Materials produced by Liber in the course of providing the Liber App including whether in draft or final form, in writing, provided orally, either alone or in conjunction with you or others, and any Intellectual Property Rights attaching to those materials.</td>
+</tr>
+<tr class="odd">
+<td>Documentation</td>
+<td>means all manuals, help files and other documents supplied by us to you relating to Liber App, whether in electronic or hardcopy form.</td>
+</tr>
+<tr class="even">
+<td>Generated Material</td>
+<td>means Materials, including any mobile applications, developed content, media and other technical or creative works obtained from Liber App which are generated by, and specifically for, you or your Users.</td>
+</tr>
+<tr class="odd">
+<td>Hosting Services</td>
+<td>has the meaning given in clause 7.4.</td>
+</tr>
+<tr class="even">
+<td>Intellectual Property Rights</td>
+<td>means any and all present and future intellectual and industrial property rights throughout the world (whether registered or unregistered), including copyright, trade marks, designs, patents, moral rights, semiconductor and circuit layout rights, trade, business, company and domain names, and other proprietary rights, trade secrets, know-how, technical data, confidential information and the right to have information kept confidential, or any rights to registration of such rights (including renewal), whether created before or after the date of this agreement.</td>
+</tr>
+<tr class="odd">
+<td>Material</td>
+<td>means tangible and intangible information, documents, reports, software (including source and object code), inventions, data and other materials in any media whatsoever.</td>
+</tr>
+<tr class="even">
+<td>Personnel</td>
+<td>means, in respect of a party, its officers, employees, contractors (including subcontractors) and agents.</td>
+</tr>
+<tr class="odd">
+<td>Liber App</td>
+<td>has the meaning given in the first paragraph of these Terms.</td>
+</tr>
+<tr class="even">
+<td>Regulator</td>
+<td>has the meaning given in the second paragraph of these Terms.</td>
+</tr>
+<tr class="odd">
+<td>Subscription</td>
+<td>has meaning given in the first paragraph of these Terms.</td>
+</tr>
+<tr class="even">
+<td>Subscription Fees</td>
+<td>has the meaning set out in clause 12 of these Terms.</td>
+</tr>
+<tr class="odd">
+<td>Subscription Period</td>
+<td>means the period of your Subscription to the Liber App as agreed on the Website.</td>
+</tr>
+<tr class="even">
+<td>Subscription Tier</td>
+<td>has the meaning given in the first paragraph of these Terms.</td>
+</tr>
+<tr class="odd">
+<td>Support Services</td>
+<td>has the meaning given in clause 7.3.</td>
+</tr>
+<tr class="even">
+<td>User</td>
+<td>means you and any third party end user of the Liber App and Generated Material who you make Liber App and Generated Material available to.</td>
+</tr>
+<tr class="odd">
+<td>User Data</td>
+<td>means any files, data, document, information or any other Materials, which is uploaded to Liber App by you or any other User or which you, your Personnel or Users otherwise provide to us under or in connection with these Terms, including any Intellectual Property Rights attaching to those materials.</td>
+</tr>
+<tr class="even">
+<td>Website</td>
+<td>means the website at the URL set out in the first paragraph of these Terms, and any other website operated by us in connection with the Liber App.</td>
+</tr>
+</tbody>
+</table>
+
       </div>
     </div>
   </section>
 </main>
-
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
@@ -84,7 +816,6 @@
     <p class="foot-note">Liber Group Pty Ltd · ABN 69 694 983 429 · Your family's information is private and never sold.</p>
   </div>
 </footer>
-
 <script src="../assets/site.js" defer></script>
 </body>
 </html>
