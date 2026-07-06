@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="xi Si init Ni Bi pr qi Ui $i capture calculateEventProperties Zi register register_once register_for_session unregister unregister_for_session Yi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Ki identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Qi Wi createPersonProfile setInternalOrTestUser Ji Fi tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zi debug mr it getPageViewId captureTraceFeedback captureTraceMetric Ri".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_2ThTXHl2KDJTQolhAJInrXvRKtKXohJTFI7QK8k49r2', {
@@ -9,7 +10,6 @@
         person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
     })
 </script>
-<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="any" />
@@ -385,9 +385,12 @@
   .foot-cta{border-bottom:1px solid var(--line);padding:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
   .foot-cta h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;color:var(--ink);}
   .foot-cta p{color:var(--ink-soft);font-size:.95rem;margin-top:6px;}
-  .foot-cta .btn{font-size:.92rem;padding:12px 26px;box-shadow:0 6px 18px -10px rgba(71,81,65,.5);}
+  .foot-cta .btn{font-size:.9rem;padding:11px 22px;box-shadow:0 4px 12px -8px rgba(71,81,65,.45);}
   /* Main columns */
-  .foot-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;column-gap:32px;row-gap:40px;padding:52px 0 44px;align-items:start;}
+  .foot-main{display:flex;justify-content:space-between;align-items:flex-start;gap:48px;padding:52px 0 44px;}
+  .brand-col{flex:0 1 340px;}
+  .foot-nav{display:flex;gap:64px;flex-wrap:wrap;}
+  .foot-nav > div{min-width:130px;}
   .brand-col .logo{margin-bottom:0;}
   .brand-col .meaning{font-style:italic;color:var(--ink-soft);font-size:.9rem;line-height:1.55;margin-top:12px;max-width:300px;}
   .foot-trust{display:flex;align-items:flex-start;gap:8px;margin-top:20px;max-width:300px;color:var(--sage-deep);font-size:.84rem;line-height:1.5;font-weight:500;}
@@ -407,8 +410,8 @@
 
   /* ===== Responsive ===== */
   @media (max-width:980px){
-    .foot-main{grid-template-columns:1.4fr 1fr 1fr;gap:36px;}
-    .brand-col{grid-column:1 / -1;}
+    .foot-main{flex-direction:column;gap:40px;}
+    .brand-col{flex:none;max-width:420px;}
     .hero-grid{grid-template-columns:1fr;}
     .hero h1{max-width:none;}
     .moment{max-width:480px;}
@@ -441,8 +444,8 @@
     .hero-actions .btn{width:100%;}
     /* mobile footer: stack cleanly */
     footer.site .wrap{padding:0 24px;}
-    .foot-main{grid-template-columns:1fr 1fr;gap:32px 36px;}
-    .brand-col{grid-column:1 / -1;}
+    .foot-nav{gap:28px 48px;}
+    .foot-nav > div{min-width:120px;flex:1 1 40%;}
     .foot-cta{flex-direction:column;align-items:flex-start;}
     .foot-bottom{flex-direction:column;align-items:flex-start;}
     section{padding:64px 0;}
@@ -831,32 +834,34 @@
         </div>
       </div>
 
-      <div>
-        <h3>Product</h3>
-        <ul>
-          <li><a href="#how">How it works</a></li>
-          <li><a href="/learning-record/">Learning record</a></li>
-          <li><a href="/for-separated-families/">For co-parents</a></li>
-          <li><a href="#plans">Free &amp; Liber+</a></li>
-        </ul>
-      </div>
+      <nav class="foot-nav">
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="/learning-record/">Learning record</a></li>
+            <li><a href="/for-separated-families/">For co-parents</a></li>
+            <li><a href="#plans">Free &amp; Liber+</a></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="/guides/">Guides</a></li>
-          <li><a href="/am-i-doing-enough/">Am I doing enough?</a></li>
-        </ul>
-      </div>
+        <div>
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/am-i-doing-enough/">Am I doing enough?</a></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#founder">Our story</a></li>
-          <li><a href="https://www.instagram.com/liberlearning/">Instagram</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a></li>
-        </ul>
-      </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#founder">Our story</a></li>
+            <li><a href="https://www.instagram.com/liberlearning/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61584045934594">Facebook</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
     <div class="foot-bottom">
