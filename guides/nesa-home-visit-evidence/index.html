@@ -68,6 +68,16 @@
   summary{cursor:pointer;font-family:'Fraunces',serif;font-size:1.1rem;color:var(--ink);}
   a{color:var(--sage-deep);}
   .foot{border-top:1px solid var(--line);margin-top:60px;padding-top:20px;font-size:.9rem;color:var(--ink-faint);}
+  .capture{background:var(--sage-tint);border-radius:var(--radius);padding:26px;margin:40px 0 28px;}
+  .capture h2{margin:0 0 .3em;font-size:1.25rem;}
+  .capture p{margin:0 0 18px;font-size:.98rem;}
+  .capture-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .capture input[type=email]{flex:1 1 240px;min-width:0;padding:13px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:1rem;color:var(--ink);}
+  .capture input[type=email]:focus{outline:2px solid var(--sage);outline-offset:1px;}
+  .capture button{padding:13px 22px;border:0;border-radius:999px;background:var(--sage);color:#fff;font:inherit;font-size:1rem;cursor:pointer;min-height:48px;}
+  .capture button:hover{background:var(--sage-deep);}
+  .capture .mini{margin:14px 0 0;font-size:.87rem;color:var(--ink-faint);}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
 </style>
 </head>
 <body>
@@ -128,6 +138,20 @@
 <details><summary>Do I need a formal curriculum?</summary><p>Your program must be <i>based on</i> the NESA syllabuses — that's a mapping exercise, not a purchase. Many registered families show how everyday learning connects to syllabus areas instead of using packaged curriculum.</p></details>
 <details><summary>How many work samples do I need?</summary><p>No fixed number. A modest, consistent, dated record showing a working system beats a thick folder assembled the week before.</p></details>
 <details><summary>Can unschoolers satisfy the requirements?</summary><p>Yes. The task is translation — showing where syllabus-relevant learning already happens in everyday life, with dated records to point to. It's work, but it's honest work, and it doesn't require changing how your family learns.</p></details>
+
+<form class="capture" name="guide-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks/">
+<input type="hidden" name="form-name" value="guide-updates" />
+<input type="hidden" name="source" value="guide-nesa" />
+<p class="hp"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+<h2>Not registering just yet?</h2>
+<p>We're writing more of these — registration, evidence, what reviews actually ask for. Plain guides, from a parent who's been through it. We'll send you the next one when it lands.</p>
+<div class="capture-row">
+  <label class="hp" for="cap-email-nesa">Your email</label>
+  <input id="cap-email-nesa" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+  <button type="submit">Send me new guides</button>
+</div>
+<p class="mini">New guides only — no product emails, no drip sequence. Unsubscribe by replying to any of them.</p>
+</form>
 
 <div class="disclosure">Full disclosure: this guide is published by Liber, an app for capturing everyday learning moments — built by a NSW homeschooling parent who went through this exact process. Nothing here is legal advice, Liber is not affiliated with or endorsed by the NSW Department of Education, and no app is required to register successfully. Guidance current at July 2026; requirements change — always verify against the <a href="https://www.nsw.gov.au/education-and-training/home-schooling">live NSW Government pages</a>.</div>
 

@@ -96,3 +96,15 @@ footer.site{border-top:1px solid var(--line);background:var(--paper-2);padding:5
   .foot-links a{padding:9px 0;}
 }
 @media (prefers-reduced-motion:reduce){ *{animation-duration:.001ms!important;transition-duration:.001ms!important;} }
+
+/* email capture (Netlify Forms) */
+.capture{background:var(--sage-tint);border-radius:var(--radius);padding:26px;margin:0 auto;max-width:54ch;text-align:left;}
+.capture h3{font-family:'Fraunces',serif;color:var(--ink);margin:0 0 .3em;font-size:1.2rem;font-weight:600;}
+.capture p{margin:0 0 18px;font-size:.98rem;}
+.capture-row{display:flex;gap:10px;flex-wrap:wrap;}
+.capture input[type=email]{flex:1 1 240px;min-width:0;padding:13px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:1rem;color:var(--ink);}
+.capture input[type=email]:focus{outline:2px solid var(--sage);outline-offset:1px;}
+.capture button{padding:13px 22px;border:0;border-radius:999px;background:var(--sage);color:#fff;font:inherit;font-size:1rem;cursor:pointer;min-height:48px;}
+.capture button:hover{background:var(--sage-deep);}
+.capture .mini{margin:14px 0 0;font-size:.87rem;color:var(--ink-faint);}
+.hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important;}

@@ -43,7 +43,9 @@
       <a href="/#how">How it works</a>
       <a href="/learning-record/">Learning record</a>
       <a href="/for-separated-families/">For co-parents</a>
+      <a href="/guides/">Guides</a>
       <a href="/#plans">Free &amp; Liber+</a>
+      <a href="/#founder">Our story</a>
     </nav>
     <a href="https://app.liber.net.au/signup/?utm_source=liber_site&utm_medium=web&utm_content=nav" class="btn btn-primary nav-cta">Try it free</a>
     <button class="nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">Menu</button>
@@ -95,6 +97,20 @@
       <p class="lede">Not a pep talk. The actual evidence of your real days.</p>
       <a href="https://app.liber.net.au/signup/?utm_source=liber_site&utm_medium=web&utm_content=page_enough" class="btn btn-primary">Try Liber free <span class="btn-arrow">→</span></a>
       <p class="final-mini">No card. One moment is enough to begin.</p>
+
+      <form class="capture" name="guide-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks/" style="margin-top:48px;">
+        <input type="hidden" name="form-name" value="guide-updates" />
+        <input type="hidden" name="source" value="page-enough" />
+        <p class="hp"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <h3>Not ready to start anything today?</h3>
+        <p>That's alright. We write plain guides for the parts of this that get hard — registration, evidence, what a review actually asks for. We'll send you the next one when it lands.</p>
+        <div class="capture-row">
+          <label class="hp" for="cap-email-enough">Your email</label>
+          <input id="cap-email-enough" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+          <button type="submit">Send me new guides</button>
+        </div>
+        <p class="mini">New guides only — no product emails, no drip sequence. Unsubscribe by replying to any of them.</p>
+      </form>
     </div>
   </section>
 </main>
