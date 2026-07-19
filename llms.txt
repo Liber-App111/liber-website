@@ -34,4 +34,4 @@ Liber is deliberately not a curriculum tool: no lesson plans, no worksheets, no 
 - https://liber.net.au/terms/ — terms of service
 
 ## Contact
-support@liber.net.au [CONFIRM correct support address before production]
+support@liber.net.au
