@@ -22,42 +22,21 @@ GitHub, branch `website-refresh-2026-09`.
 **WHEN IT SHOULD BE DONE**
 First. A branch push does not change production.
 
-## 2. Check four small product facts not in your confirmed list
+## 2. Product facts: RESOLVED
 
-**WHY IT IS NEEDED**
-Each is still on the site but was not in the plan lists you confirmed.
+All confirmed by Adam on 21 September 2026. The site already matches each one, so no content change was needed.
 
-- **Backdating** ("If it happened yesterday, change the date"; "Add moments from earlier days"). Recorded as built in an earlier inspection of the live app.
-- **"No card needed"** to start free. Your wording from the previous live site.
-- **GST.** Are $9.00 and $90.00 GST-inclusive? If Liber is registered for GST, the displayed price must include it.
-- **Cancellation method.** The app says "Cancel whenever you like". The Terms (clause 23) say to cancel by contacting Liber. The site says only "cancel whenever you like" and "plans renew automatically", with a link to the Terms.
+- **Backdating** is supported. The site says "If it happened yesterday, change the date" and "Add moments from earlier days".
+- **The free plan needs no card.** The site says "No card needed".
+- **GST.** Liber is not currently registered for GST, so the website must not say prices include GST. It shows $9.00 AUD a month and $90.00 AUD a year and makes no GST claim.
+- **Cancelling.** Liber Plus can be cancelled through the app. The site says "cancel whenever you like", which is consistent.
+- **Account and record deletion** is handled through support@liber.net.au. The site makes no deletion claim; support@liber.net.au is its listed contact.
 
-**WHAT I NEED TO PROVIDE/DO**
-Confirm each, or say which to remove. If the app lets people cancel themselves, the Terms need updating (item 11).
+## 3. Recognition screenshot: RESOLVED
 
-**WHERE IT GOES**
-`index.html` (How it works, FAQ, pricing notes).
+Confirmed by Adam on 21 September 2026. The "What Liber has noticed across your moments" card (Watching & listening, 3 moments) is explicitly approved as the substitute for the surfing screenshot.
 
-**WHEN IT SHOULD BE DONE**
-Before merge.
-
-## 3. Confirm the Recognition screenshot
-
-**WHY IT IS NEEDED**
-You asked for the "Liber Noticed" surfing example. No such screen was in the upload. The surfing photo appears only in a Journal list screenshot, and that one shows a QA test entry ("QA allow-path check…"), so it is not suitable for a public site.
-
-I used the only Recognition screen supplied: the "What Liber has noticed across your moments" card, showing Watching & listening across 3 moments for Boy 1.
-
-**WHAT I NEED TO PROVIDE/DO**
-Either confirm this card is fine, or send the surfing Liber Noticed screenshot you meant.
-
-If you sign LIB-REC-02-D, which renames the card "What keeps appearing in your moments", this screenshot will need replacing.
-
-**WHERE IT GOES**
-`images/app-noticed.webp`, used in the Recognition section of `index.html`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
+If LIB-REC-02-D is signed and renames the card, this screenshot will need replacing then.
 
 ## 4. Confirm consent for the two quotes
 
@@ -143,7 +122,7 @@ When convenient. Parents see this record in the app today.
 Netlify publishes `main` to liber.net.au.
 
 **WHAT I NEED TO PROVIDE/DO**
-When items 2, 3 and 4 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
+When item 4 is done and `validate_site.py --release` passes, open a pull request and merge it yourself.
 
 **WHERE IT GOES**
 GitHub, then Netlify.
@@ -171,7 +150,7 @@ When convenient.
 The Terms (1 March 2026):
 - describe Liber as in "beta";
 - describe paid tiers as including printing "reports for approval";
-- describe cancellation by contacting Liber.
+- describe cancellation by contacting Liber, whereas Plus can now be cancelled through the app (confirmed 21 September 2026).
 
 The confirmed plans and app wording now differ: Plus is unlimited moments, voice capture, family sharing, and preparing and exporting Learning Records, and the app says "Cancel whenever you like". The website does not change legal text.
 
