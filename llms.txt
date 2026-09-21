@@ -2,12 +2,12 @@
 
 > Liber is a simple journal for homeschooling parents. Families write a line or two about something that happened, add a photo if they like, and over weeks and months those moments build into a record of each child's learning, in the parent's words.
 
-Liber is a learning-journal web app for homeschooling families, made in Australia. It is built especially for relaxed, interest-led and unschooling families. Parents write down ordinary moments; Liber keeps each one, dated, for each child. When someone asks to see the learning, a parent can prepare a Learning Record from what they have already kept.
+Liber is a learning-journal web app for homeschooling families, made in Australia. It is built especially for relaxed, interest-led and unschooling families. Parents write down ordinary moments; Liber keeps each one, dated, for each child. With Liber Plus, a parent can prepare and export a Learning Record from what they have already kept.
 
 Liber is deliberately not a curriculum tool. It does not grade, score, assess or diagnose children, does not plan lessons, and never shows what is "missing". Parents' own words stay at the centre, and every moment is one a parent wrote.
 
 ## Recognition (being introduced gradually)
-Liber is being designed to point out things that keep appearing across a family's moments, always showing the parent the moments it means so they can check them. By design nothing is pointed out until it appears in at least three moments on at least three different days. This is being introduced gradually and is not yet available to most families.
+Liber is being designed to point out things that keep appearing across a family's moments, always showing the parent the moments it means so they can check them. By design nothing is pointed out until it appears in at least three moments on at least three different days. It is included on both plans and is being introduced gradually, so it is not yet available to most families.
 
 ## Who it's for
 - Relaxed, interest-led and unschooling homeschool families
@@ -16,14 +16,13 @@ Liber is being designed to point out things that keep appearing across a family'
 
 ## Key features
 - Write a moment in a line or two, with an optional photo
-- Record for each child, or several at once, and add moments from earlier days
-- Each child's Record gathers their moments together over time
-- Optional organisation by a state's learning areas, or by the family's own categories
-- Prepare a Learning Record for a chosen period
+- Record for each child; each child's Record gathers their moments over time
+- Optional organisation by a learning path or the family's own categories
 
 ## Pricing
-- Free: write moments and keep each child's Record
-- Liber Plus: paid subscription (AUD), monthly or annual
+- Free ($0): 20 moments each month, unlimited historical journal, unlimited learners, photos, journal, Record, Recognition (as it is introduced), categories, learning path, raw data export
+- Liber Plus: $9.00 AUD a month or $90.00 AUD a year (saves $18). Adds unlimited moments, voice capture, family sharing, and preparing and exporting Learning Records
+- Everything a family has already written stays theirs on either plan. Plus adds new things and never takes anything away
 
 ## Pages
 - https://liber.net.au/ : what Liber is and how it works

@@ -1,8 +1,8 @@
 # Website refresh: manual actions
 
-Branch: `website-refresh-2026-09` · Prepared 21 September 2026
+Branch: `website-refresh-2026-09` · Updated 21 September 2026 (pricing and plans confirmed)
 
-This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Nine of them are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
+This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Seven of them are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
 
 This file is blocked from the public site by a rule in `netlify.toml`.
 
@@ -11,176 +11,145 @@ This file is blocked from the public site by a rule in `netlify.toml`.
 ## 1. Push the branch to GitHub
 
 **WHY IT IS NEEDED**
-The work was done in a clone of `Liber-App111/liber-website`, but the session had no GitHub credentials, so it could not push.
+The work was done in a clone of `Liber-App111/liber-website`. The session had no GitHub credentials.
 
 **WHAT I NEED TO PROVIDE/DO**
-Apply the supplied patch or bundle and push the branch. The exact commands are in the delivery note. Do not merge.
+Apply the supplied patch or bundle and push the branch. Do not merge.
 
 **WHERE IT GOES**
 GitHub, branch `website-refresh-2026-09`.
 
 **WHEN IT SHOULD BE DONE**
-First. If Netlify deploy previews are switched on for branches, the push gives you a private preview URL to review. That preview is not production.
+First. A branch push does not change production.
 
-## 2. Confirm the Liber Plus price
+## 2. Check four small product facts not in your confirmed list
 
 **WHY IT IS NEEDED**
-The repository has no price anywhere. Your notes record both A$14 (18 September) and $9 (21 September).
+Each is still on the site but was not in the plan lists you confirmed.
+
+- **Backdating** ("If it happened yesterday, change the date"; "Add moments from earlier days"). Recorded as built in an earlier inspection of the live app.
+- **"No card needed"** to start free. Your wording from the previous live site.
+- **GST.** Are $9.00 and $90.00 GST-inclusive? If Liber is registered for GST, the displayed price must include it.
+- **Cancellation method.** The app says "Cancel whenever you like". The Terms (clause 23) say to cancel by contacting Liber. The site says only "cancel whenever you like" and "plans renew automatically", with a link to the Terms.
 
 **WHAT I NEED TO PROVIDE/DO**
-Give the price in AUD, including GST, for monthly and, if it exists, annual. The Terms confirm both billing periods exist.
+Confirm each, or say which to remove. If the app lets people cancel themselves, the Terms need updating (item 11).
 
 **WHERE IT GOES**
-`index.html`, Pricing section, `data-confirm="plus-price"`. Also the SoftwareApplication `offers` in the same page's JSON-LD, which currently lists Free only.
+`index.html` (How it works, FAQ, pricing notes).
 
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 3. Confirm what Liber Plus includes
-
-**WHY IT IS NEEDED**
-The only repository evidence is the Terms (1 March 2026, before V2). They say paid tiers include "extended progress history, continuity, and the ability to print reports for approval". That may not match V2, and the site must not invent feature gates.
-
-**WHAT I NEED TO PROVIDE/DO**
-A short list of what Plus includes in V2 today, in plain words.
-
-**WHERE IT GOES**
-`index.html`, Pricing section, `data-confirm="plus-entitlements"`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
-
-## 4. Confirm the Free list and the Learning Record wording
-
-**WHY IT IS NEEDED**
-These describe V2 behaviour I could not verify from the website repository:
-
-- *Free list:* unlimited moments, photos, several children, backdating, each child's Record, and the learning-path choice.
-- *Learning Record wording:* "choose the period, read it through, decide who sees it", and "prepare a Learning Record".
-
-**WHAT I NEED TO PROVIDE/DO**
-Read the Free card and the "What is a Learning Record?" section against the live app. Say what's wrong, if anything.
-
-**WHERE IT GOES**
-`index.html` (Pricing and Learning Record sections), `learning-record/index.html`, `llms.txt`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
-
-## 5. Provide four product screenshots
+## 3. Provide four product screenshots
 
 **WHY IT IS NEEDED**
 The repository has no product screenshots, and none may be mocked up.
 
 **WHAT I NEED TO PROVIDE/DO**
-Take phone screenshots from the live app on a demo account with invented moments (no real children's names or photos):
+Phone screenshots from the live app on a demo account with invented moments:
 
 - **S1:** a saved moment in the Journal, with a photo.
 - **S2:** writing a moment, with a photo added and a child chosen.
 - **S3:** the Journal with a few weeks of moments.
-- **S4:** a child's Record, including the things you keep writing about.
+- **S4:** a child's Record, with the things you keep writing about.
 
 Portrait PNG, about 1170 px wide.
 
 **WHERE IT GOES**
-`images/`. Then swap each dashed frame marked `data-placeholder="S1…S4"` in `index.html`. This is a routine code change that can be done for you once the files exist.
+`images/`, then swap the frames marked `data-placeholder="S1…S4"` in `index.html`.
 
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 6. Provide the short product video
+## 4. Provide the short product video, or decide to launch without it
 
 **WHY IT IS NEEDED**
-Section 7, "See it in under a minute", has a placeholder only.
+Section 7, "See it in under a minute", is a placeholder.
 
 **WHAT I NEED TO PROVIDE/DO**
-A 45 to 60 second screen recording on the demo account: write a moment, see it kept, open the child's Record, prepare a Learning Record. MP4 with captions, no voiceover needed. Storyboard in LIB-WEB-01, F.4.
+Either:
+- a 45 to 60 second screen recording on the demo account (storyboard in LIB-WEB-01, F.4); or
+- a decision to remove the section for launch, which is a one-edit change.
 
 **WHERE IT GOES**
-`images/` or a video host. Swap the frame marked `data-placeholder="V1"`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge. Alternatively, decide to launch without it: the section can be removed in one edit.
-
-## 7. Confirm consent for the two quotes
-
-**WHY IT IS NEEDED**
-Quotes are used only where they can be traced to a real message and the person has agreed.
-
-**WHAT I NEED TO PROVIDE/DO**
-For each quote, confirm you hold the message and the person's agreement to be quoted. If you can't, say so and the quote comes out.
-
-- **Zephyr:** "I take a photo and save it in Liber and then chuck the paperwork…" on the homepage.
-- **An unnamed parent:** "It feels good to see it at the end of the day…" on Am I doing enough?
-
-**WHERE IT GOES**
-`index.html` (`data-confirm-note="Zephyr testimonial consent"`) and `am-i-doing-enough/index.html`.
+`index.html`, the frame marked `data-placeholder="V1"`.
 
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 8. Confirm continued use of the three family photographs
+## 5. Confirm consent for the two quotes
 
 **WHY IT IS NEEDED**
-The creek photo, the journalling photo and the family photo show children. They are already published on the live site, and the refresh reuses them in similar places. Permission for children's photos should be a decision, not an assumption.
+Quotes are used only where traced to a real message, with the person's agreement.
+
+**WHAT I NEED TO PROVIDE/DO**
+Confirm, or say which to remove:
+- Zephyr's quote on the homepage;
+- the unnamed parent's quote on "Am I doing enough?".
+
+**WHERE IT GOES**
+`index.html`, `am-i-doing-enough/index.html` (marked `data-confirm-note`).
+
+**WHEN IT SHOULD BE DONE**
+Before merge.
+
+## 6. Confirm continued use of the three family photographs
+
+**WHY IT IS NEEDED**
+The creek, journalling and family photos show children. They are already live; the refresh reuses them.
 
 **WHAT I NEED TO PROVIDE/DO**
 Confirm yes, or say which to replace.
 
 **WHERE IT GOES**
-`index.html` (Why it exists, Founder, closing section), `about/index.html`.
+`index.html`, `about/index.html`.
 
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 9. Get a vector version of the logo
+## 7. Decide the co-parents page
 
 **WHY IT IS NEEDED**
-The supplied logo is a 398×430 PNG. The site uses a cleaned, transparent version at screen sizes, which is fine for launch. It will not hold up in print, the convention material, or large display.
+Family sharing is now confirmed as a Liber Plus feature, but the page does not match what is confirmed:
 
-`favicon.svg` currently wraps a small raster tree, because no vector source exists.
+- It says both parents can add moments to one record. How family sharing actually behaves is not confirmed.
+- It invites visitors to "Try it free", while family sharing is a Plus feature.
+
+The page is unlinked from the navigation and footer, out of the sitemap and `llms.txt`, and marked `noindex`. Its content is unchanged and it still has 15 em dashes.
 
 **WHAT I NEED TO PROVIDE/DO**
-Commission or export SVG versions, all with transparent backgrounds and no tagline:
+Describe what family sharing lets a second parent do (view only, add moments, or something else). Then choose:
+- rewrite the page to match and re-link it; or
+- remove the page, with a redirect to the homepage.
 
-- full lockup;
-- tree and wordmark side by side;
-- tree only;
-- one-colour and reversed versions.
+**WHERE IT GOES**
+`for-separated-families/index.html`, navigation, `sitemap.xml`, `llms.txt`.
+
+**WHEN IT SHOULD BE DONE**
+Before the convention. It is not blocking the merge while unlinked.
+
+## 8. Get a true vector version of the logo
+
+**WHY IT IS NEEDED**
+The `image_50.svg` supplied on 21 September is a 500×541 PNG wrapped in an SVG file (a Figma export), not vector artwork. The site's screen logos are fine, but print and large display need real vector paths. `favicon.svg` also still wraps a raster.
+
+**WHAT I NEED TO PROVIDE/DO**
+Commission, or export from the original design file, SVGs made of paths: full lockup, horizontal, tree only, one-colour and reversed. Transparent background, no tagline.
 
 **WHERE IT GOES**
 `images/`, and replace `favicon.svg`.
 
 **WHEN IT SHOULD BE DONE**
-Before any print material. It is not blocking for the website.
+Before any print material. It is not blocking the website.
 
-## 10. Decide the co-parents page
-
-**WHY IT IS NEEDED**
-The page says both parents can add moments to one record. Nothing in the website repository shows whether co-parent sharing is live in V2.
-
-It has been removed from the navigation, footer, sitemap and `llms.txt`, and marked `noindex`. Its content is unchanged and it is still reachable by direct link.
-
-**WHAT I NEED TO PROVIDE/DO**
-Choose one:
-
-- (a) It's live: re-link it.
-- (b) It's coming: rewrite it as coming.
-- (c) Delete the page, and add a redirect to the homepage.
-
-**WHERE IT GOES**
-`for-separated-families/index.html`, the navigation, `sitemap.xml`.
-
-**WHEN IT SHOULD BE DONE**
-Before the convention.
-
-## 11. Merge and deploy
+## 9. Merge and deploy
 
 **WHY IT IS NEEDED**
-The README says GitHub deploys to Netlify and on to liber.net.au, so merging to `main` publishes the site.
+Netlify publishes `main` to liber.net.au.
 
 **WHAT I NEED TO PROVIDE/DO**
-When items 2 to 8 are done and the checks in the delivery note pass with `--release`, open a pull request from `website-refresh-2026-09` and merge it yourself.
+When items 2 to 6 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
 
 **WHERE IT GOES**
 GitHub, then Netlify.
@@ -188,16 +157,35 @@ GitHub, then Netlify.
 **WHEN IT SHOULD BE DONE**
 Last.
 
-## 12. Ask your legal adviser about two lines in the Terms (optional)
+## 10. Your NSW guide article (optional)
 
 **WHY IT IS NEEDED**
-The Terms (1 March 2026) describe Liber as in "beta" and paid tiers as including printing "reports for approval". The new site avoids both, because Liber can't promise approval and V2 is published.
+The article is outside the refresh and was not edited. It has 58 em dashes, and it is your signed piece.
 
 **WHAT I NEED TO PROVIDE/DO**
-Decide with your adviser whether the Terms should be updated. The website refresh did not change any legal text.
+Say whether you want its punctuation brought into line.
+
+**WHERE IT GOES**
+`guides/nesa-home-visit-evidence/index.html`.
+
+**WHEN IT SHOULD BE DONE**
+When convenient.
+
+## 11. Ask your legal adviser about the Terms (optional)
+
+**WHY IT IS NEEDED**
+The Terms (1 March 2026):
+- describe Liber as in "beta";
+- describe paid tiers as including printing "reports for approval";
+- describe cancellation by contacting Liber.
+
+The confirmed plans and app wording now differ: Plus is unlimited moments, voice capture, family sharing, and preparing and exporting Learning Records, and the app says "Cancel whenever you like". The website does not change legal text.
+
+**WHAT I NEED TO PROVIDE/DO**
+Decide with your adviser whether to update the Terms.
 
 **WHERE IT GOES**
 `terms/index.html`.
 
 **WHEN IT SHOULD BE DONE**
-When convenient.
+Soon after launch.
