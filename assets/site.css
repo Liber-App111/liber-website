@@ -199,3 +199,10 @@ footer.site{border-top:1px solid var(--line);background:var(--paper-2);padding:5
 .steps-text .step p{max-width:34rem;}
 @media (min-width:880px){ .how-split{grid-template-columns:1.1fr .9fr;} .lr-split{grid-template-columns:1.2fr .8fr;} }
 @media (max-width:879px){ .how-split .app-phone, .lr-split .app-phone{margin-top:8px;} }
+
+/* Example Learning Record strip (Learning Record page) */
+.example-strip{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 18px;margin:8px -6px 36px;overscroll-behavior-x:contain;}
+.example-strip:focus-visible{outline:2px solid var(--sage);outline-offset:4px;border-radius:12px;}
+.example-page{flex:0 0 min(15rem,70vw);scroll-snap-align:start;margin:0;}
+.example-page img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 20px 40px -30px rgba(38,49,31,.35);}
+.example-page figcaption{font-size:.875rem;line-height:1.45;color:var(--ink-faint);margin-top:10px;}

@@ -2,7 +2,7 @@
 
 Branch: `website-refresh-2026-09` · Updated 21 September 2026 (pricing and plans confirmed)
 
-This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Two of them are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
+This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Two of them (the quote consents) are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
 
 This file is blocked from the public site by a rule in `netlify.toml`.
 
@@ -33,7 +33,7 @@ Each is still on the site but was not in the plan lists you confirmed.
 - **Cancellation method.** The app says "Cancel whenever you like". The Terms (clause 23) say to cancel by contacting Liber. The site says only "cancel whenever you like" and "plans renew automatically", with a link to the Terms.
 
 **WHAT I NEED TO PROVIDE/DO**
-Confirm each, or say which to remove. If the app lets people cancel themselves, the Terms need updating (item 9).
+Confirm each, or say which to remove. If the app lets people cancel themselves, the Terms need updating (item 11).
 
 **WHERE IT GOES**
 `index.html` (How it works, FAQ, pricing notes).
@@ -75,7 +75,26 @@ Confirm, or say which to remove:
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 5. Decide the co-parents page
+## 5. Confirm Lisa agrees to the example Learning Record strip
+
+**WHY IT IS NEEDED**
+You approved four pages of the example Learning Record for the Learning Record page. Together they publish:
+- Bodhi's first name, school year (Year 2) and state;
+- photos of both boys;
+- counts drawn from Lisa's journal.
+
+Your approval as their parent is on record. Lisa's agreement is not, and the journal behind these pages is hers.
+
+**WHAT I NEED TO PROVIDE/DO**
+Confirm Lisa is comfortable with this, or say which pages to remove.
+
+**WHERE IT GOES**
+`learning-record/index.html` (the example strip) and `images/example-record-*.webp`.
+
+**WHEN IT SHOULD BE DONE**
+Before merge.
+
+## 6. Decide the co-parents page
 
 **WHY IT IS NEEDED**
 Family sharing is now confirmed as a Liber Plus feature, but the page does not match what is confirmed:
@@ -96,7 +115,7 @@ Describe what family sharing lets a second parent do (view only, add moments, or
 **WHEN IT SHOULD BE DONE**
 Before the convention. It is not blocking the merge while unlinked.
 
-## 6. Get a true vector version of the logo
+## 7. Get a true vector version of the logo
 
 **WHY IT IS NEEDED**
 The `image_50.svg` supplied on 21 September is a 500×541 PNG wrapped in an SVG file (a Figma export), not vector artwork. The site's screen logos are fine, but print and large display need real vector paths. `favicon.svg` also still wraps a raster.
@@ -110,13 +129,36 @@ Commission, or export from the original design file, SVGs made of paths: full lo
 **WHEN IT SHOULD BE DONE**
 Before any print material. It is not blocking the website.
 
-## 7. Merge and deploy
+## 8. Raise the in-app example record wording with your developer (not a website change)
+
+**WHY IT IS NEEDED**
+The example record inside the app (EXAMPLE RECORD viewer) contains lines that conflict with Liber's own standards and the website:
+
+- **Screen 2:** "A selection of days, not every day". This contradicts the site's distinction that a portfolio is a selection and a Learning Record is the broader record.
+- **Screen 6:** "LIBER NOTICED" interpretations presented as if Recognition already works at full depth.
+- **Screen 9:**
+  - "A boy who is not yet reading", a deficit statement;
+  - "got every word on his spelling list right", a score, next to screen 2's "No scores, levels or grades";
+  - a February to August narrative with the child as the subject and a trajectory.
+
+None of these screens is used on the website. The website task did not touch the app.
+
+**WHAT I NEED TO PROVIDE/DO**
+Decide whether to have the example record revised in the app.
+
+**WHERE IT GOES**
+The Liber app, not this repository.
+
+**WHEN IT SHOULD BE DONE**
+When convenient. Parents see this record in the app today.
+
+## 9. Merge and deploy
 
 **WHY IT IS NEEDED**
 Netlify publishes `main` to liber.net.au.
 
 **WHAT I NEED TO PROVIDE/DO**
-When items 2, 3 and 4 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
+When items 2, 3, 4 and 5 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
 
 **WHERE IT GOES**
 GitHub, then Netlify.
@@ -124,7 +166,7 @@ GitHub, then Netlify.
 **WHEN IT SHOULD BE DONE**
 Last.
 
-## 8. Your NSW guide article (optional)
+## 10. Your NSW guide article (optional)
 
 **WHY IT IS NEEDED**
 The article is outside the refresh and was not edited. It has 58 em dashes, and it is your signed piece.
@@ -138,7 +180,7 @@ Say whether you want its punctuation brought into line.
 **WHEN IT SHOULD BE DONE**
 When convenient.
 
-## 9. Ask your legal adviser about the Terms (optional)
+## 11. Ask your legal adviser about the Terms (optional)
 
 **WHY IT IS NEEDED**
 The Terms (1 March 2026):
