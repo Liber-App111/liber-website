@@ -2,7 +2,7 @@
 
 Branch: `website-refresh-2026-09` · Updated 21 September 2026 (pricing and plans confirmed)
 
-This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Seven of them are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
+This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Two of them are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
 
 This file is blocked from the public site by a rule in `netlify.toml`.
 
@@ -33,7 +33,7 @@ Each is still on the site but was not in the plan lists you confirmed.
 - **Cancellation method.** The app says "Cancel whenever you like". The Terms (clause 23) say to cancel by contacting Liber. The site says only "cancel whenever you like" and "plans renew automatically", with a link to the Terms.
 
 **WHAT I NEED TO PROVIDE/DO**
-Confirm each, or say which to remove. If the app lets people cancel themselves, the Terms need updating (item 11).
+Confirm each, or say which to remove. If the app lets people cancel themselves, the Terms need updating (item 9).
 
 **WHERE IT GOES**
 `index.html` (How it works, FAQ, pricing notes).
@@ -41,44 +41,25 @@ Confirm each, or say which to remove. If the app lets people cancel themselves, 
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 3. Provide four product screenshots
+## 3. Confirm the Recognition screenshot
 
 **WHY IT IS NEEDED**
-The repository has no product screenshots, and none may be mocked up.
+You asked for the "Liber Noticed" surfing example. No such screen was in the upload. The surfing photo appears only in a Journal list screenshot, and that one shows a QA test entry ("QA allow-path check…"), so it is not suitable for a public site.
+
+I used the only Recognition screen supplied: the "What Liber has noticed across your moments" card, showing Watching & listening across 3 moments for Boy 1.
 
 **WHAT I NEED TO PROVIDE/DO**
-Phone screenshots from the live app on a demo account with invented moments:
+Either confirm this card is fine, or send the surfing Liber Noticed screenshot you meant.
 
-- **S1:** a saved moment in the Journal, with a photo.
-- **S2:** writing a moment, with a photo added and a child chosen.
-- **S3:** the Journal with a few weeks of moments.
-- **S4:** a child's Record, with the things you keep writing about.
-
-Portrait PNG, about 1170 px wide.
+If you sign LIB-REC-02-D, which renames the card "What keeps appearing in your moments", this screenshot will need replacing.
 
 **WHERE IT GOES**
-`images/`, then swap the frames marked `data-placeholder="S1…S4"` in `index.html`.
+`images/app-noticed.webp`, used in the Recognition section of `index.html`.
 
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 4. Provide the short product video, or decide to launch without it
-
-**WHY IT IS NEEDED**
-Section 7, "See it in under a minute", is a placeholder.
-
-**WHAT I NEED TO PROVIDE/DO**
-Either:
-- a 45 to 60 second screen recording on the demo account (storyboard in LIB-WEB-01, F.4); or
-- a decision to remove the section for launch, which is a one-edit change.
-
-**WHERE IT GOES**
-`index.html`, the frame marked `data-placeholder="V1"`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
-
-## 5. Confirm consent for the two quotes
+## 4. Confirm consent for the two quotes
 
 **WHY IT IS NEEDED**
 Quotes are used only where traced to a real message, with the person's agreement.
@@ -94,21 +75,7 @@ Confirm, or say which to remove:
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 6. Confirm continued use of the three family photographs
-
-**WHY IT IS NEEDED**
-The creek, journalling and family photos show children. They are already live; the refresh reuses them.
-
-**WHAT I NEED TO PROVIDE/DO**
-Confirm yes, or say which to replace.
-
-**WHERE IT GOES**
-`index.html`, `about/index.html`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
-
-## 7. Decide the co-parents page
+## 5. Decide the co-parents page
 
 **WHY IT IS NEEDED**
 Family sharing is now confirmed as a Liber Plus feature, but the page does not match what is confirmed:
@@ -129,7 +96,7 @@ Describe what family sharing lets a second parent do (view only, add moments, or
 **WHEN IT SHOULD BE DONE**
 Before the convention. It is not blocking the merge while unlinked.
 
-## 8. Get a true vector version of the logo
+## 6. Get a true vector version of the logo
 
 **WHY IT IS NEEDED**
 The `image_50.svg` supplied on 21 September is a 500×541 PNG wrapped in an SVG file (a Figma export), not vector artwork. The site's screen logos are fine, but print and large display need real vector paths. `favicon.svg` also still wraps a raster.
@@ -143,13 +110,13 @@ Commission, or export from the original design file, SVGs made of paths: full lo
 **WHEN IT SHOULD BE DONE**
 Before any print material. It is not blocking the website.
 
-## 9. Merge and deploy
+## 7. Merge and deploy
 
 **WHY IT IS NEEDED**
 Netlify publishes `main` to liber.net.au.
 
 **WHAT I NEED TO PROVIDE/DO**
-When items 2 to 6 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
+When items 2, 3 and 4 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
 
 **WHERE IT GOES**
 GitHub, then Netlify.
@@ -157,7 +124,7 @@ GitHub, then Netlify.
 **WHEN IT SHOULD BE DONE**
 Last.
 
-## 10. Your NSW guide article (optional)
+## 8. Your NSW guide article (optional)
 
 **WHY IT IS NEEDED**
 The article is outside the refresh and was not edited. It has 58 em dashes, and it is your signed piece.
@@ -171,7 +138,7 @@ Say whether you want its punctuation brought into line.
 **WHEN IT SHOULD BE DONE**
 When convenient.
 
-## 11. Ask your legal adviser about the Terms (optional)
+## 9. Ask your legal adviser about the Terms (optional)
 
 **WHY IT IS NEEDED**
 The Terms (1 March 2026):
