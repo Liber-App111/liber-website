@@ -75,24 +75,9 @@ Confirm, or say which to remove:
 **WHEN IT SHOULD BE DONE**
 Before merge.
 
-## 5. Confirm Lisa agrees to the example Learning Record strip
+## 5. Lisa's agreement to the example Learning Record strip: RESOLVED
 
-**WHY IT IS NEEDED**
-You approved four pages of the example Learning Record for the Learning Record page. Together they publish:
-- Bodhi's first name, school year (Year 2) and state;
-- photos of both boys;
-- counts drawn from Lisa's journal.
-
-Your approval as their parent is on record. Lisa's agreement is not, and the journal behind these pages is hers.
-
-**WHAT I NEED TO PROVIDE/DO**
-Confirm Lisa is comfortable with this, or say which pages to remove.
-
-**WHERE IT GOES**
-`learning-record/index.html` (the example strip) and `images/example-record-*.webp`.
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
+Resolved 21 September 2026. Lisa has given consent for the example Learning Record strip to be published. The strip shows pages 1, 3, 4 and 12, with Bodhi's first name, school year and state, photos of both boys, and counts from her journal. It is on the Learning Record page. Adam's approval as parent was given earlier.
 
 ## 6. Decide the co-parents page
 
@@ -158,7 +143,7 @@ When convenient. Parents see this record in the app today.
 Netlify publishes `main` to liber.net.au.
 
 **WHAT I NEED TO PROVIDE/DO**
-When items 2, 3, 4 and 5 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
+When items 2, 3 and 4 are done and `validate_site.py --release` passes, open a pull request and merge it yourself.
 
 **WHERE IT GOES**
 GitHub, then Netlify.
