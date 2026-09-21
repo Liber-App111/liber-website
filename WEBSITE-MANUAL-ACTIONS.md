@@ -2,7 +2,7 @@
 
 Branch: `website-refresh-2026-09` · Updated 21 September 2026 (pricing and plans confirmed)
 
-This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. Two of them (the quote consents) are also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
+This lists only what needs you. Everything else in the refresh is done on the branch. The site must not go live while any item marked **Before merge** is open. The two quote consents were also marked in the pages themselves (highlighted in yellow, or as dashed placeholder frames).
 
 This file is blocked from the public site by a rule in `netlify.toml`.
 
@@ -38,21 +38,13 @@ Confirmed by Adam on 21 September 2026. The "What Liber has noticed across your 
 
 If LIB-REC-02-D is signed and renames the card, this screenshot will need replacing then.
 
-## 4. Confirm consent for the two quotes
+## 4. Consent for the two quotes: RESOLVED
 
-**WHY IT IS NEEDED**
-Quotes are used only where traced to a real message, with the person's agreement.
+Resolved 21 September 2026:
+- Zephyr has consented to the homepage quote.
+- The unnamed parent has consented to the quote on "Am I doing enough?".
 
-**WHAT I NEED TO PROVIDE/DO**
-Confirm, or say which to remove:
-- Zephyr's quote on the homepage;
-- the unnamed parent's quote on "Am I doing enough?".
-
-**WHERE IT GOES**
-`index.html`, `am-i-doing-enough/index.html` (marked `data-confirm-note`).
-
-**WHEN IT SHOULD BE DONE**
-Before merge.
+The in-page consent markers have been removed.
 
 ## 5. Lisa's agreement to the example Learning Record strip: RESOLVED
 
@@ -122,7 +114,7 @@ When convenient. Parents see this record in the app today.
 Netlify publishes `main` to liber.net.au.
 
 **WHAT I NEED TO PROVIDE/DO**
-When item 4 is done and `validate_site.py --release` passes, open a pull request and merge it yourself.
+When `validate_site.py --release` passes, open a pull request and merge it yourself.
 
 **WHERE IT GOES**
 GitHub, then Netlify.
