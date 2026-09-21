@@ -31,6 +31,6 @@
     if (e.key === 'Escape') setOpen(false);
   });
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 680) setOpen(false);
+    if (window.innerWidth > 900) setOpen(false);
   });
 })();

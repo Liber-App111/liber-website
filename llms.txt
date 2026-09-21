@@ -1,37 +1,39 @@
 # Liber
 
-> Liber helps homeschool families capture everyday moments of learning and turn them into confidence, records and evidence — without creating school at home.
+> Liber is a simple journal for homeschooling parents. Families write a line or two about something that happened, add a photo if they like, and over weeks and months those moments build into a record of each child's learning, in the parent's words.
 
-Liber is a learning-journal web app for relaxed, interest-led, unschooling and neurodivergent homeschool families, made in Australia. Parents capture ordinary moments (a photo and a few lines); Liber helps them see the learning already in those moments and quietly builds a private record they can use for registration, reviews or an Authorised Person visit.
+Liber is a learning-journal web app for homeschooling families, made in Australia. It is built especially for relaxed, interest-led and unschooling families. Parents write down ordinary moments; Liber keeps each one, dated, for each child. When someone asks to see the learning, a parent can prepare a Learning Record from what they have already kept.
 
-Liber is deliberately not a curriculum tool: no lesson plans, no worksheets, no grades, and it never fabricates learning that didn't happen. Parents' own words stay at the centre.
+Liber is deliberately not a curriculum tool. It does not grade, score, assess or diagnose children, does not plan lessons, and never shows what is "missing". Parents' own words stay at the centre, and every moment is one a parent wrote.
+
+## Recognition (being introduced gradually)
+Liber is being designed to point out things that keep appearing across a family's moments, always showing the parent the moments it means so they can check them. By design nothing is pointed out until it appears in at least three moments on at least three different days. This is being introduced gradually and is not yet available to most families.
 
 ## Who it's for
-- Relaxed, interest-led and unschooling families
-- Newly-registering homeschool families preparing for reviews or home visits (e.g. NSW Authorised Person visits)
-- Families with neurodivergent learners
-- Homeschool families across Australia and New Zealand (and beyond)
+- Relaxed, interest-led and unschooling homeschool families
+- Families preparing for registration, reviews or home visits (for example NSW Authorised Person visits)
+- Homeschool families across Australia and New Zealand
 
 ## Key features
-- Moment capture: photo plus a short note, in your own words
-- Reflection: see the learning a moment already contains
-- Patterns over time: threads and a fuller picture of how a child learns
-- Private by design: family data is never shared or sold
-- Liber+ (paid): full history, richer learning stories, review-ready exports, optional curriculum tagging (never required)
+- Write a moment in a line or two, with an optional photo
+- Record for each child, or several at once, and add moments from earlier days
+- Each child's Record gathers their moments together over time
+- Optional organisation by a state's learning areas, or by the family's own categories
+- Prepare a Learning Record for a chosen period
 
 ## Pricing
-- Free: capture unlimited everyday moments and start your record
-- Liber+: paid subscription (AUD) adding history, patterns, stories and exports
+- Free: write moments and keep each child's Record
+- Liber Plus: paid subscription (AUD), monthly or annual
 
 ## Pages
-- https://liber.net.au/ — what Liber is and how it works
-- https://liber.net.au/learning-record/ — what a learning record is, and how to keep one without a curriculum
-- https://liber.net.au/for-separated-families/ — for separated & co-parenting families: one record across two homes
-- https://liber.net.au/am-i-doing-enough/ — a kinder way to answer the most common homeschool question, using evidence
-- https://liber.net.au/guides/ — practical guides for homeschool evidence and records
-- https://liber.net.au/guides/nesa-home-visit-evidence/ — what to show an Authorised Person at a NSW home visit
-- https://liber.net.au/privacy/ — privacy policy
-- https://liber.net.au/terms/ — terms of service
+- https://liber.net.au/ : what Liber is and how it works
+- https://liber.net.au/learning-record/ : what a Learning Record is, and how it differs from a portfolio
+- https://liber.net.au/am-i-doing-enough/ : a kinder way to answer the most common homeschool question
+- https://liber.net.au/about/ : who makes Liber
+- https://liber.net.au/guides/ : practical guides for homeschool records
+- https://liber.net.au/guides/nesa-home-visit-evidence/ : what to show an Authorised Person at a NSW home visit
+- https://liber.net.au/privacy/ : privacy policy
+- https://liber.net.au/terms/ : terms of service
 
 ## Contact
 support@liber.net.au
