@@ -206,3 +206,10 @@ footer.site{border-top:1px solid var(--line);background:var(--paper-2);padding:5
 .example-page{flex:0 0 min(15rem,70vw);scroll-snap-align:start;margin:0;}
 .example-page img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 20px 40px -30px rgba(38,49,31,.35);}
 .example-page figcaption{font-size:.875rem;line-height:1.45;color:var(--ink-faint);margin-top:10px;}
+
+/* Mobile menu sign-up link: only shown when the menu is the drop panel */
+.nav-links a.nav-menu-cta{display:none;}
+@media (max-width:900px){
+  .nav-links a.nav-menu-cta{display:block;width:auto;margin:8px 28px 12px;padding:13px 20px;text-align:center;background:var(--sage);color:#fff;border-radius:100px;font-weight:500;}
+  .nav-links a.nav-menu-cta:hover{background:var(--sage-deep);color:#fff;}
+}
